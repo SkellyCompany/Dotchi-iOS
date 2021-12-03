@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Portal
+
+  Created by Grzegorz Charyszczak on 27/10/2020.
+  
+*/
+
+"NSCameraUsageDescription" = "Portal skal bruge kameraet.";
+"NSUserTrackingUsageDescription" = "Den data som vi indsamler, bliver brugt til at forbedre vores applikation og fejlsøgning af eventuelle fejl.";
+"NSLocationWhenInUseUsageDescription" = "Portal skal bruge lokalitet.";

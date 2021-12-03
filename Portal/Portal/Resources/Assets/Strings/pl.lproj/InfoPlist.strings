@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  Portal
+
+  Created by Grzegorz Charyszczak on 27/10/2020.
+  
+*/
+
+"NSCameraUsageDescription" = "Portal potrzebuje dostępu do kamery.";
+"NSUserTrackingUsageDescription" = "Dane które zbieramy, będą używame do ulepszania aplikacji oraz naprawiania błędów.";
+"NSLocationWhenInUseUsageDescription" = "Portal potrzebuje dostępu do twojej lokalizacji.";

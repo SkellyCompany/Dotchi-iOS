@@ -1,0 +1,19 @@
+strings:
+  inputs: ../Assets/Strings/en.lproj
+  outputs:
+    - templatePath: Stencils/structured-swift5-localizable.stencil
+      output: Generated/L10n.swift
+xcassets:
+  inputs:
+    - ../Assets/Icons.xcassets
+    - ../Assets/Images.xcassets
+    - ../Assets/Colors.xcassets
+  outputs:
+    - templateName: swift5
+      output: Generated/Assets.swift
+json:
+    inputs:
+        - ../Assets/Animations/
+    outputs:
+        templatePath: Stencils/lottie.stencil
+        output: Generated/Lottie.swift

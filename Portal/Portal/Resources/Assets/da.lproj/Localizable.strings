@@ -1,0 +1,133 @@
+/* 
+  Localizable.strings
+  Portal
+
+  Created by Greg Charyszczak on 18/04/2021.
+  
+*/
+
+/* Portal */
+"Portal.Name" = "Portal";
+
+/* General */
+"General.Close" = "Luk";
+"General.Cancel" = "Annuller";
+"General.Device" = "Enhed";
+"General.Version" = "Version";
+"General.Oops" = "Oops!";
+"General.OK" = "OK";
+
+/* Language */
+"Language.English" = "Engelsk";
+"Language.Polish" = "Polsk";
+"Language.Danish" = "Dansk";
+
+/* Theme */
+"Theme.Dark" = "Mørkt";
+"Theme.Light" = "Lyst";
+"Theme.System" = "Systemets Standard";
+
+/* Data Error */
+"DataError.ConnectionError.Description" = "Der opstod en forbindelsesfejl. Kontroller din internetforbindelse, eller prøv igen senere.";
+"DataError.ApplicationError.Description" = "Ups! Der opstod en applikationsfejl. Rapporter en fejl, eller prøv igen senere.";
+"DataError.DataSourceError.Description" = "Vi beklager...\nDer opstod en forbindelsesfejl fra vores side. Rapporter en fejl, eller prøv igen senere.";
+"DataError.EmptyData.Description" = "Vi kunne ikke finde noget.";
+
+/* Login Error */
+"LoginError.InvalidCredentials.Description" = "Forkert email eller adgangskode.";
+"LoginError.ConnectionError.Description" = "Forbindelsesfejl. Tjek din internetforbindelse.";
+"LoginError.ApplicationError.Description" = "Server Fejl. Prøv igen senere.";
+"LoginError.DataSourceError.Description" = "Program fejl. Prøv igen senere.";
+
+/* Reset Password Error */
+"ResetPasswordError.InvalidEmail.Description" = "Forkert email.";
+"ResetPasswordError.ConnectionError.Description" = "Forbindelsesfejl. Tjek din internetforbindelse.";
+"ResetPasswordError.ApplicationError.Description" = "Server Fejl. Prøv igen senere.";
+"ResetPasswordError.DataSourceError.Description" = "Program fejl. Prøv igen senere.";
+
+/* Create Account Error */
+"CreateAccountError.WrongCredentials.Description" = "Forkert email eller adgangskode.";
+"CreateAccountError.ConnectionError.Description" = "Forbindelsesfejl. Tjek din internetforbindelse.";
+"CreateAccountError.ApplicationError.Description" = "Server Fejl. Prøv igen senere.";
+"CreateAccountError.DataSourceError.Description" = "Program fejl. Prøv igen senere.";
+
+/* Search Bar */
+"SearchBar.Search" = "Søg";
+"SearchBar.Cancel" = "Annuller";
+
+/* Permission View */
+"PermissionView.Allow" = "Tillad";
+"PermissionView.NotNow" = "Tillad senere";
+"PermissionView.Title.AppTracking" = "Aktivitetssporing";
+"PermissionView.Description.AppTracking" = "Tillad adgang til push aktivitetssporing.";
+"PermissionView.Title.Camera" = "Kamera Adgang";
+"PermissionView.Description.Camera" = "Tillad adgang til kameraet.";
+"PermissionView.Title.Location" = "Beliggenhed Adgang";
+"PermissionView.Description.Location" = "Tillad adgang til beliggenhed.";
+"PermissionView.Title.PushNotifications" = "Push Notifikationer";
+"PermissionView.Description.PushNotifications" = "Tillad adgang til push notifikationer.";
+
+/* Tab Bar View Controller */
+"TabBarViewController.Browse" = "Browse";
+
+/* Settings View Controller */
+"SettingsViewController.Settings" = "Indstillinger";
+
+"SettingsScheme.Group.Preferences" = "Generelt";
+"SettingsScheme.Group.Contact" = "Kontakt";
+
+"SettingsScheme.Item.Login" = "Log ind";
+"SettingsScheme.Item.Logout" = "Log ud";
+"SettingsScheme.Item.Language" = "Sprog";
+"SettingsScheme.Item.Theme" = "Tema";
+"SettingsScheme.Item.Privacy" = "Privatliv";
+"SettingsScheme.Item.BugReport" = "Fejlrapport";
+"SettingsScheme.Item.Homepage" = "Hjemmeside";
+"SettingsScheme.Item.ContactUs" = "Kontakt Os";
+
+"SettingsViewController.BugReportHeader" = "Hej, jeg har fundet en fejl.<br><br>Jeg gjorde dette:<br>Jeg så dette:";
+"SettingsViewController.ContactUsHeader" = "Hej";
+"SettingsViewController.NoMail" = "Du skal have opsat en e-mail på din enhed";
+
+/* Login View Controller */
+"LoginViewController.Email" = "Email";
+"LoginViewController.Password" = "Adgangskode";
+"LoginViewController.Login" = "Log Ind";
+"LoginViewController.CreateAccount" = "Har du ikke en bruger endnu?";
+"LoginViewController.ResetPassword" = "Glemt kodeord?";
+
+/* Reset Password View Controller */
+"ResetPasswordViewController.Title" = "Nulstil kodeord";
+"ResetPasswordViewController.Email" = "E-mail";
+"ResetPasswordViewController.Reset" = "Nulstil";
+
+/* Create Account View Controller */
+"CreateAccountViewController.Title" = "Opret bruger";
+"CreateAccountViewController.Email" = "E-mail";
+"CreateAccountViewController.FirstName" = "Fornavn";
+"CreateAccountViewController.LastName" = "Efternavn";
+"CreateAccountViewController.Password" = "Kodeord";
+"CreateAccountViewController.Create" = "Opret";
+
+/* Language View Controller */
+"LanguageViewController.Language" = "Sprog";
+"LanguageViewController.LanguageChangeConfirmation.Title" = "Er du sikker på, at du vil ændre sprog?";
+"LanguageViewController.LanguageChangeConfirmation.ChangeTo" = "Skift til";
+
+/* Theme View Controller */
+"ThemeViewController.Theme" = "Tema";
+
+/* Privacy View Controller */
+"PrivacyViewController.Privacy" = "Privatliv";
+"PrivacyViewController.Analytics" = "Analytics";
+"PrivacyViewController.Crashlytics" = "Crashlytics";
+"PrivacyViewController.AnalyticsDescription" = "Aktivér Analytics for at hjælpe os med at forbedre applikationen ved at indsamle anonyme analyser";
+"PrivacyViewController.CrashlyticsDescription" = "Aktivér Crashlytics for at hjælpe os med at opdage og rette fejl ved at indsamle anonyme fejlrapporter";
+"PrivacyViewController.AppTrackingDescription" = "For at aktivere Analytics & Crashlytics skal du have give App Tracking tilladelelse for at hjælpe os med at forbedre Portal.";
+
+/* Website View Controller */
+"WebsiteViewController.Title" = "Hjemmeside";
+"WebsiteViewController.ErrorMessage" = "Kunne ikke indlæse websiden. Tjek din internetforbindelse, eller prøv igen senere.";
+
+/* Browse View Controller */
+"BrowseViewController.Title" = "Browse";

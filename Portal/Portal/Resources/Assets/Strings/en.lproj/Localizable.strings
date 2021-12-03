@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  Portal
+
+  Created by Greg Charyszczak on 18/04/2021.
+ 
+*/
+
+/* Portal */
+"Portal.Name" = "Portal";
+
+/* General */
+"General.Close" = "Close";
+"General.Cancel" = "Cancel";
+"General.Device" = "Device";
+"General.Version" = "Version";
+"General.Oops" = "Oops!";
+"General.OK" = "OK";
+
+/* Language */
+"Language.English" = "English";
+"Language.Polish" = "Polish";
+"Language.Danish" = "Danish";
+
+/* Theme */
+"Theme.Dark" = "Dark";
+"Theme.Light" = "Light";
+"Theme.System" = "System";
+
+/* Data Error */
+"DataError.ConnectionError.Description" = "It looks like there was a connection error. Please check your internet connection or try again later.";
+"DataError.ApplicationError.Description" = "Oops! There was an application error, please report a bug or try again later.";
+"DataError.DataSourceError.Description" = "We are sorry... There was a connection error from our side, please report a bug or try again later.";
+"DataError.EmptyData.Description" = "We could not find anything.";
+
+/* Login Error */
+"LoginError.InvalidCredentials.Description" = "Wrong email or password.";
+"LoginError.ConnectionError.Description" = "Connection error. Check your internet connection.";
+"LoginError.ApplicationError.Description" = "Server error. Try again later.";
+"LoginError.DataSourceError.Description" = "Application error. Try again later.";
+
+/* Reset Password Error */
+"ResetPasswordError.InvalidEmail.Description" = "Wrong email.";
+"ResetPasswordError.ConnectionError.Description" = "Connection error. Check your internet connection.";
+"ResetPasswordError.ApplicationError.Description" = "Server error. Try again later.";
+"ResetPasswordError.DataSourceError.Description" = "Application error. Try again later.";
+
+/* Create Account Error */
+"CreateAccountError.WrongCredentials.Description" = "Wrong email or password.";
+"CreateAccountError.ConnectionError.Description" = "Connection error. Check your internet connection.";
+"CreateAccountError.ApplicationError.Description" = "Server error. Try again later.";
+"CreateAccountError.DataSourceError.Description" = "Application error. Try again later.";
+
+/* Search Bar */
+"SearchBar.Search" = "Search";
+"SearchBar.Cancel" = "Cancel";
+
+/* Permission View */
+"PermissionView.Allow" = "Allow";
+"PermissionView.NotNow" = "Not now";
+"PermissionView.Title.AppTracking" = "App Tracking";
+"PermissionView.Description.AppTracking" = "Allow app tracking.";
+"PermissionView.Title.Camera" = "Camera Access";
+"PermissionView.Description.Camera" = "Allow access to the camera.";
+"PermissionView.Title.Location" = "Location Access";
+"PermissionView.Description.Location" = "Allow access to the location.";
+"PermissionView.Title.PushNotifications" = "Push Notifications";
+"PermissionView.Description.PushNotifications" = "Allow acces to the push notifications";
+
+/* Tab Bar View Controller */
+"TabBarViewController.Browse" = "Browse";

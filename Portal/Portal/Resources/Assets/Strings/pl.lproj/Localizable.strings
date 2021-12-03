@@ -1,0 +1,71 @@
+/* 
+  Localizable.strings
+  Portal
+
+  Created by Greg Charyszczak on 18/04/2021.
+  
+*/
+
+/* Portal */
+"Portal.Name" = "Portal";
+
+/* General */
+"General.Close" = "Zamknij";
+"General.Cancel" = "Anuluj";
+"General.Device" = "Urządzenie";
+"General.Version" = "Wersja";
+"General.Oops" = "Oops!";
+"General.OK" = "OK";
+
+/* Language */
+"Language.English" = "Angielski";
+"Language.Polish" = "Polski";
+"Language.Danish" = "Duński";
+
+/* Theme */
+"Theme.Dark" = "Ciemny";
+"Theme.Light" = "Jasny";
+"Theme.System" = "Systemowy";
+
+/* Data Error */
+"DataError.ConnectionError.Description" = "Wygląda na to, że wystąpił błąd z połączeniem. Sprawdź swoje połączenie internetowe, lub spróbuj ponownie później.";
+"DataError.ApplicationError.Description" = "Oops! Wystąpił błąd aplikacji, zgłoś błąd lub spróbuj ponownie później.";
+"DataError.DataSourceError.Description" = "Przepraszamy... Wystąpił błąd połączenia z naszej strony, zgłoś błąd lub spróbuj ponownie później";
+"DataError.EmptyData.Description" = "Nie mogliśmy niczego znaleźć.";
+
+/* Login Error */
+"LoginError.InvalidCredentials.Description" = "Nieprawidłowy email lub hasło.";
+"LoginError.ConnectionError.Description" = "Błąd połączenia. Sprawdź połączenie z internetem.";
+"LoginError.ApplicationError.Description" = "Błąd serwera. Spróbuj ponownie później.";
+"LoginError.DataSourceError.Description" = "Błąd aplikacji. Spróbuj ponownie później.";
+
+/* Reset Password Error */
+"ResetPasswordError.InvalidEmail.Description" = "Nieprawidłowy email.";
+"ResetPasswordError.ConnectionError.Description" = "Błąd połączenia. Sprawdź połączenie z internetem.";
+"ResetPasswordError.ApplicationError.Description" = "Błąd serwera. Spróbuj ponownie później.";
+"ResetPasswordError.DataSourceError.Description" = "Błąd aplikacji. Spróbuj ponownie później.";
+
+/* Create Account Error */
+"CreateAccountError.WrongCredentials.Description" = "Nieprawidłowy email lub hasło.";
+"ResetPasswordError.ConnectionError.Description" = "Błąd połączenia. Sprawdź połączenie z internetem.";
+"ResetPasswordError.ApplicationError.Description" = "Błąd serwera. Spróbuj ponownie później.";
+"ResetPasswordError.DataSourceError.Description" = "Błąd aplikacji. Spróbuj ponownie później.";
+
+/* Search Bar */
+"SearchBar.Search" = "Szukaj";
+"SearchBar.Cancel" = "Anuluj";
+
+/* Permission View */
+"PermissionView.Allow" = "Zezwól";
+"PermissionView.NotNow" = "Później";
+"PermissionView.Title.AppTracking" = "Śledzenie aktywności";
+"PermissionView.Description.AppTracking" = "Zezwól na śledzenie aktywności.";
+"PermissionView.Title.Camera" = "Dostęp do aparatu";
+"PermissionView.Description.Camera" = "Zezwól na dostęp do aparatu.";
+"PermissionView.Title.Location" = "Dostęp do lokalizacji";
+"PermissionView.Description.Location" = "Zezwól na dostęp do lokalizacji.";
+"PermissionView.Title.PushNotifications" = "Powiadomienia";
+"PermissionView.Description.PushNotifications" = "Zezwól na powiadomienia.";
+
+/* Tab Bar View Controller */
+"TabBarViewController.Browse" = "Przeglądaj";
