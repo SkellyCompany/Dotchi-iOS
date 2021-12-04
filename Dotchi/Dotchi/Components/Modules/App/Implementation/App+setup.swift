@@ -41,6 +41,10 @@ extension App {
         themeController.switchActiveTheme(to: userPreferencesRepository.getUserPreferences().activeTheme.interfaceStyle, in: windows)
     }
     
+    func setupTint(in window: UIWindow) {
+        window.tintColor = Asset.Colors.accent.color
+    }
+    
     func setupFirebase() {
         FirebaseApp.configure()
     }

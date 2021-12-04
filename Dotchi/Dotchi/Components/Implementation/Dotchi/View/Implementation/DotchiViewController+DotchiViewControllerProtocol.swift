@@ -7,6 +7,6 @@
 
 import Foundation
 
-extension BrowseViewController: BrowseViewControllerProtocol {
+extension DotchiViewController: DotchiViewControllerProtocol {
     
 }

@@ -20,7 +20,7 @@ extension AppDefaults: AppDefaultsProtocol {
     
     // MARK: Theme
     var defaultTheme: Theme {
-        return .dark
+        return .light
     }
     
     // MARK: User Preferences

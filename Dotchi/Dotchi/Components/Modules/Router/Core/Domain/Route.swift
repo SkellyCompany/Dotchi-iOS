@@ -9,5 +9,7 @@ import Foundation
 
 enum Route {
     case tabBar
-    case browse
+    case dotchi
+    case metrics
+    case logs
 }

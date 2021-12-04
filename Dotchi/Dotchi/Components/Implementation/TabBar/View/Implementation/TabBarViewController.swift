@@ -15,7 +15,6 @@ class TabBarViewController: UITabBarController {
         self.router = router
         self.eventHandler = eventHandler
         super.init(nibName: nil, bundle: nil)
-        self.view.backgroundColor = .blue
         eventHandler.didInit()
     }
     

@@ -151,9 +151,18 @@ extension App {
             presenter.viewController = resolver.resolve(TabBarViewControllerProtocol.self)!
         }
         
-        container.register(BrowseViewController.self) { _ in
-            return BrowseViewController()
-        }.implements(BrowseViewControllerProtocol.self)
+        container.register(DotchiViewController.self) { _ in
+            return DotchiViewController()
+        }.implements(DotchiViewControllerProtocol.self)
+        
+        container.register(MetricsViewController.self) { _ in
+            return MetricsViewController()
+        }.implements(MetricsViewControllerProtocol.self)
+        
+        container.register(LogsViewController.self) { _ in
+            return LogsViewController()
+        }.implements(LogsViewControllerProtocol.self)
+        
         return container
     }
 }

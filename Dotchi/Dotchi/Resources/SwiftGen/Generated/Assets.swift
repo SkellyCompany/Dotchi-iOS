@@ -27,6 +27,7 @@ internal enum Asset {
     internal static let backgroundQuaternary = ColorAsset(name: "BackgroundQuaternary")
     internal static let backgroundSecondary = ColorAsset(name: "BackgroundSecondary")
     internal static let backgroundTertiary = ColorAsset(name: "BackgroundTertiary")
+    internal static let pastelBackground = ColorAsset(name: "PastelBackground")
     internal static let textPrimary = ColorAsset(name: "TextPrimary")
     internal static let textQuaternary = ColorAsset(name: "TextQuaternary")
     internal static let textSecondary = ColorAsset(name: "TextSecondary")
