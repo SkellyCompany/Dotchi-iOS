@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "637DD8F0262C93DD005972BD"
-               BuildableName = "Portal.app"
-               BlueprintName = "Portal"
-               ReferencedContainer = "container:Portal.xcodeproj">
+               BuildableName = "Dotchi.app"
+               BlueprintName = "Dotchi"
+               ReferencedContainer = "container:Dotchi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "637DD8F0262C93DD005972BD"
-            BuildableName = "Portal.app"
-            BlueprintName = "Portal"
-            ReferencedContainer = "container:Portal.xcodeproj">
+            BuildableName = "Dotchi.app"
+            BlueprintName = "Dotchi"
+            ReferencedContainer = "container:Dotchi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "637DD8F0262C93DD005972BD"
-            BuildableName = "Portal.app"
-            BlueprintName = "Portal"
-            ReferencedContainer = "container:Portal.xcodeproj">
+            BuildableName = "Dotchi.app"
+            BlueprintName = "Dotchi"
+            ReferencedContainer = "container:Dotchi.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

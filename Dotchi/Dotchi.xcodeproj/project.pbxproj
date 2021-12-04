@@ -231,7 +231,7 @@
 		6354C8DB2758C1E100CB2415 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		6354C8DD2758C21100CB2415 /* AppProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProtocol.swift; sourceTree = "<group>"; };
 		6354C8DF2758C3F700CB2415 /* App+AppProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+AppProtocol.swift"; sourceTree = "<group>"; };
-		637DD8F1262C93DD005972BD /* Portal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Portal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		637DD8F1262C93DD005972BD /* Dotchi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dotchi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		637DD902262C93DF005972BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6380D9DD270EEF8D006B4E0C /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		6380D9DF270EEF98006B4E0C /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
@@ -797,7 +797,7 @@
 		637DD8E8262C93DD005972BD = {
 			isa = PBXGroup;
 			children = (
-				637DD8F3262C93DD005972BD /* Portal */,
+				637DD8F3262C93DD005972BD /* Dotchi */,
 				637DD8F2262C93DD005972BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -805,12 +805,12 @@
 		637DD8F2262C93DD005972BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				637DD8F1262C93DD005972BD /* Portal.app */,
+				637DD8F1262C93DD005972BD /* Dotchi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		637DD8F3262C93DD005972BD /* Portal */ = {
+		637DD8F3262C93DD005972BD /* Dotchi */ = {
 			isa = PBXGroup;
 			children = (
 				637DD91C262C9645005972BD /* Resources */,
@@ -819,7 +819,7 @@
 				3747FECB26D03DE200F3A219 /* Components */,
 				63FEC5D42721787500201749 /* Infrastructure */,
 			);
-			path = Portal;
+			path = Dotchi;
 			sourceTree = "<group>";
 		};
 		637DD91C262C9645005972BD /* Resources */ = {
@@ -1211,9 +1211,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		637DD8F0262C93DD005972BD /* Portal */ = {
+		637DD8F0262C93DD005972BD /* Dotchi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 637DD905262C93DF005972BD /* Build configuration list for PBXNativeTarget "Portal" */;
+			buildConfigurationList = 637DD905262C93DF005972BD /* Build configuration list for PBXNativeTarget "Dotchi" */;
 			buildPhases = (
 				637DD8ED262C93DD005972BD /* Sources */,
 				637DD8EE262C93DD005972BD /* Frameworks */,
@@ -1226,7 +1226,7 @@
 			);
 			dependencies = (
 			);
-			name = Portal;
+			name = Dotchi;
 			packageProductDependencies = (
 				3747FA4F26D02CB000F3A219 /* FirebaseAnalytics */,
 				3747FA5126D02CB000F3A219 /* FirebaseMessaging */,
@@ -1242,7 +1242,7 @@
 				74D9437127593D83000D421D /* Swinject */,
 			);
 			productName = Portal;
-			productReference = 637DD8F1262C93DD005972BD /* Portal.app */;
+			productReference = 637DD8F1262C93DD005972BD /* Dotchi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1259,7 +1259,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 637DD8EC262C93DD005972BD /* Build configuration list for PBXProject "Portal" */;
+			buildConfigurationList = 637DD8EC262C93DD005972BD /* Build configuration list for PBXProject "Dotchi" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -1285,7 +1285,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				637DD8F0262C93DD005972BD /* Portal */,
+				637DD8F0262C93DD005972BD /* Dotchi */,
 			);
 		};
 /* End PBXProject section */
@@ -1644,12 +1644,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8ZG2L8C39H;
-				INFOPLIST_FILE = Portal/Resources/Info/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dotchi/Resources/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.charyszczak.Portal;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.charyszczak.Dotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1664,12 +1664,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8ZG2L8C39H;
-				INFOPLIST_FILE = Portal/Resources/Info/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Dotchi/Resources/Info/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = dev.charyszczak.Portal;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.charyszczak.Dotchi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1679,7 +1679,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		637DD8EC262C93DD005972BD /* Build configuration list for PBXProject "Portal" */ = {
+		637DD8EC262C93DD005972BD /* Build configuration list for PBXProject "Dotchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				637DD903262C93DF005972BD /* Debug */,
@@ -1688,7 +1688,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		637DD905262C93DF005972BD /* Build configuration list for PBXNativeTarget "Portal" */ = {
+		637DD905262C93DF005972BD /* Build configuration list for PBXNativeTarget "Dotchi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				637DD906262C93DF005972BD /* Debug */,
