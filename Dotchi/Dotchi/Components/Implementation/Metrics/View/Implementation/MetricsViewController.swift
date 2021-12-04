@@ -9,5 +9,9 @@ import Foundation
 import UIKit
 
 class MetricsViewController: UIViewController {
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Metrics"
+        self.view.backgroundColor = Asset.Colors.pastelBackground.color
+    }
 }

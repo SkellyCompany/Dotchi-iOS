@@ -138,18 +138,14 @@ extension App {
     }
     
     private func setupComponents(container: Container) -> Container {
-        container.register(TabBarViewController.self) { resolver in
+        container.register(TabBarController.self) { resolver in
             let router = resolver.resolve(RouterProtocol.self)!
-            let eventHandler = resolver.resolve(TabBarEventHandler.self)!
-            let viewController = TabBarViewController(router: router, eventHandler: eventHandler)
+            let viewController = TabBarController(router: router)
             return viewController
-        }.implements(TabBarViewControllerProtocol.self)
-        container.register(TabBarEventHandler.self) { _ in
-            return TabBarPresenter()
-        }.initCompleted { resolver, eventHandler in
-            let presenter = eventHandler as! TabBarPresenter
-            presenter.viewController = resolver.resolve(TabBarViewControllerProtocol.self)!
         }
+        container.register(NavigationController.self) { _ in
+            return NavigationController()
+        }.inObjectScope(.transient)
         
         container.register(DotchiViewController.self) { _ in
             return DotchiViewController()

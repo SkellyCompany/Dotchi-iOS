@@ -9,6 +9,8 @@ import UIKit
 
 class DotchiViewController: UIViewController {
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.title = "Dotchi"
+        self.view.backgroundColor = Asset.Colors.pastelBackground.color
     }
 }

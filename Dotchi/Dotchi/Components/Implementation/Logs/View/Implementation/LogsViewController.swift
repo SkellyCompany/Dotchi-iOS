@@ -9,5 +9,9 @@ import Foundation
 import UIKit
 
 class LogsViewController: UIViewController {
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.title = "Logs"
+        self.view.backgroundColor = Asset.Colors.pastelBackground.color
+    }
 }

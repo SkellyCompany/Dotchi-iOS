@@ -9,5 +9,5 @@ import Foundation
 import UIKit
 
 protocol RouterProtocol {
-    func route(to route: Route, style: PresentationStyle)
+    func route(to route: Route, style: PresentationStyle, options: [RoutingOption]?)
 }

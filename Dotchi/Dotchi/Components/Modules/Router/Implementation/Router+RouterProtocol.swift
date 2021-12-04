@@ -8,20 +8,29 @@
 import UIKit
 
 extension Router: RouterProtocol {
-    func route(to route: Route, style: PresentationStyle) {
+    func route(to route: Route, style: PresentationStyle, options: [RoutingOption]?) {
+        var viewController = resolveViewController(for: route)
+        options?.forEach { option in
+            switch option {
+            case .wrapInNavigation:
+                let navigation = container.resolve(NavigationController.self)!
+                navigation.viewControllers = [viewController]
+                viewController = navigation
+            }
+        }
+        self.route(to: viewController, style: style)
+    }
+    
+    private func resolveViewController(for route: Route) -> UIViewController {
         switch route {
         case .tabBar:
-            let viewController = container.resolve(TabBarViewController.self)!
-            self.route(to: viewController, style: style)
+            return container.resolve(TabBarController.self)!
         case .dotchi:
-            let viewController = container.resolve(DotchiViewController.self)!
-            self.route(to: viewController, style: style)
+            return container.resolve(DotchiViewController.self)!
         case .metrics:
-            let viewController = container.resolve(MetricsViewController.self)!
-            self.route(to: viewController, style: style)
+            return container.resolve(MetricsViewController.self)!
         case .logs:
-            let viewController = container.resolve(LogsViewController.self)!
-            self.route(to: viewController, style: style)
+            return container.resolve(LogsViewController.self)!
         }
     }
     
