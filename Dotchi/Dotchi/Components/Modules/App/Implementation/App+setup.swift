@@ -45,6 +45,17 @@ extension App {
         window.tintColor = Asset.Colors.accent.color
     }
     
+    func setupComponents(in window: UIWindow) {
+        let dotchiTabBarItem = UITabBarItem(title: "Browse", image: UIImage(systemName: "pawprint"), selectedImage: UIImage(systemName: "pawprint.fill"))
+        let metricsTabBarItem = UITabBarItem(title: "Metrics", image: UIImage(systemName: "chart.bar"), selectedImage: UIImage(systemName: "chart.bar.fill"))
+        let logsTabBarItem = UITabBarItem(title: "Logs", image: UIImage(systemName: "doc.badge.gearshape"), selectedImage: UIImage(systemName: "doc.badge.gearshape.fill"))
+
+        router?.route(to: .dotchi, style: .root(window: window), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
+            .metrics : metricsTabBarItem,
+            .logs : logsTabBarItem
+        ])])
+    }
+    
     func setupFirebase() {
         FirebaseApp.configure()
     }

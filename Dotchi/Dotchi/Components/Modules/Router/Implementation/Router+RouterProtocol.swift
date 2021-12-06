@@ -16,6 +16,20 @@ extension Router: RouterProtocol {
                 let navigation = container.resolve(NavigationController.self)!
                 navigation.viewControllers = [viewController]
                 viewController = navigation
+            case .wrapInTabBar(let tabBarItem, let viewControllers):
+                let tabBar = container.resolve(TabBarController.self)!
+                let navigation = container.resolve(NavigationController.self)!
+                viewController.tabBarItem = tabBarItem
+                navigation.viewControllers = [viewController]
+                tabBar.viewControllers = [navigation]
+                viewControllers?.forEach { route, tabBarItem in
+                    let navigation = container.resolve(NavigationController.self)!
+                    let vc = resolveViewController(for: route)
+                    vc.tabBarItem = tabBarItem
+                    navigation.viewControllers = [vc]
+                    tabBar.viewControllers?.append(navigation)
+                }
+                viewController = tabBar
             }
         }
         self.route(to: viewController, style: style)
@@ -23,8 +37,6 @@ extension Router: RouterProtocol {
     
     private func resolveViewController(for route: Route) -> UIViewController {
         switch route {
-        case .tabBar:
-            return container.resolve(TabBarController.self)!
         case .dotchi:
             return container.resolve(DotchiViewController.self)!
         case .metrics:
@@ -43,13 +55,6 @@ extension Router: RouterProtocol {
             navigationController.pushViewController(viewController, animated: true)
         case .modal(let sender):
             sender.present(viewController, animated: true, completion: nil)
-        case .embed(let tabBarController, let tabBarItem):
-            viewController.tabBarItem = tabBarItem
-            if tabBarController.viewControllers == nil {
-                tabBarController.viewControllers = [viewController]
-            } else {
-                tabBarController.viewControllers?.append(viewController)
-            }
         }
     }
 }

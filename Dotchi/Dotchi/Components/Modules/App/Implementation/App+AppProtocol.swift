@@ -21,7 +21,7 @@ extension App: AppProtocol {
     func willConnect(with window: UIWindow) {
         setupTheme(in: [window])
         setupTint(in: window)
-        router?.route(to: .tabBar, style: .root(window: window))
+        setupComponents(in: window)
     }
     
     func willEnterForeground() {
