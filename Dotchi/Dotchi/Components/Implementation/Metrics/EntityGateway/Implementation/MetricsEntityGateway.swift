@@ -13,6 +13,5 @@ class MetricsEntityGateway {
     init(repository: MetricRepositoryProtocol) {
         self.repository = repository
         print("Testing websockets...")
-        repository.test()
     }
 }

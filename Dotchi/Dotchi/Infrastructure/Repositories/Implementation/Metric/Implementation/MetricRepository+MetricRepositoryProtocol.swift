@@ -8,7 +8,5 @@
 import Foundation
 
 extension MetricRepository: MetricRepositoryProtocol {
-    func test() {
-        service.test()
-    }
+
 }
