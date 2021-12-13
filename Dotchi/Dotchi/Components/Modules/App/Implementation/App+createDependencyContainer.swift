@@ -70,6 +70,9 @@ extension App {
         container.register(HttpServiceProtocol.self) { resolver in
             return HttpService()
         }
+        container.register(WebSocketServiceProtocol.self) { resolver in
+            return WebSocketService()
+        }
         return container
     }
     
@@ -134,6 +137,10 @@ extension App {
             let service = resolver.resolve(HttpServiceProtocol.self)!
             return AuthenticationRepository(storage: storage, defaults: defaults, environment: environment, logger: logger, service: service)
         }
+        container.register(MetricRepositoryProtocol.self) { resolver in
+            let service = resolver.resolve(WebSocketServiceProtocol.self)!
+            return MetricRepository(service: service)
+        }
         return container
     }
     
@@ -151,9 +158,25 @@ extension App {
             return DotchiViewController()
         }.implements(DotchiViewControllerProtocol.self)
         
-        container.register(MetricsViewController.self) { _ in
-            return MetricsViewController()
+        container.register(MetricsViewController.self) { resolver in
+            let eventHandler = resolver.resolve(MetricsEventHandlerProtocol.self)!
+            return MetricsViewController(eventHandler: eventHandler)
         }.implements(MetricsViewControllerProtocol.self)
+        container.register(MetricsEventHandlerProtocol.self) { resolver in
+            let interactor = resolver.resolve(MetricsInteractorProtocol.self)!
+            return MetricsPresenter(interactor: interactor)
+        }.initCompleted { resolver, eventHandler in
+            let presenter = eventHandler as! MetricsPresenter
+            presenter.viewController = resolver.resolve(MetricsViewControllerProtocol.self)!
+        }
+        container.register(MetricsInteractorProtocol.self) { resolver in
+            let entityGateway = resolver.resolve(MetricsEntityGatewayProtocol.self)!
+            return MetricsInteractor(entityGateway: entityGateway)
+        }
+        container.register(MetricsEntityGatewayProtocol.self) { resolver in
+            let repository = resolver.resolve(MetricRepositoryProtocol.self)!
+            return MetricsEntityGateway(repository: repository)
+        }
         
         container.register(LogsViewController.self) { _ in
             return LogsViewController()

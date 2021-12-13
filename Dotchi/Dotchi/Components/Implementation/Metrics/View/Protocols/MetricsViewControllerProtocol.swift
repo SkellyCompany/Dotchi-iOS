@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol MetricsViewControllerProtocol {
+protocol MetricsViewControllerProtocol: AnyObject {
     
 }

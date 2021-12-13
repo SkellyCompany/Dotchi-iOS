@@ -118,6 +118,18 @@
 		639CC705273276D800801616 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639CC704273276D800801616 /* Colors.swift */; };
 		639CC707273276EE00801616 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639CC706273276EE00801616 /* Icons.swift */; };
 		639CC709273276F600801616 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639CC708273276F600801616 /* Animations.swift */; };
+		740E8333276765CE00D233CC /* MetricRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E8332276765CE00D233CC /* MetricRepository.swift */; };
+		740E8337276765E100D233CC /* MetricRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E8336276765E100D233CC /* MetricRepositoryProtocol.swift */; };
+		740E8339276765F700D233CC /* MetricRepository+MetricRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E8338276765F700D233CC /* MetricRepository+MetricRepositoryProtocol.swift */; };
+		740E833E27676AEA00D233CC /* MetricsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E833D27676AEA00D233CC /* MetricsInteractorProtocol.swift */; };
+		740E834027676AF200D233CC /* MetricsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E833F27676AF200D233CC /* MetricsInteractor.swift */; };
+		740E834227676AFF00D233CC /* MetricsInteractor+MetricsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834127676AFF00D233CC /* MetricsInteractor+MetricsInteractorProtocol.swift */; };
+		740E834727676B6D00D233CC /* MetricsEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834627676B6D00D233CC /* MetricsEventHandlerProtocol.swift */; };
+		740E834927676B8300D233CC /* MetricsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834827676B8300D233CC /* MetricsPresenter.swift */; };
+		740E834B27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834A27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift */; };
+		740E835027676BF200D233CC /* MetricsEntityGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834F27676BF200D233CC /* MetricsEntityGatewayProtocol.swift */; };
+		740E835227676BFC00D233CC /* MetricsEntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E835127676BFC00D233CC /* MetricsEntityGateway.swift */; };
+		740E835427676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E835327676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift */; };
 		74402E83275B9AB400D94943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74402E82275B9AB400D94943 /* GoogleService-Info.plist */; };
 		74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E8F275BA2EE00D94943 /* NavigationController.swift */; };
 		74402E92275BA41100D94943 /* RoutingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E91275BA41100D94943 /* RoutingOption.swift */; };
@@ -250,6 +262,18 @@
 		639CC704273276D800801616 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		639CC706273276EE00801616 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		639CC708273276F600801616 /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		740E8332276765CE00D233CC /* MetricRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricRepository.swift; sourceTree = "<group>"; };
+		740E8336276765E100D233CC /* MetricRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricRepositoryProtocol.swift; sourceTree = "<group>"; };
+		740E8338276765F700D233CC /* MetricRepository+MetricRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetricRepository+MetricRepositoryProtocol.swift"; sourceTree = "<group>"; };
+		740E833D27676AEA00D233CC /* MetricsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsInteractorProtocol.swift; sourceTree = "<group>"; };
+		740E833F27676AF200D233CC /* MetricsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsInteractor.swift; sourceTree = "<group>"; };
+		740E834127676AFF00D233CC /* MetricsInteractor+MetricsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetricsInteractor+MetricsInteractorProtocol.swift"; sourceTree = "<group>"; };
+		740E834627676B6D00D233CC /* MetricsEventHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsEventHandlerProtocol.swift; sourceTree = "<group>"; };
+		740E834827676B8300D233CC /* MetricsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsPresenter.swift; sourceTree = "<group>"; };
+		740E834A27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetricsPresenter+MetricsEventHandlerProtocol.swift"; sourceTree = "<group>"; };
+		740E834F27676BF200D233CC /* MetricsEntityGatewayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsEntityGatewayProtocol.swift; sourceTree = "<group>"; };
+		740E835127676BFC00D233CC /* MetricsEntityGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsEntityGateway.swift; sourceTree = "<group>"; };
+		740E835327676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetricsEntityGateway+MetricsEntityGatewayProtocol.swift"; sourceTree = "<group>"; };
 		74402E82275B9AB400D94943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74402E8F275BA2EE00D94943 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		74402E91275BA41100D94943 /* RoutingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingOption.swift; sourceTree = "<group>"; };
@@ -747,8 +771,6 @@
 		6350CBF527306626009F272C /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
-				74D943352758FF59000D421D /* TabBar */,
-				74402E8E275BA2D900D94943 /* Navigation */,
 				74D9435927593756000D421D /* Dotchi */,
 				74C4EADC275B6FB500034387 /* Metrics */,
 				74C4EADD275B6FBB00034387 /* Logs */,
@@ -762,6 +784,7 @@
 				3747FE8F26D03DE200F3A219 /* Authentication */,
 				3747FE8626D03DE200F3A219 /* User */,
 				3747FE8C26D03DE200F3A219 /* UserPreferences */,
+				740E8331276765BA00D233CC /* Metric */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1053,6 +1076,110 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		740E8331276765BA00D233CC /* Metric */ = {
+			isa = PBXGroup;
+			children = (
+				740E8335276765D500D233CC /* Implementation */,
+				740E8334276765D100D233CC /* Protocols */,
+			);
+			path = Metric;
+			sourceTree = "<group>";
+		};
+		740E8334276765D100D233CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				740E8336276765E100D233CC /* MetricRepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		740E8335276765D500D233CC /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				740E8332276765CE00D233CC /* MetricRepository.swift */,
+				740E8338276765F700D233CC /* MetricRepository+MetricRepositoryProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		740E833A27676A9400D233CC /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				740E833C27676AC400D233CC /* Implementation */,
+				740E833B27676AA100D233CC /* Protocols */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		740E833B27676AA100D233CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				740E833D27676AEA00D233CC /* MetricsInteractorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		740E833C27676AC400D233CC /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				740E833F27676AF200D233CC /* MetricsInteractor.swift */,
+				740E834127676AFF00D233CC /* MetricsInteractor+MetricsInteractorProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		740E834327676B4500D233CC /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				740E834527676B5400D233CC /* Implementation */,
+				740E834427676B4F00D233CC /* Protocols */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		740E834427676B4F00D233CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				740E834627676B6D00D233CC /* MetricsEventHandlerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		740E834527676B5400D233CC /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				740E834827676B8300D233CC /* MetricsPresenter.swift */,
+				740E834A27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		740E834C27676BCB00D233CC /* EntityGateway */ = {
+			isa = PBXGroup;
+			children = (
+				740E834E27676BE000D233CC /* Implementation */,
+				740E834D27676BD800D233CC /* Protocols */,
+			);
+			path = EntityGateway;
+			sourceTree = "<group>";
+		};
+		740E834D27676BD800D233CC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				740E834F27676BF200D233CC /* MetricsEntityGatewayProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		740E834E27676BE000D233CC /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				740E835127676BFC00D233CC /* MetricsEntityGateway.swift */,
+				740E835327676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
 		74402E8E275BA2D900D94943 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1070,18 +1197,21 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
-		7445EEC7275AC9E300072FBC /* Protocol */ = {
+		7445EEC7275AC9E300072FBC /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				7445EEC8275AC9F400072FBC /* DotchiViewControllerProtocol.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		74C4EADC275B6FB500034387 /* Metrics */ = {
 			isa = PBXGroup;
 			children = (
 				74C4EADE275B6FCB00034387 /* View */,
+				740E834327676B4500D233CC /* Presenter */,
+				740E833A27676A9400D233CC /* Interactor */,
+				740E834C27676BCB00D233CC /* EntityGateway */,
 			);
 			path = Metrics;
 			sourceTree = "<group>";
@@ -1098,7 +1228,7 @@
 			isa = PBXGroup;
 			children = (
 				74C4EAE3275B707F00034387 /* Implementation */,
-				74C4EAE0275B706E00034387 /* Protocol */,
+				74C4EAE0275B706E00034387 /* Protocols */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1107,25 +1237,25 @@
 			isa = PBXGroup;
 			children = (
 				74C4EAE2275B707A00034387 /* Implementation */,
-				74C4EAE1275B707500034387 /* Protocol */,
+				74C4EAE1275B707500034387 /* Protocols */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		74C4EAE0275B706E00034387 /* Protocol */ = {
+		74C4EAE0275B706E00034387 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				74C4EAE4275B709700034387 /* MetricsViewControllerProtocol.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
-		74C4EAE1275B707500034387 /* Protocol */ = {
+		74C4EAE1275B707500034387 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
 				74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */,
 			);
-			path = Protocol;
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 		74C4EAE2275B707A00034387 /* Implementation */ = {
@@ -1151,6 +1281,8 @@
 			children = (
 				3747FFA326D03DE200F3A219 /* App */,
 				74D943322758FEE6000D421D /* Router */,
+				74D943352758FF59000D421D /* TabBar */,
+				74402E8E275BA2D900D94943 /* Navigation */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1239,7 +1371,7 @@
 			isa = PBXGroup;
 			children = (
 				7445EEC6275AC98E00072FBC /* Implementation */,
-				7445EEC7275AC9E300072FBC /* Protocol */,
+				7445EEC7275AC9E300072FBC /* Protocols */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1444,16 +1576,20 @@
 				6380D9DE270EEF8D006B4E0C /* Language.swift in Sources */,
 				63302F3926FB162300F0ADB9 /* EnvironmentProtocol.swift in Sources */,
 				63302F1026F8FE2400F0ADB9 /* UserPreferencesRepository+UserPreferencesRepositoryProtocol.swift in Sources */,
+				740E8337276765E100D233CC /* MetricRepositoryProtocol.swift in Sources */,
 				74C4EAE9275B70AD00034387 /* LogsViewController.swift in Sources */,
+				740E835427676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift in Sources */,
 				3747005B26D03DE300F3A219 /* Cache.swift in Sources */,
 				373A485527035BAF00820FD0 /* InputData.swift in Sources */,
 				3747001A26D03DE300F3A219 /* DTO.swift in Sources */,
 				37D44E84272CA7FB001AA0F4 /* Strings.swift in Sources */,
 				74C4EAEB275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift in Sources */,
+				740E834027676AF200D233CC /* MetricsInteractor.swift in Sources */,
 				378A3D5F26E65D55002946DD /* AppDefaults.swift in Sources */,
 				74D9435127592D2E000D421D /* Router+RouterProtocol.swift in Sources */,
 				3704283226E8FB0800AD0FF4 /* ResetPasswordError.swift in Sources */,
 				63302F2E26FB150A00F0ADB9 /* SystemInfoProtocol.swift in Sources */,
+				740E834B27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift in Sources */,
 				6354C8E02758C3F700CB2415 /* App+AppProtocol.swift in Sources */,
 				63302EFB26F8F8D700F0ADB9 /* ResetPasswordError+init.swift in Sources */,
 				3747002226D03DE300F3A219 /* ComponentErrorProtocol.swift in Sources */,
@@ -1472,16 +1608,20 @@
 				63302F3B26FB163200F0ADB9 /* Environment+EnvironmentProtocol.swift in Sources */,
 				373A485727035BC000820FD0 /* OutputData.swift in Sources */,
 				63302F3326FB15B200F0ADB9 /* AppDefaultsProtocol.swift in Sources */,
+				740E835027676BF200D233CC /* MetricsEntityGatewayProtocol.swift in Sources */,
 				63070CDF26EFDAA300796082 /* AppCacheProtocol.swift in Sources */,
 				3704282E26E8FADB00AD0FF4 /* ResetPasswordDTO.swift in Sources */,
 				6395103C2703BA5F005F57D3 /* LoginError+DataErrorProtocol.swift in Sources */,
 				3747005C26D03DE300F3A219 /* CacheProtocol.swift in Sources */,
+				740E834227676AFF00D233CC /* MetricsInteractor+MetricsInteractorProtocol.swift in Sources */,
+				740E834927676B8300D233CC /* MetricsPresenter.swift in Sources */,
 				7445EECB275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift in Sources */,
 				6354C8DE2758C21100CB2415 /* AppProtocol.swift in Sources */,
 				63302EF526F8F85D00F0ADB9 /* DataError+init.swift in Sources */,
 				3747001926D03DE300F3A219 /* UserDTO.swift in Sources */,
 				639510262703B0D1005F57D3 /* EmptyOutput.swift in Sources */,
 				63302EF926F8F8B600F0ADB9 /* CreateAccountError+init.swift in Sources */,
+				740E834727676B6D00D233CC /* MetricsEventHandlerProtocol.swift in Sources */,
 				7445EEC9275AC9F400072FBC /* DotchiViewControllerProtocol.swift in Sources */,
 				6380D9E0270EEF98006B4E0C /* Theme.swift in Sources */,
 				3747001826D03DE300F3A219 /* UserRoleDTO.swift in Sources */,
@@ -1493,6 +1633,7 @@
 				63302F4D26FB1CA900F0ADB9 /* Endpoint+getUrlString.swift in Sources */,
 				3747005A26D03DE300F3A219 /* CacheItem.swift in Sources */,
 				3747003F26D03DE300F3A219 /* Environment.swift in Sources */,
+				740E8339276765F700D233CC /* MetricRepository+MetricRepositoryProtocol.swift in Sources */,
 				74402E94275BA45600D94943 /* RouterProtocol+defaults.swift in Sources */,
 				74402E92275BA41100D94943 /* RoutingOption.swift in Sources */,
 				63302F4126FB173400F0ADB9 /* Route.swift in Sources */,
@@ -1500,6 +1641,7 @@
 				63302F3626FB15C200F0ADB9 /* AppDefaults+AppDefaultsProtocol.swift in Sources */,
 				3747002D26D03DE300F3A219 /* UserRole.swift in Sources */,
 				3704282D26E8FADB00AD0FF4 /* CreateAccountDTO.swift in Sources */,
+				740E8333276765CE00D233CC /* MetricRepository.swift in Sources */,
 				63070C7926EFC35000796082 /* ResetPasswordError+ComponentErrorProtocol.swift in Sources */,
 				63070C7726EFC31F00796082 /* CreateAccountError+ComponentErrorProtocol.swift in Sources */,
 				3747005F26D03DE300F3A219 /* UserDefaultsProtocol.swift in Sources */,
@@ -1514,6 +1656,8 @@
 				3747006026D03DE300F3A219 /* AppStorable.swift in Sources */,
 				6395103A2703BA4A005F57D3 /* DataError+DataErrorProtocol.swift in Sources */,
 				3747004C26D03DE300F3A219 /* UserRepositoryProtocol.swift in Sources */,
+				740E835227676BFC00D233CC /* MetricsEntityGateway.swift in Sources */,
+				740E833E27676AEA00D233CC /* MetricsInteractorProtocol.swift in Sources */,
 				3747012726D03DE300F3A219 /* SceneDelegate.swift in Sources */,
 				3747002E26D03DE300F3A219 /* User.swift in Sources */,
 				6354C8DC2758C1E100CB2415 /* App.swift in Sources */,
@@ -1768,8 +1912,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:6rishka/Swifty-Communication-Services.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				branch = 1.0.8;
+				kind = branch;
 			};
 		};
 		6354C8C62758BE4700CB2415 /* XCRemoteSwiftPackageReference "Swifty-Extensions" */ = {

@@ -9,6 +9,17 @@ import Foundation
 import UIKit
 
 class MetricsViewController: UIViewController {
+    let eventHandler: MetricsEventHandlerProtocol
+    
+    init(eventHandler: MetricsEventHandlerProtocol) {
+        self.eventHandler = eventHandler
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Metrics"
