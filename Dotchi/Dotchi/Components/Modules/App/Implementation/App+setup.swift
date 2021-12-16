@@ -47,26 +47,53 @@ extension App {
     
     func launch(in window: UIWindow) {
         router?.route(to: .splash, style: .root(window: window))
+        
         //TODO: Remove hardcoded dotchi id
-        dotchiRepository?.getDotchi(id: "C4:5B:BE:8C:60:F0") { result in
+        let dotchiId = "C4:5B:BE:8C:60:F0"
+        
+        let group = DispatchGroup()
+        let queue = DispatchQueue(label: "App.launch", qos: .userInteractive)
+        
+        var dotchi: Dotchi?
+        var logs: [Log]?
+        
+        group.enter()
+        dotchiRepository?.getDotchi(id: dotchiId) { result in
             switch result {
-            case .success(let dotchi):
-                let dotchiTabBarItem = UITabBarItem(title: "Browse", image: UIImage(systemName: "pawprint"), selectedImage: UIImage(systemName: "pawprint.fill"))
-                let metricsTabBarItem = UITabBarItem(title: "Metrics", image: UIImage(systemName: "chart.bar"), selectedImage: UIImage(systemName: "chart.bar.fill"))
-                let logsTabBarItem = UITabBarItem(title: "Logs", image: UIImage(systemName: "doc.badge.gearshape"), selectedImage: UIImage(systemName: "doc.badge.gearshape.fill"))
-
-                DispatchQueue.main.async {
-                    self.router?.route(to: .dotchi(model: DotchiRouteModel(dotchi: dotchi)), style: .root(window: window, transition: .flipToRight), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
-                        .metrics(model: MetricsRouteModel(dotchi: dotchi)) : metricsTabBarItem,
-                        .logs(model: LogsRouteModel(dotchi: dotchi)) : logsTabBarItem
-                    ])])
-                }
+            case .success(let fetchedDotchi):
+                dotchi = fetchedDotchi
             case .failure(let error):
                 self.logger?.log(type: .error, name: "couldNotLaunch", description: error.longDescription)
-                //TODO: Implement proper error handling
+            }
+            group.leave()
+        }
+        
+        group.enter()
+        logRepository?.getAllLogs(dotchiId: dotchiId) { result in
+            switch result {
+            case .success(let fetchedLogs):
+                logs = fetchedLogs
+            case .failure(let error):
+                self.logger?.log(type: .error, name: "couldNotLaunch", description: error.longDescription)
+            }
+            group.leave()
+        }
+        
+        group.notify(queue: queue) {
+            guard let dotchi = dotchi, let logs = logs else {
+                self.logger?.log(type: .error, name: "couldNotLaunch")
                 fatalError()
             }
-            
+            let dotchiTabBarItem = UITabBarItem(title: "Browse", image: UIImage(systemName: "pawprint"), selectedImage: UIImage(systemName: "pawprint.fill"))
+            let metricsTabBarItem = UITabBarItem(title: "Metrics", image: UIImage(systemName: "chart.bar"), selectedImage: UIImage(systemName: "chart.bar.fill"))
+            let logsTabBarItem = UITabBarItem(title: "Logs", image: UIImage(systemName: "doc.badge.gearshape"), selectedImage: UIImage(systemName: "doc.badge.gearshape.fill"))
+
+            DispatchQueue.main.async {
+                self.router?.route(to: .dotchi(model: DotchiRouteModel(dotchi: dotchi)), style: .root(window: window, transition: .flipToRight), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
+                    .metrics(model: MetricsRouteModel(dotchi: dotchi)) : metricsTabBarItem,
+                    .logs(model: LogsRouteModel(dotchi: dotchi, logs: logs)) : logsTabBarItem
+                ])])
+            }
         }
     }
     

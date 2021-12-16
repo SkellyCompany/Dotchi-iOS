@@ -22,6 +22,7 @@ class App {
     var appTrackingController: AppTrackingControllerProtocol?
     var userPreferencesRepository: UserPreferencesRepositoryProtocol?
     var dotchiRepository: DotchiRepositoryProtocol?
+    var logRepository: LogRepositoryProtocol?
     
     private init() {
         

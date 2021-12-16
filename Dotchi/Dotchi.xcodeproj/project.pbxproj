@@ -146,6 +146,12 @@
 		7411675A276B9FC50067F68D /* DotchiRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116759276B9FC50067F68D /* DotchiRouteModel.swift */; };
 		74116760276BA1800067F68D /* LogsRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411675F276BA1800067F68D /* LogsRouteModel.swift */; };
 		74116764276BA1A80067F68D /* MetricsRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116763276BA1A80067F68D /* MetricsRouteModel.swift */; };
+		74116767276BCC230067F68D /* LogDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116766276BCC230067F68D /* LogDTO.swift */; };
+		7411676A276BCC560067F68D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116769276BCC560067F68D /* Log.swift */; };
+		7411676C276BCEFB0067F68D /* Log+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411676B276BCEFB0067F68D /* Log+init.swift */; };
+		74116770276BDB880067F68D /* DotchiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411676F276BDB880067F68D /* DotchiViewModel.swift */; };
+		74116774276BDBB00067F68D /* MetricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116773276BDBB00067F68D /* MetricsViewModel.swift */; };
+		74116778276BDBCA0067F68D /* LogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116777276BDBCA0067F68D /* LogsViewModel.swift */; };
 		74402E83275B9AB400D94943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74402E82275B9AB400D94943 /* GoogleService-Info.plist */; };
 		74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E8F275BA2EE00D94943 /* NavigationController.swift */; };
 		74402E92275BA41100D94943 /* RoutingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E91275BA41100D94943 /* RoutingOption.swift */; };
@@ -312,6 +318,12 @@
 		74116759276B9FC50067F68D /* DotchiRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiRouteModel.swift; sourceTree = "<group>"; };
 		7411675F276BA1800067F68D /* LogsRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsRouteModel.swift; sourceTree = "<group>"; };
 		74116763276BA1A80067F68D /* MetricsRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRouteModel.swift; sourceTree = "<group>"; };
+		74116766276BCC230067F68D /* LogDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDTO.swift; sourceTree = "<group>"; };
+		74116769276BCC560067F68D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		7411676B276BCEFB0067F68D /* Log+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+init.swift"; sourceTree = "<group>"; };
+		7411676F276BDB880067F68D /* DotchiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiViewModel.swift; sourceTree = "<group>"; };
+		74116773276BDBB00067F68D /* MetricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewModel.swift; sourceTree = "<group>"; };
+		74116777276BDBCA0067F68D /* LogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewModel.swift; sourceTree = "<group>"; };
 		74402E82275B9AB400D94943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74402E8F275BA2EE00D94943 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		74402E91275BA41100D94943 /* RoutingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingOption.swift; sourceTree = "<group>"; };
@@ -776,6 +788,7 @@
 				746172CA276B67630071C470 /* Authentication */,
 				746172C9276B67590071C470 /* User */,
 				746172CB276B67790071C470 /* Dotchi */,
+				74116765276BCC150067F68D /* Log */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -788,6 +801,7 @@
 				63302EDB26F8F05000F0ADB9 /* UserPreferences */,
 				3747FE5626D03DE200F3A219 /* User */,
 				746172C8276B67320071C470 /* Dotchi */,
+				74116768276BCC490067F68D /* Log */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1413,6 +1427,71 @@
 			path = Domain;
 			sourceTree = "<group>";
 		};
+		74116765276BCC150067F68D /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				74116766276BCC230067F68D /* LogDTO.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		74116768276BCC490067F68D /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				74116769276BCC560067F68D /* Log.swift */,
+				7411676B276BCEFB0067F68D /* Log+init.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		7411676D276BDA610067F68D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7411676E276BDA660067F68D /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7411676E276BDA660067F68D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7411676F276BDB880067F68D /* DotchiViewModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		74116771276BDBA20067F68D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				74116772276BDBA60067F68D /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		74116772276BDBA60067F68D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74116773276BDBB00067F68D /* MetricsViewModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		74116775276BDBBB0067F68D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				74116776276BDBBE0067F68D /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		74116776276BDBBE0067F68D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74116777276BDBCA0067F68D /* LogsViewModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		74402E8E275BA2D900D94943 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1523,6 +1602,7 @@
 		74C4EADE275B6FCB00034387 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74116771276BDBA20067F68D /* Core */,
 				74C4EAE3275B707F00034387 /* Implementation */,
 				74C4EAE0275B706E00034387 /* Protocols */,
 			);
@@ -1532,6 +1612,7 @@
 		74C4EADF275B6FD000034387 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74116775276BDBBB0067F68D /* Core */,
 				74C4EAE2275B707A00034387 /* Implementation */,
 				74C4EAE1275B707500034387 /* Protocols */,
 			);
@@ -1668,6 +1749,7 @@
 		74D9436727593906000D421D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7411676D276BDA610067F68D /* Core */,
 				7445EEC6275AC98E00072FBC /* Implementation */,
 				7445EEC7275AC9E300072FBC /* Protocols */,
 			);
@@ -1864,6 +1946,7 @@
 				3704283126E8FB0800AD0FF4 /* CreateAccountError.swift in Sources */,
 				74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */,
 				746172D3276B69190071C470 /* DotchiRepository.swift in Sources */,
+				74116778276BDBCA0067F68D /* LogsViewModel.swift in Sources */,
 				3747001626D03DE300F3A219 /* LoginDTO.swift in Sources */,
 				63302F4B26FB1C9600F0ADB9 /* Endpoint.swift in Sources */,
 				74D9434A27591781000D421D /* TabBarController.swift in Sources */,
@@ -1895,6 +1978,7 @@
 				37D44E84272CA7FB001AA0F4 /* Strings.swift in Sources */,
 				74C4EAEB275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift in Sources */,
 				740E834027676AF200D233CC /* MetricsInteractor.swift in Sources */,
+				7411676A276BCC560067F68D /* Log.swift in Sources */,
 				378A3D5F26E65D55002946DD /* AppDefaults.swift in Sources */,
 				74D9435127592D2E000D421D /* Router+RouterProtocol.swift in Sources */,
 				3704283226E8FB0800AD0FF4 /* ResetPasswordError.swift in Sources */,
@@ -1904,6 +1988,7 @@
 				6354C8E02758C3F700CB2415 /* App+AppProtocol.swift in Sources */,
 				63302EFB26F8F8D700F0ADB9 /* ResetPasswordError+init.swift in Sources */,
 				3747002226D03DE300F3A219 /* ComponentErrorProtocol.swift in Sources */,
+				74116774276BDBB00067F68D /* MetricsViewModel.swift in Sources */,
 				7411674B276B89960067F68D /* DotchiEventHandlerProtocol.swift in Sources */,
 				3747005326D03DE300F3A219 /* AuthenticationRepository.swift in Sources */,
 				3747001D26D03DE300F3A219 /* UserPreferences.swift in Sources */,
@@ -1912,12 +1997,14 @@
 				63302EF726F8F87800F0ADB9 /* LoginError+init.swift in Sources */,
 				639CC707273276EE00801616 /* Icons.swift in Sources */,
 				3747010D26D03DE300F3A219 /* AppDelegate.swift in Sources */,
+				7411676C276BCEFB0067F68D /* Log+init.swift in Sources */,
 				74116710276B7BDC0067F68D /* RootTransition.swift in Sources */,
 				74116757276B8DDE0067F68D /* LogRepository.swift in Sources */,
 				7411670C276B76B10067F68D /* SplashViewControllerProtocol.swift in Sources */,
 				74D9437F27594BF0000D421D /* App+resolveDependencies.swift in Sources */,
 				63070CB326EFC92D00796082 /* Cache+CacheProtocol.swift in Sources */,
 				3747003E26D03DE300F3A219 /* SystemInfo.swift in Sources */,
+				74116767276BCC230067F68D /* LogDTO.swift in Sources */,
 				3747002B26D03DE300F3A219 /* InitializationError.swift in Sources */,
 				63302F3B26FB163200F0ADB9 /* Environment+EnvironmentProtocol.swift in Sources */,
 				63302F3326FB15B200F0ADB9 /* AppDefaultsProtocol.swift in Sources */,
@@ -1979,6 +2066,7 @@
 				3747012726D03DE300F3A219 /* SceneDelegate.swift in Sources */,
 				3747002E26D03DE300F3A219 /* User.swift in Sources */,
 				6354C8DC2758C1E100CB2415 /* App.swift in Sources */,
+				74116770276BDB880067F68D /* DotchiViewModel.swift in Sources */,
 				63070CE326EFDC6E00796082 /* AppCache+AppCacheProtocol.swift in Sources */,
 				63070CE126EFDC1200796082 /* AppStorage+AppStorageProtocol.swift in Sources */,
 				63302F0D26F8FDDD00F0ADB9 /* UserRepository+UserRepositoryProtocol.swift in Sources */,
