@@ -7,10 +7,12 @@
 
 import Foundation
 import SwiftyFeatureControllers
+import SwiftyLogger
 
 extension App {
     func resolveDependencies() {
         self.router = container?.resolve(RouterProtocol.self)!
+        self.logger = container?.resolve(LoggerProtocol.self)!
         self.languageController = container?.resolve(LanguageControllerProtocol.self)!
         self.privacyController = container?.resolve(PrivacyControllerProtocol.self)!
         self.themeController = container?.resolve(ThemeControllerProtocol.self)!

@@ -21,7 +21,7 @@ enum Endpoint {
     case createAccount
     case resetPassword
     
-    case dotchi
+    case dotchi(dotchiId: String)
     case newLog(dotchiId: String)
     case updatedMetrics(dotchiId: String)
     case updatedStatistics(dotchiId: String)

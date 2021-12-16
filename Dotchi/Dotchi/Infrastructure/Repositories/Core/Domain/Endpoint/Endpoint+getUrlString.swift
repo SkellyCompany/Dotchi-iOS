@@ -16,8 +16,8 @@ extension Endpoint {
             return "\(environment.apiUrl)/\(Self.createAccountUrl)"
         case .resetPassword:
             return "\(environment.apiUrl)/\(Self.resetPasswordUrl)"
-        case .dotchi:
-            return "\(environment.apiUrl)/\(Self.dotchiUrl)"
+        case .dotchi(let dotchiId):
+            return "\(environment.apiUrl)/\(Self.dotchiUrl)/\(dotchiId)"
         case .newLog(let dotchiId):
             return "\(environment.apiUrl)/\(Self.newLogUrl)/\(dotchiId)"
         case .updatedMetrics(let dotchiId):

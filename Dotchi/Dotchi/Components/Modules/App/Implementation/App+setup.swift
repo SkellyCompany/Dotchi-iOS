@@ -46,16 +46,27 @@ extension App {
     }
     
     func launch(in window: UIWindow) {
+        router?.route(to: .splash, style: .root(window: window))
         //TODO: Remove hardcoded dotchi id
         dotchiRepository?.getDotchi(id: "C4:5B:BE:8C:60:F0") { result in
-            let dotchiTabBarItem = UITabBarItem(title: "Browse", image: UIImage(systemName: "pawprint"), selectedImage: UIImage(systemName: "pawprint.fill"))
-            let metricsTabBarItem = UITabBarItem(title: "Metrics", image: UIImage(systemName: "chart.bar"), selectedImage: UIImage(systemName: "chart.bar.fill"))
-            let logsTabBarItem = UITabBarItem(title: "Logs", image: UIImage(systemName: "doc.badge.gearshape"), selectedImage: UIImage(systemName: "doc.badge.gearshape.fill"))
+            switch result {
+            case .success(let dotchi):
+                let dotchiTabBarItem = UITabBarItem(title: "Browse", image: UIImage(systemName: "pawprint"), selectedImage: UIImage(systemName: "pawprint.fill"))
+                let metricsTabBarItem = UITabBarItem(title: "Metrics", image: UIImage(systemName: "chart.bar"), selectedImage: UIImage(systemName: "chart.bar.fill"))
+                let logsTabBarItem = UITabBarItem(title: "Logs", image: UIImage(systemName: "doc.badge.gearshape"), selectedImage: UIImage(systemName: "doc.badge.gearshape.fill"))
 
-            self.router?.route(to: .dotchi, style: .root(window: window), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
-                .metrics : metricsTabBarItem,
-                .logs : logsTabBarItem
-            ])])
+                DispatchQueue.main.async {
+                    self.router?.route(to: .dotchi, style: .root(window: window, transition: .flipToRight), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
+                        .metrics : metricsTabBarItem,
+                        .logs : logsTabBarItem
+                    ])])
+                }
+            case .failure(let error):
+                self.logger?.log(type: .error, name: "couldNotLaunch", description: error.longDescription)
+                //TODO: Implement proper error handling
+                fatalError()
+            }
+            
         }
     }
     

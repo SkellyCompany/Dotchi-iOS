@@ -37,6 +37,8 @@ extension Router: RouterProtocol {
     
     private func resolveViewController(for route: Route) -> UIViewController {
         switch route {
+        case .splash:
+            return container.resolve(SplashViewController.self)!
         case .dotchi:
             return container.resolve(DotchiViewController.self)!
         case .metrics:
@@ -48,9 +50,10 @@ extension Router: RouterProtocol {
     
     private func route(to viewController: UIViewController, style: PresentationStyle) {
         switch style {
-        case .root(let window):
+        case .root(let window, let transition):
             window.rootViewController = viewController
             window.makeKeyAndVisible()
+            UIView.transition(with: window, duration: 0.75, options: transition?.resolve() ?? [], animations: {})
         case .navigation(let navigationController):
             navigationController.pushViewController(viewController, animated: true)
         case .modal(let sender):

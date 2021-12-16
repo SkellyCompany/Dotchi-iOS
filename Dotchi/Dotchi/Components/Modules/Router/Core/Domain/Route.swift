@@ -8,6 +8,7 @@
 import Foundation
 
 enum Route {
+    case splash
     case dotchi
     case metrics
     case logs

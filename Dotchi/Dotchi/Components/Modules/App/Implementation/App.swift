@@ -8,12 +8,14 @@
 import Foundation
 import Swinject
 import SwiftyFeatureControllers
+import SwiftyLogger
 
 class App {
     static let shared = App()
     
     var container: Container?
     var router: RouterProtocol?
+    var logger: LoggerProtocol?
     var languageController: LanguageControllerProtocol?
     var privacyController: PrivacyControllerProtocol?
     var themeController: ThemeControllerProtocol?

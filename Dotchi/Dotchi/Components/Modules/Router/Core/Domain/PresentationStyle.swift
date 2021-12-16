@@ -10,5 +10,5 @@ import UIKit
 enum PresentationStyle {
     case navigation(navigationController: UINavigationController)
     case modal(sender: UIViewController)
-    case root(window: UIWindow)
+    case root(window: UIWindow, transition: RootTransition? = nil)
 }

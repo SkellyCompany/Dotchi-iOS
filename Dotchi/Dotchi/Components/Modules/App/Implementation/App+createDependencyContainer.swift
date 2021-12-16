@@ -161,6 +161,10 @@ extension App {
             return NavigationController()
         }.inObjectScope(.transient)
         
+        container.register(SplashViewController.self) { _ in
+            return SplashViewController()
+        }.implements(SplashViewControllerProtocol.self)
+        
         container.register(DotchiViewController.self) { _ in
             return DotchiViewController()
         }.implements(DotchiViewControllerProtocol.self)
