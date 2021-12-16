@@ -1,11 +1,15 @@
 //
-//  UserRole+init.swift
+//  UserRole.swift
 //  Portal
 //
-//  Created by Greg Charyszczak on 20/09/2021.
+//  Created by Greg Charyszczak on 15/06/2021.
 //
 
 import Foundation
+
+enum UserRole: String, AppStorable {
+    case user = "User"
+}
 
 extension UserRole {
     static func initManyFrom(_ userRoleDtos: [UserRoleDTO]) -> [UserRole] {

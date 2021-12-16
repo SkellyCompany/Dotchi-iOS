@@ -15,3 +15,14 @@ struct User: AppStorable {
     let roles: [UserRole]
     let token: String
 }
+
+extension User {
+    init(from userDto: UserDTO, with password: String) {
+        self.id = userDto.id
+        self.email = userDto.email
+        self.password = password
+        self.phoneNumber = userDto.phoneNumber
+        self.roles = UserRole.initManyFrom(userDto.roles)
+        self.token = userDto.token
+    }
+}

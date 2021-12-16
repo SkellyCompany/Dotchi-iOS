@@ -6,10 +6,43 @@
 //
 
 import Foundation
+import SwiftyCommunicationServices
 
 enum DataError {
     case connectionError
     case applicationError
     case dataSourceError
     case emptyData
+}
+
+extension DataError {
+    init(error: Error?) {
+        if let httpServiceError = error as? HttpServiceError {
+            switch httpServiceError {
+            case .createRequestError, .parseError, .unknown, .refreshTokenError, .invalidToken:
+                self = .applicationError
+            case .performRequestError(let performRequestError):
+                switch performRequestError {
+                case .httpError(let statusCode, _, _):
+                    if statusCode < 500 {
+                        self = .applicationError
+                    } else {
+                        self = .dataSourceError
+                    }
+                case .connectionError:
+                    self = .connectionError
+                case .invalidResponse:
+                    self = .applicationError
+                case .emptyResponse:
+                    self = .dataSourceError
+                }
+            case .emptyData:
+                self = .emptyData
+            }
+        } else if error is InitializationError {
+            self = .applicationError
+        } else {
+            self = .applicationError
+        }
+    }
 }

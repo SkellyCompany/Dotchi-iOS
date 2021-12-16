@@ -73,13 +73,6 @@
 		63070CDF26EFDAA300796082 /* AppCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63070CDE26EFDAA300796082 /* AppCacheProtocol.swift */; };
 		63070CE126EFDC1200796082 /* AppStorage+AppStorageProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63070CE026EFDC1200796082 /* AppStorage+AppStorageProtocol.swift */; };
 		63070CE326EFDC6E00796082 /* AppCache+AppCacheProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63070CE226EFDC6E00796082 /* AppCache+AppCacheProtocol.swift */; };
-		63302EE626F8F1B300F0ADB9 /* User+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302EE526F8F1B300F0ADB9 /* User+init.swift */; };
-		63302EEC26F8F6DD00F0ADB9 /* UserRole+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302EEB26F8F6DD00F0ADB9 /* UserRole+init.swift */; };
-		63302EF526F8F85D00F0ADB9 /* DataError+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302EF426F8F85D00F0ADB9 /* DataError+init.swift */; };
-		63302EF726F8F87800F0ADB9 /* LoginError+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302EF626F8F87800F0ADB9 /* LoginError+init.swift */; };
-		63302EF926F8F8B600F0ADB9 /* CreateAccountError+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302EF826F8F8B600F0ADB9 /* CreateAccountError+init.swift */; };
-		63302EFB26F8F8D700F0ADB9 /* ResetPasswordError+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302EFA26F8F8D700F0ADB9 /* ResetPasswordError+init.swift */; };
-		63302EFD26F8F8F800F0ADB9 /* InitializationError+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302EFC26F8F8F800F0ADB9 /* InitializationError+init.swift */; };
 		63302F0A26F8FD7300F0ADB9 /* AuthenticationRepository+AuthenticationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302F0926F8FD7300F0ADB9 /* AuthenticationRepository+AuthenticationRepositoryProtocol.swift */; };
 		63302F0D26F8FDDD00F0ADB9 /* UserRepository+UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302F0C26F8FDDD00F0ADB9 /* UserRepository+UserRepositoryProtocol.swift */; };
 		63302F1026F8FE2400F0ADB9 /* UserPreferencesRepository+UserPreferencesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63302F0F26F8FE2400F0ADB9 /* UserPreferencesRepository+UserPreferencesRepositoryProtocol.swift */; };
@@ -127,7 +120,6 @@
 		7411670C276B76B10067F68D /* SplashViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411670B276B76B10067F68D /* SplashViewControllerProtocol.swift */; };
 		7411670E276B76D50067F68D /* SplashViewController+SplashViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411670D276B76D50067F68D /* SplashViewController+SplashViewControllerProtocol.swift */; };
 		74116710276B7BDC0067F68D /* RootTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411670F276B7BDC0067F68D /* RootTransition.swift */; };
-		74116713276B7C110067F68D /* RootTransition+resolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116712276B7C110067F68D /* RootTransition+resolve.swift */; };
 		7411672B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift */; };
 		7411672C276B89840067F68D /* LogsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671C276B89840067F68D /* LogsInteractor.swift */; };
 		7411672D276B89840067F68D /* LogsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671E276B89840067F68D /* LogsInteractorProtocol.swift */; };
@@ -148,23 +140,18 @@
 		74116764276BA1A80067F68D /* MetricsRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116763276BA1A80067F68D /* MetricsRouteModel.swift */; };
 		74116767276BCC230067F68D /* LogDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116766276BCC230067F68D /* LogDTO.swift */; };
 		7411676A276BCC560067F68D /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116769276BCC560067F68D /* Log.swift */; };
-		7411676C276BCEFB0067F68D /* Log+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411676B276BCEFB0067F68D /* Log+init.swift */; };
 		74116770276BDB880067F68D /* DotchiViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411676F276BDB880067F68D /* DotchiViewModel.swift */; };
 		74116774276BDBB00067F68D /* MetricsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116773276BDBB00067F68D /* MetricsViewModel.swift */; };
 		74116778276BDBCA0067F68D /* LogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116777276BDBCA0067F68D /* LogsViewModel.swift */; };
-		743B6532276BE2D300D9F57E /* DotchiStatistics+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6531276BE2D300D9F57E /* DotchiStatistics+init.swift */; };
-		743B6534276BE30400D9F57E /* DotchiMetrics+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6533276BE30400D9F57E /* DotchiMetrics+init.swift */; };
 		74402E83275B9AB400D94943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74402E82275B9AB400D94943 /* GoogleService-Info.plist */; };
 		74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E8F275BA2EE00D94943 /* NavigationController.swift */; };
 		74402E92275BA41100D94943 /* RoutingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E91275BA41100D94943 /* RoutingOption.swift */; };
-		74402E94275BA45600D94943 /* RouterProtocol+defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E93275BA45600D94943 /* RouterProtocol+defaults.swift */; };
 		7445EEC9275AC9F400072FBC /* DotchiViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7445EEC8275AC9F400072FBC /* DotchiViewControllerProtocol.swift */; };
 		7445EECB275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7445EECA275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift */; };
 		746172BB276B62B80071C470 /* DotchiRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172BA276B62B80071C470 /* DotchiRepositoryProtocol.swift */; };
 		746172C3276B65400071C470 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172C2276B65400071C470 /* Result.swift */; };
 		746172C7276B668B0071C470 /* DotchiDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172C6276B668B0071C470 /* DotchiDTO.swift */; };
 		746172CF276B67AD0071C470 /* Dotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172CE276B67AD0071C470 /* Dotchi.swift */; };
-		746172D1276B67C00071C470 /* Dotchi+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172D0276B67C00071C470 /* Dotchi+init.swift */; };
 		746172D3276B69190071C470 /* DotchiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172D2276B69190071C470 /* DotchiRepository.swift */; };
 		746172D5276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172D4276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift */; };
 		749197BE276BDE6B00F29D61 /* DotchiMetricsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197BD276BDE6B00F29D61 /* DotchiMetricsDTO.swift */; };
@@ -185,9 +172,8 @@
 		74D9435827592FC4000D421D /* PresentationStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9435727592FC4000D421D /* PresentationStyle.swift */; };
 		74D9436927593916000D421D /* DotchiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9436827593916000D421D /* DotchiViewController.swift */; };
 		74D9437227593D83000D421D /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = 74D9437127593D83000D421D /* Swinject */; };
-		74D9437427594373000D421D /* App+createDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9437327594373000D421D /* App+createDependencyContainer.swift */; };
+		74D9437427594373000D421D /* App+dependecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9437327594373000D421D /* App+dependecies.swift */; };
 		74D94376275943AB000D421D /* App+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D94375275943AB000D421D /* App+setup.swift */; };
-		74D9437F27594BF0000D421D /* App+resolveDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9437E27594BF0000D421D /* App+resolveDependencies.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -255,13 +241,6 @@
 		63070CDE26EFDAA300796082 /* AppCacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCacheProtocol.swift; sourceTree = "<group>"; };
 		63070CE026EFDC1200796082 /* AppStorage+AppStorageProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppStorage+AppStorageProtocol.swift"; sourceTree = "<group>"; };
 		63070CE226EFDC6E00796082 /* AppCache+AppCacheProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppCache+AppCacheProtocol.swift"; sourceTree = "<group>"; };
-		63302EE526F8F1B300F0ADB9 /* User+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+init.swift"; sourceTree = "<group>"; };
-		63302EEB26F8F6DD00F0ADB9 /* UserRole+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserRole+init.swift"; sourceTree = "<group>"; };
-		63302EF426F8F85D00F0ADB9 /* DataError+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataError+init.swift"; sourceTree = "<group>"; };
-		63302EF626F8F87800F0ADB9 /* LoginError+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginError+init.swift"; sourceTree = "<group>"; };
-		63302EF826F8F8B600F0ADB9 /* CreateAccountError+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateAccountError+init.swift"; sourceTree = "<group>"; };
-		63302EFA26F8F8D700F0ADB9 /* ResetPasswordError+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ResetPasswordError+init.swift"; sourceTree = "<group>"; };
-		63302EFC26F8F8F800F0ADB9 /* InitializationError+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InitializationError+init.swift"; sourceTree = "<group>"; };
 		63302F0926F8FD7300F0ADB9 /* AuthenticationRepository+AuthenticationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationRepository+AuthenticationRepositoryProtocol.swift"; sourceTree = "<group>"; };
 		63302F0C26F8FDDD00F0ADB9 /* UserRepository+UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserRepository+UserRepositoryProtocol.swift"; sourceTree = "<group>"; };
 		63302F0F26F8FE2400F0ADB9 /* UserPreferencesRepository+UserPreferencesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserPreferencesRepository+UserPreferencesRepositoryProtocol.swift"; sourceTree = "<group>"; };
@@ -305,7 +284,6 @@
 		7411670B276B76B10067F68D /* SplashViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerProtocol.swift; sourceTree = "<group>"; };
 		7411670D276B76D50067F68D /* SplashViewController+SplashViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashViewController+SplashViewControllerProtocol.swift"; sourceTree = "<group>"; };
 		7411670F276B7BDC0067F68D /* RootTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTransition.swift; sourceTree = "<group>"; };
-		74116712276B7C110067F68D /* RootTransition+resolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootTransition+resolve.swift"; sourceTree = "<group>"; };
 		7411671B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogsInteractor+LogsInteractorProtocol.swift"; sourceTree = "<group>"; };
 		7411671C276B89840067F68D /* LogsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsInteractor.swift; sourceTree = "<group>"; };
 		7411671E276B89840067F68D /* LogsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsInteractorProtocol.swift; sourceTree = "<group>"; };
@@ -326,23 +304,18 @@
 		74116763276BA1A80067F68D /* MetricsRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRouteModel.swift; sourceTree = "<group>"; };
 		74116766276BCC230067F68D /* LogDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogDTO.swift; sourceTree = "<group>"; };
 		74116769276BCC560067F68D /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
-		7411676B276BCEFB0067F68D /* Log+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Log+init.swift"; sourceTree = "<group>"; };
 		7411676F276BDB880067F68D /* DotchiViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiViewModel.swift; sourceTree = "<group>"; };
 		74116773276BDBB00067F68D /* MetricsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewModel.swift; sourceTree = "<group>"; };
 		74116777276BDBCA0067F68D /* LogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewModel.swift; sourceTree = "<group>"; };
-		743B6531276BE2D300D9F57E /* DotchiStatistics+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiStatistics+init.swift"; sourceTree = "<group>"; };
-		743B6533276BE30400D9F57E /* DotchiMetrics+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiMetrics+init.swift"; sourceTree = "<group>"; };
 		74402E82275B9AB400D94943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74402E8F275BA2EE00D94943 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		74402E91275BA41100D94943 /* RoutingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingOption.swift; sourceTree = "<group>"; };
-		74402E93275BA45600D94943 /* RouterProtocol+defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RouterProtocol+defaults.swift"; sourceTree = "<group>"; };
 		7445EEC8275AC9F400072FBC /* DotchiViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiViewControllerProtocol.swift; sourceTree = "<group>"; };
 		7445EECA275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiViewController+DotchiViewControllerProtocol.swift"; sourceTree = "<group>"; };
 		746172BA276B62B80071C470 /* DotchiRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiRepositoryProtocol.swift; sourceTree = "<group>"; };
 		746172C2276B65400071C470 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		746172C6276B668B0071C470 /* DotchiDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiDTO.swift; sourceTree = "<group>"; };
 		746172CE276B67AD0071C470 /* Dotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dotchi.swift; sourceTree = "<group>"; };
-		746172D0276B67C00071C470 /* Dotchi+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dotchi+init.swift"; sourceTree = "<group>"; };
 		746172D2276B69190071C470 /* DotchiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiRepository.swift; sourceTree = "<group>"; };
 		746172D4276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiRepository+DotchiRepositoryProtocol.swift"; sourceTree = "<group>"; };
 		749197BD276BDE6B00F29D61 /* DotchiMetricsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiMetricsDTO.swift; sourceTree = "<group>"; };
@@ -361,9 +334,8 @@
 		74D9435027592D2E000D421D /* Router+RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+RouterProtocol.swift"; sourceTree = "<group>"; };
 		74D9435727592FC4000D421D /* PresentationStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationStyle.swift; sourceTree = "<group>"; };
 		74D9436827593916000D421D /* DotchiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiViewController.swift; sourceTree = "<group>"; };
-		74D9437327594373000D421D /* App+createDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+createDependencyContainer.swift"; sourceTree = "<group>"; };
+		74D9437327594373000D421D /* App+dependecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+dependecies.swift"; sourceTree = "<group>"; };
 		74D94375275943AB000D421D /* App+setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+setup.swift"; sourceTree = "<group>"; };
-		74D9437E27594BF0000D421D /* App+resolveDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+resolveDependencies.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -440,8 +412,7 @@
 			isa = PBXGroup;
 			children = (
 				3747FE5826D03DE200F3A219 /* User.swift */,
-				63302EE526F8F1B300F0ADB9 /* User+init.swift */,
-				63302EEA26F8F6C700F0ADB9 /* UserRole */,
+				3747FE5726D03DE200F3A219 /* UserRole.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -614,7 +585,6 @@
 			isa = PBXGroup;
 			children = (
 				3747FE5226D03DE200F3A219 /* InitializationError.swift */,
-				63302EFC26F8F8F800F0ADB9 /* InitializationError+init.swift */,
 				63070C6A26EFC20E00796082 /* InitializationError+CustomStringConvertible.swift */,
 				63070C6C26EFC22400796082 /* InitializationError+LocalizedError.swift */,
 			);
@@ -625,7 +595,6 @@
 			isa = PBXGroup;
 			children = (
 				3747FE3F26D03DE200F3A219 /* DataError.swift */,
-				63302EF426F8F85D00F0ADB9 /* DataError+init.swift */,
 				639510392703BA4A005F57D3 /* DataError+DataErrorProtocol.swift */,
 			);
 			path = DataError;
@@ -635,7 +604,6 @@
 			isa = PBXGroup;
 			children = (
 				3747FE4026D03DE200F3A219 /* LoginError.swift */,
-				63302EF626F8F87800F0ADB9 /* LoginError+init.swift */,
 				6395103B2703BA5F005F57D3 /* LoginError+DataErrorProtocol.swift */,
 			);
 			path = LoginError;
@@ -645,7 +613,6 @@
 			isa = PBXGroup;
 			children = (
 				3704282F26E8FB0800AD0FF4 /* CreateAccountError.swift */,
-				63302EF826F8F8B600F0ADB9 /* CreateAccountError+init.swift */,
 				6395103D2703BA88005F57D3 /* CreateAccountError+DataErrorProtocol.swift */,
 			);
 			path = CreateAccountError;
@@ -655,7 +622,6 @@
 			isa = PBXGroup;
 			children = (
 				3704283026E8FB0800AD0FF4 /* ResetPasswordError.swift */,
-				63302EFA26F8F8D700F0ADB9 /* ResetPasswordError+init.swift */,
 				6395103F2703BAAA005F57D3 /* ResetPasswordError+DataErrorProtocol.swift */,
 			);
 			path = ResetPasswordError;
@@ -694,15 +660,6 @@
 				3747FE3826D03DE200F3A219 /* UserPreferences.swift */,
 			);
 			path = UserPreferences;
-			sourceTree = "<group>";
-		};
-		63302EEA26F8F6C700F0ADB9 /* UserRole */ = {
-			isa = PBXGroup;
-			children = (
-				3747FE5726D03DE200F3A219 /* UserRole.swift */,
-				63302EEB26F8F6DD00F0ADB9 /* UserRole+init.swift */,
-			);
-			path = UserRole;
 			sourceTree = "<group>";
 		};
 		63302F0826F8FD5A00F0ADB9 /* Implementation */ = {
@@ -864,8 +821,7 @@
 			children = (
 				6354C8DB2758C1E100CB2415 /* App.swift */,
 				6354C8DF2758C3F700CB2415 /* App+AppProtocol.swift */,
-				74D9437327594373000D421D /* App+createDependencyContainer.swift */,
-				74D9437E27594BF0000D421D /* App+resolveDependencies.swift */,
+				74D9437327594373000D421D /* App+dependecies.swift */,
 				74D94375275943AB000D421D /* App+setup.swift */,
 			);
 			path = Implementation;
@@ -1242,15 +1198,6 @@
 			path = Implementation;
 			sourceTree = "<group>";
 		};
-		74116711276B7BFE0067F68D /* RootTransition */ = {
-			isa = PBXGroup;
-			children = (
-				7411670F276B7BDC0067F68D /* RootTransition.swift */,
-				74116712276B7C110067F68D /* RootTransition+resolve.swift */,
-			);
-			path = RootTransition;
-			sourceTree = "<group>";
-		};
 		74116719276B89840067F68D /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
@@ -1451,7 +1398,6 @@
 			isa = PBXGroup;
 			children = (
 				74116769276BCC560067F68D /* Log.swift */,
-				7411676B276BCEFB0067F68D /* Log+init.swift */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -1559,9 +1505,8 @@
 			isa = PBXGroup;
 			children = (
 				746172CE276B67AD0071C470 /* Dotchi.swift */,
-				746172D0276B67C00071C470 /* Dotchi+init.swift */,
-				749197C2276BDF5200F29D61 /* Statistics */,
-				749197C1276BDF4E00F29D61 /* Metrics */,
+				749197C5276BDF7200F29D61 /* DotchiMetrics.swift */,
+				749197C3276BDF6200F29D61 /* DotchiStatistics.swift */,
 			);
 			path = Dotchi;
 			sourceTree = "<group>";
@@ -1593,24 +1538,6 @@
 				749197BF276BDE8800F29D61 /* DotchiStatisticsDTO.swift */,
 			);
 			path = Dotchi;
-			sourceTree = "<group>";
-		};
-		749197C1276BDF4E00F29D61 /* Metrics */ = {
-			isa = PBXGroup;
-			children = (
-				749197C5276BDF7200F29D61 /* DotchiMetrics.swift */,
-				743B6533276BE30400D9F57E /* DotchiMetrics+init.swift */,
-			);
-			path = Metrics;
-			sourceTree = "<group>";
-		};
-		749197C2276BDF5200F29D61 /* Statistics */ = {
-			isa = PBXGroup;
-			children = (
-				749197C3276BDF6200F29D61 /* DotchiStatistics.swift */,
-				743B6531276BE2D300D9F57E /* DotchiStatistics+init.swift */,
-			);
-			path = Statistics;
 			sourceTree = "<group>";
 		};
 		74C4EADC275B6FB500034387 /* Metrics */ = {
@@ -1737,7 +1664,6 @@
 			isa = PBXGroup;
 			children = (
 				74D9434C27592CDD000D421D /* RouterProtocol.swift */,
-				74402E93275BA45600D94943 /* RouterProtocol+defaults.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1756,7 +1682,7 @@
 				63302F4026FB173400F0ADB9 /* Route.swift */,
 				74D9435727592FC4000D421D /* PresentationStyle.swift */,
 				74402E91275BA41100D94943 /* RoutingOption.swift */,
-				74116711276B7BFE0067F68D /* RootTransition */,
+				7411670F276B7BDC0067F68D /* RootTransition.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -1959,13 +1885,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63302EE626F8F1B300F0ADB9 /* User+init.swift in Sources */,
 				63302F3126FB154F00F0ADB9 /* SystemInfo+SystemInfoProtocol.swift in Sources */,
 				7411674D276B89960067F68D /* DotchiInteractor.swift in Sources */,
 				7411672D276B89840067F68D /* LogsInteractorProtocol.swift in Sources */,
 				375603B426D03E5F009BD2FF /* Lottie.swift in Sources */,
 				3747002026D03DE300F3A219 /* DataError.swift in Sources */,
-				63302EFD26F8F8F800F0ADB9 /* InitializationError+init.swift in Sources */,
 				746172D5276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift in Sources */,
 				7411672C276B89840067F68D /* LogsInteractor.swift in Sources */,
 				3747002126D03DE300F3A219 /* LoginError.swift in Sources */,
@@ -1998,7 +1922,6 @@
 				3747004D26D03DE300F3A219 /* UserRepository.swift in Sources */,
 				63070C7326EFC2C100796082 /* DataError+ComponentErrorProtocol.swift in Sources */,
 				63516E1226F295C800325EA8 /* DataResult.swift in Sources */,
-				63302EEC26F8F6DD00F0ADB9 /* UserRole+init.swift in Sources */,
 				7411672B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift in Sources */,
 				74116760276BA1800067F68D /* LogsRouteModel.swift in Sources */,
 				639CC709273276F600801616 /* Animations.swift in Sources */,
@@ -2023,7 +1946,6 @@
 				63302F2E26FB150A00F0ADB9 /* SystemInfoProtocol.swift in Sources */,
 				740E834B27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift in Sources */,
 				6354C8E02758C3F700CB2415 /* App+AppProtocol.swift in Sources */,
-				63302EFB26F8F8D700F0ADB9 /* ResetPasswordError+init.swift in Sources */,
 				3747002226D03DE300F3A219 /* ComponentErrorProtocol.swift in Sources */,
 				74116774276BDBB00067F68D /* MetricsViewModel.swift in Sources */,
 				7411674B276B89960067F68D /* DotchiEventHandlerProtocol.swift in Sources */,
@@ -2031,14 +1953,11 @@
 				3747001D26D03DE300F3A219 /* UserPreferences.swift in Sources */,
 				3747005226D03DE300F3A219 /* AuthenticationRepositoryProtocol.swift in Sources */,
 				74D94376275943AB000D421D /* App+setup.swift in Sources */,
-				63302EF726F8F87800F0ADB9 /* LoginError+init.swift in Sources */,
 				639CC707273276EE00801616 /* Icons.swift in Sources */,
 				3747010D26D03DE300F3A219 /* AppDelegate.swift in Sources */,
-				7411676C276BCEFB0067F68D /* Log+init.swift in Sources */,
 				74116710276B7BDC0067F68D /* RootTransition.swift in Sources */,
 				74116757276B8DDE0067F68D /* LogRepository.swift in Sources */,
 				7411670C276B76B10067F68D /* SplashViewControllerProtocol.swift in Sources */,
-				74D9437F27594BF0000D421D /* App+resolveDependencies.swift in Sources */,
 				63070CB326EFC92D00796082 /* Cache+CacheProtocol.swift in Sources */,
 				3747003E26D03DE300F3A219 /* SystemInfo.swift in Sources */,
 				74116767276BCC230067F68D /* LogDTO.swift in Sources */,
@@ -2053,9 +1972,7 @@
 				740E834927676B8300D233CC /* MetricsPresenter.swift in Sources */,
 				7445EECB275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift in Sources */,
 				6354C8DE2758C21100CB2415 /* AppProtocol.swift in Sources */,
-				63302EF526F8F85D00F0ADB9 /* DataError+init.swift in Sources */,
 				3747001926D03DE300F3A219 /* UserDTO.swift in Sources */,
-				63302EF926F8F8B600F0ADB9 /* CreateAccountError+init.swift in Sources */,
 				740E834727676B6D00D233CC /* MetricsEventHandlerProtocol.swift in Sources */,
 				7411672E276B89840067F68D /* LogsPresenter.swift in Sources */,
 				7445EEC9275AC9F400072FBC /* DotchiViewControllerProtocol.swift in Sources */,
@@ -2067,22 +1984,18 @@
 				375603B326D03E5F009BD2FF /* Assets.swift in Sources */,
 				63302F4D26FB1CA900F0ADB9 /* Endpoint+getUrlString.swift in Sources */,
 				749197BE276BDE6B00F29D61 /* DotchiMetricsDTO.swift in Sources */,
-				74116713276B7C110067F68D /* RootTransition+resolve.swift in Sources */,
 				3747005A26D03DE300F3A219 /* CacheItem.swift in Sources */,
 				3747003F26D03DE300F3A219 /* Environment.swift in Sources */,
 				740E8339276765F700D233CC /* MetricRepository+MetricRepositoryProtocol.swift in Sources */,
-				74402E94275BA45600D94943 /* RouterProtocol+defaults.swift in Sources */,
 				74402E92275BA41100D94943 /* RoutingOption.swift in Sources */,
 				74116764276BA1A80067F68D /* MetricsRouteModel.swift in Sources */,
 				63302F4126FB173400F0ADB9 /* Route.swift in Sources */,
 				7411674E276B89960067F68D /* DotchiInteractorProtocol.swift in Sources */,
 				74C4EAED275B70E200034387 /* MetricsViewController+MetricsViewControllerProtocol.swift in Sources */,
-				743B6532276BE2D300D9F57E /* DotchiStatistics+init.swift in Sources */,
 				63302F3626FB15C200F0ADB9 /* AppDefaults+AppDefaultsProtocol.swift in Sources */,
 				3747002D26D03DE300F3A219 /* UserRole.swift in Sources */,
 				3704282D26E8FADB00AD0FF4 /* CreateAccountDTO.swift in Sources */,
 				740E8333276765CE00D233CC /* MetricsRepository.swift in Sources */,
-				746172D1276B67C00071C470 /* Dotchi+init.swift in Sources */,
 				63070C7926EFC35000796082 /* ResetPasswordError+ComponentErrorProtocol.swift in Sources */,
 				63070C7726EFC31F00796082 /* CreateAccountError+ComponentErrorProtocol.swift in Sources */,
 				3747005F26D03DE300F3A219 /* UserDefaultsProtocol.swift in Sources */,
@@ -2092,7 +2005,7 @@
 				37D44E82272CA7AD001AA0F4 /* Resources.swift in Sources */,
 				7411674A276B89960067F68D /* DotchiPresenter+DotchiEventHandlerProtocol.swift in Sources */,
 				7411674C276B89960067F68D /* DotchiInteractor+DotchiInteractorProtocol.swift in Sources */,
-				74D9437427594373000D421D /* App+createDependencyContainer.swift in Sources */,
+				74D9437427594373000D421D /* App+dependecies.swift in Sources */,
 				74116755276B8DD60067F68D /* LogRepository+LogRepositoryProtocol.swift in Sources */,
 				3747005D26D03DE300F3A219 /* AppCache.swift in Sources */,
 				6380D9E4270EF034006B4E0C /* Theme+ThemeProtocol.swift in Sources */,
@@ -2107,7 +2020,6 @@
 				6354C8DC2758C1E100CB2415 /* App.swift in Sources */,
 				74116770276BDB880067F68D /* DotchiViewModel.swift in Sources */,
 				63070CE326EFDC6E00796082 /* AppCache+AppCacheProtocol.swift in Sources */,
-				743B6534276BE30400D9F57E /* DotchiMetrics+init.swift in Sources */,
 				63070CE126EFDC1200796082 /* AppStorage+AppStorageProtocol.swift in Sources */,
 				63302F0D26F8FDDD00F0ADB9 /* UserRepository+UserRepositoryProtocol.swift in Sources */,
 				63070C6B26EFC20E00796082 /* InitializationError+CustomStringConvertible.swift in Sources */,

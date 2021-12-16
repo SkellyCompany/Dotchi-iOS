@@ -11,3 +11,16 @@ struct Log {
     let name: String
     let description: String
 }
+
+extension Log {
+    init(from logDto: LogDTO) {
+        self.name = logDto.name
+        self.description = logDto.description
+    }
+    
+    static func initMany(from logDtos: [LogDTO]) -> [Log] {
+        return logDtos.map { logDto in
+            return Log(name: logDto.name, description: logDto.description)
+        }
+    }
+}
