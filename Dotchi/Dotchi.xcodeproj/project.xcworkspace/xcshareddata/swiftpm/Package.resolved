@@ -96,8 +96,8 @@
         "repositoryURL": "https://github.com/airbnb/lottie-ios",
         "state": {
           "branch": null,
-          "revision": "79a0b70547f7c40ea54c67487f935fa2f2eaaadc",
-          "version": "3.2.3"
+          "revision": "4a6058cbbdfe4f74aeae92c8bd51ad3b0de2a1ee",
+          "version": "3.3.0"
         }
       },
       {
@@ -177,7 +177,7 @@
         "repositoryURL": "git@github.com:6rishka/Swifty-Communication-Services.git",
         "state": {
           "branch": "1.0.8",
-          "revision": "c3e42c025e68e362266e131183ea1434ceec8537",
+          "revision": "ddd04087518b95db358ba7ebc93222ba881ad236",
           "version": null
         }
       },

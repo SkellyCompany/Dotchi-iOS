@@ -8,12 +8,11 @@
 import Foundation
 
 extension Environment: EnvironmentProtocol {
-    // TODO: Set correct values
     var apiUrl: String {
         #if DEBUG
-        return "portal.io"
+        return "https://dotchiapi.herokuapp.com"
         #else
-        return "portal.io"
+        return "https://dotchiapi.herokuapp.com"
         #endif
     }
     

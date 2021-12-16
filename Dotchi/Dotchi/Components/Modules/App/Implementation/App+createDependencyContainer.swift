@@ -71,7 +71,8 @@ extension App {
             return HttpService()
         }
         container.register(WebSocketServiceProtocol.self) { resolver in
-            return WebSocketService()
+            let environment = resolver.resolve(EnvironmentProtocol.self)!
+            return WebSocketService(url: environment.apiUrl)!
         }
         return container
     }
@@ -137,9 +138,9 @@ extension App {
             let service = resolver.resolve(HttpServiceProtocol.self)!
             return AuthenticationRepository(storage: storage, defaults: defaults, environment: environment, logger: logger, service: service)
         }
-        container.register(MetricRepositoryProtocol.self) { resolver in
+        container.register(MetricsRepositoryProtocol.self) { resolver in
             let service = resolver.resolve(WebSocketServiceProtocol.self)!
-            return MetricRepository(service: service)
+            return MetricsRepository(service: service)
         }
         return container
     }
@@ -174,7 +175,7 @@ extension App {
             return MetricsInteractor(entityGateway: entityGateway)
         }
         container.register(MetricsEntityGatewayProtocol.self) { resolver in
-            let repository = resolver.resolve(MetricRepositoryProtocol.self)!
+            let repository = resolver.resolve(MetricsRepositoryProtocol.self)!
             return MetricsEntityGateway(repository: repository)
         }
         

@@ -10,7 +10,7 @@ import SwiftyCommunicationServices
 
 extension AuthenticationRepository: AuthenticationRepositoryProtocol {
     func login(with loginModel: LoginDTO, completionHandler: @escaping LoginResultCallback) {
-        service.post(returnType: UserDTO.self, endpointUrl: loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
+        service.post(response: UserDTO.self, endpointUrl: loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
             switch result {
             case .success(let userDto):
                 do {
@@ -66,7 +66,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
     func refreshToken(completionHandler: @escaping (String?) -> Void) {
         if let loggedInUser = storage.user {
             let loginModel = LoginDTO(email: loggedInUser.email, password: loggedInUser.password)
-            service.post(returnType: UserDTO.self, endpointUrl: self.loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
+            service.post(response: UserDTO.self, endpointUrl: self.loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
                 switch result {
                 case .success(let userDto):
                     do {

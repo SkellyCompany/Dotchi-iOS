@@ -11,11 +11,19 @@ extension Endpoint {
     func getUrlString(with environment: EnvironmentProtocol) -> String {
         switch self {
         case .login:
-            return "\(self.getTransferType())://\(environment.apiUrl)/\(Self.loginUrl)"
+            return "\(environment.apiUrl)/\(Self.loginUrl)"
         case .createAccount:
-            return "\(self.getTransferType())://\(environment.apiUrl)/\(Self.createAccountUrl)"
+            return "\(environment.apiUrl)/\(Self.createAccountUrl)"
         case .resetPassword:
-            return "\(self.getTransferType())://\(environment.apiUrl)/\(Self.resetPasswordUrl)"
+            return "\(environment.apiUrl)/\(Self.resetPasswordUrl)"
+        case .dotchi:
+            return "\(environment.apiUrl)/\(Self.dotchiUrl)"
+        case .newLog(let dotchiId):
+            return "\(environment.apiUrl)/\(Self.newLogUrl)/\(dotchiId)"
+        case .updatedMetrics(let dotchiId):
+            return "\(environment.apiUrl)/\(Self.updatedMetricsUrl)/\(dotchiId)"
+        case .updatedStatistics(let dotchiId):
+            return "\(environment.apiUrl)/\(Self.updatedStatisticsUrl)/\(dotchiId)"
         }
     }
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-extension MetricRepository: MetricRepositoryProtocol {
+extension MetricsRepository: MetricsRepositoryProtocol {
 
 }

@@ -8,9 +8,9 @@
 import Foundation
 
 class MetricsEntityGateway {
-    let repository: MetricRepositoryProtocol
+    let repository: MetricsRepositoryProtocol
     
-    init(repository: MetricRepositoryProtocol) {
+    init(repository: MetricsRepositoryProtocol) {
         self.repository = repository
         print("Testing websockets...")
     }
