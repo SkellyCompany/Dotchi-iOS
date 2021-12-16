@@ -7,10 +7,10 @@
 
 import Foundation
 
-class MetricsInteractor {
-    let repository: MetricsRepositoryProtocol
+class DotchiInteractor {
+    let repository: DotchiRepositoryProtocol
     
-    init(repository: MetricsRepositoryProtocol) {
+    init(repository: DotchiRepositoryProtocol) {
         self.repository = repository
     }
 }

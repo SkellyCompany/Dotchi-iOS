@@ -9,7 +9,7 @@ import Foundation
 
 extension DotchiRepository: DotchiRepositoryProtocol {
     func getDotchi(id: String, completionHandler: @escaping DotchiResultCallback) {
-        service.get(response: DotchiDTO.self, endpointUrl: Endpoint.dotchi(dotchiId: id).getUrlString(with: environment)) { result in
+        httpService.get(response: DotchiDTO.self, endpointUrl: Endpoint.dotchi(dotchiId: id).getUrlString(with: environment)) { result in
             switch result {
             case .success(let dotchiDto):
                 let dotchi = Dotchi(from: dotchiDto)

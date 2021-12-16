@@ -9,7 +9,7 @@ import Foundation
 
 enum Route {
     case splash
-    case dotchi
-    case metrics
-    case logs
+    case dotchi(model: DotchiRouteModel)
+    case metrics(model: MetricsRouteModel)
+    case logs(model: LogsRouteModel)
 }

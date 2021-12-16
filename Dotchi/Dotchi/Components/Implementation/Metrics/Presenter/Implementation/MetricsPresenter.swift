@@ -11,7 +11,10 @@ class MetricsPresenter {
     weak var viewController: MetricsViewControllerProtocol?
     let interactor: MetricsInteractorProtocol
     
-    init(interactor: MetricsInteractorProtocol) {
+    let model: MetricsRouteModel
+    
+    init(interactor: MetricsInteractorProtocol, model: MetricsRouteModel) {
         self.interactor = interactor
+        self.model = model
     }
 }

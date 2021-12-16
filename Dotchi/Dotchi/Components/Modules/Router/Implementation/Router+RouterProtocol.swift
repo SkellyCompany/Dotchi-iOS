@@ -39,11 +39,14 @@ extension Router: RouterProtocol {
         switch route {
         case .splash:
             return container.resolve(SplashViewController.self)!
-        case .dotchi:
+        case .dotchi(let model):
+            container.register(DotchiRouteModel.self) { _ in model }
             return container.resolve(DotchiViewController.self)!
-        case .metrics:
+        case .metrics(let model):
+            container.register(MetricsRouteModel.self) { _ in model }
             return container.resolve(MetricsViewController.self)!
-        case .logs:
+        case .logs(let model):
+            container.register(LogsRouteModel.self) { _ in model }
             return container.resolve(LogsViewController.self)!
         }
     }

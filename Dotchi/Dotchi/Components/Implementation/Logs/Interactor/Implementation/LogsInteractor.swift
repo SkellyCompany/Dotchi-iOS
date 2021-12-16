@@ -7,10 +7,10 @@
 
 import Foundation
 
-class MetricsInteractor {
-    let repository: MetricsRepositoryProtocol
+class LogsInteractor {
+    let repository: LogRepositoryProtocol
     
-    init(repository: MetricsRepositoryProtocol) {
+    init(repository: LogRepositoryProtocol) {
         self.repository = repository
     }
 }

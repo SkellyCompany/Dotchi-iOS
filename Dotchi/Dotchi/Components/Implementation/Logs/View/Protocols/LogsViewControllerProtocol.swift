@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol LogsViewControllerProtocol {
+protocol LogsViewControllerProtocol: AnyObject {
     
 }

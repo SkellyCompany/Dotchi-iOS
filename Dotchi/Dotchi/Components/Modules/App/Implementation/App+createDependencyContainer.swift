@@ -141,12 +141,20 @@ extension App {
         container.register(DotchiRepositoryProtocol.self) { resolver in
             let environment = resolver.resolve(EnvironmentProtocol.self)!
             let logger = resolver.resolve(LoggerProtocol.self)!
-            let service = resolver.resolve(HttpServiceProtocol.self)!
-            return DotchiRepository(environment: environment, logger: logger, service: service)
+            let httpService = resolver.resolve(HttpServiceProtocol.self)!
+            let socketService = resolver.resolve(WebSocketServiceProtocol.self)!
+            return DotchiRepository(environment: environment, logger: logger, httpService: httpService, socketService: socketService)
         }
         container.register(MetricsRepositoryProtocol.self) { resolver in
             let service = resolver.resolve(WebSocketServiceProtocol.self)!
             return MetricsRepository(service: service)
+        }
+        container.register(LogRepositoryProtocol.self) { resolver in
+            let environment = resolver.resolve(EnvironmentProtocol.self)!
+            let logger = resolver.resolve(LoggerProtocol.self)!
+            let httpService = resolver.resolve(HttpServiceProtocol.self)!
+            let socketService = resolver.resolve(WebSocketServiceProtocol.self)!
+            return LogRepository(environment: environment, logger: logger, httpService: httpService, socketService: socketService)
         }
         return container
     }
@@ -165,9 +173,22 @@ extension App {
             return SplashViewController()
         }.implements(SplashViewControllerProtocol.self)
         
-        container.register(DotchiViewController.self) { _ in
-            return DotchiViewController()
+        container.register(DotchiViewController.self) { resolver in
+            let eventHandler = resolver.resolve(DotchiEventHandlerProtocol.self)!
+            return DotchiViewController(eventHandler: eventHandler)
         }.implements(DotchiViewControllerProtocol.self)
+        container.register(DotchiEventHandlerProtocol.self) { resolver in
+            let interactor = resolver.resolve(DotchiInteractorProtocol.self)!
+            let model = resolver.resolve(DotchiRouteModel.self)!
+            return DotchiPresenter(interactor: interactor, model: model)
+        }.initCompleted { resolver, eventHandler in
+            let presenter = eventHandler as! DotchiPresenter
+            presenter.viewController = resolver.resolve(DotchiViewControllerProtocol.self)!
+        }
+        container.register(DotchiInteractorProtocol.self) { resolver in
+            let repository = resolver.resolve(DotchiRepositoryProtocol.self)!
+            return DotchiInteractor(repository: repository)
+        }
         
         container.register(MetricsViewController.self) { resolver in
             let eventHandler = resolver.resolve(MetricsEventHandlerProtocol.self)!
@@ -175,23 +196,33 @@ extension App {
         }.implements(MetricsViewControllerProtocol.self)
         container.register(MetricsEventHandlerProtocol.self) { resolver in
             let interactor = resolver.resolve(MetricsInteractorProtocol.self)!
-            return MetricsPresenter(interactor: interactor)
+            let model = resolver.resolve(MetricsRouteModel.self)!
+            return MetricsPresenter(interactor: interactor, model: model)
         }.initCompleted { resolver, eventHandler in
             let presenter = eventHandler as! MetricsPresenter
             presenter.viewController = resolver.resolve(MetricsViewControllerProtocol.self)!
         }
         container.register(MetricsInteractorProtocol.self) { resolver in
-            let entityGateway = resolver.resolve(MetricsEntityGatewayProtocol.self)!
-            return MetricsInteractor(entityGateway: entityGateway)
-        }
-        container.register(MetricsEntityGatewayProtocol.self) { resolver in
             let repository = resolver.resolve(MetricsRepositoryProtocol.self)!
-            return MetricsEntityGateway(repository: repository)
+            return MetricsInteractor(repository: repository)
         }
         
-        container.register(LogsViewController.self) { _ in
-            return LogsViewController()
+        container.register(LogsViewController.self) { resolver in
+            let eventHandler = resolver.resolve(LogsEventHandlerProtocol.self)!
+            return LogsViewController(eventHandler: eventHandler)
         }.implements(LogsViewControllerProtocol.self)
+        container.register(LogsEventHandlerProtocol.self) { resolver in
+            let interactor = resolver.resolve(LogsInteractorProtocol.self)!
+            let model = resolver.resolve(LogsRouteModel.self)!
+            return LogsPresenter(interactor: interactor, model: model)
+        }.initCompleted { resolver, eventHandler in
+            let presenter = eventHandler as! LogsPresenter
+            presenter.viewController = resolver.resolve(LogsViewControllerProtocol.self)!
+        }
+        container.register(LogsInteractorProtocol.self) { resolver in
+            let repository = resolver.resolve(LogRepositoryProtocol.self)!
+            return LogsInteractor(repository: repository)
+        }
         
         return container
     }

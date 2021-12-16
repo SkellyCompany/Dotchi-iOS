@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol DotchiViewControllerProtocol {
+protocol DotchiViewControllerProtocol: AnyObject  {
     
 }

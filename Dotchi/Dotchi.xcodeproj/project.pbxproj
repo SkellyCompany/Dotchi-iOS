@@ -123,14 +123,29 @@
 		740E834727676B6D00D233CC /* MetricsEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834627676B6D00D233CC /* MetricsEventHandlerProtocol.swift */; };
 		740E834927676B8300D233CC /* MetricsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834827676B8300D233CC /* MetricsPresenter.swift */; };
 		740E834B27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834A27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift */; };
-		740E835027676BF200D233CC /* MetricsEntityGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E834F27676BF200D233CC /* MetricsEntityGatewayProtocol.swift */; };
-		740E835227676BFC00D233CC /* MetricsEntityGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E835127676BFC00D233CC /* MetricsEntityGateway.swift */; };
-		740E835427676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E835327676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift */; };
 		74116707276B73C90067F68D /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116706276B73C90067F68D /* SplashViewController.swift */; };
 		7411670C276B76B10067F68D /* SplashViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411670B276B76B10067F68D /* SplashViewControllerProtocol.swift */; };
 		7411670E276B76D50067F68D /* SplashViewController+SplashViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411670D276B76D50067F68D /* SplashViewController+SplashViewControllerProtocol.swift */; };
 		74116710276B7BDC0067F68D /* RootTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411670F276B7BDC0067F68D /* RootTransition.swift */; };
 		74116713276B7C110067F68D /* RootTransition+resolve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116712276B7C110067F68D /* RootTransition+resolve.swift */; };
+		7411672B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift */; };
+		7411672C276B89840067F68D /* LogsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671C276B89840067F68D /* LogsInteractor.swift */; };
+		7411672D276B89840067F68D /* LogsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671E276B89840067F68D /* LogsInteractorProtocol.swift */; };
+		7411672E276B89840067F68D /* LogsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116721276B89840067F68D /* LogsPresenter.swift */; };
+		7411672F276B89840067F68D /* LogsPresenter+LogsEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116722276B89840067F68D /* LogsPresenter+LogsEventHandlerProtocol.swift */; };
+		74116730276B89840067F68D /* LogsEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116724276B89840067F68D /* LogsEventHandlerProtocol.swift */; };
+		74116749276B89960067F68D /* DotchiPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411673C276B89960067F68D /* DotchiPresenter.swift */; };
+		7411674A276B89960067F68D /* DotchiPresenter+DotchiEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411673D276B89960067F68D /* DotchiPresenter+DotchiEventHandlerProtocol.swift */; };
+		7411674B276B89960067F68D /* DotchiEventHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411673F276B89960067F68D /* DotchiEventHandlerProtocol.swift */; };
+		7411674C276B89960067F68D /* DotchiInteractor+DotchiInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116742276B89960067F68D /* DotchiInteractor+DotchiInteractorProtocol.swift */; };
+		7411674D276B89960067F68D /* DotchiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116743276B89960067F68D /* DotchiInteractor.swift */; };
+		7411674E276B89960067F68D /* DotchiInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116745276B89960067F68D /* DotchiInteractorProtocol.swift */; };
+		74116753276B8DC10067F68D /* LogRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116752276B8DC10067F68D /* LogRepositoryProtocol.swift */; };
+		74116755276B8DD60067F68D /* LogRepository+LogRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116754276B8DD60067F68D /* LogRepository+LogRepositoryProtocol.swift */; };
+		74116757276B8DDE0067F68D /* LogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116756276B8DDE0067F68D /* LogRepository.swift */; };
+		7411675A276B9FC50067F68D /* DotchiRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116759276B9FC50067F68D /* DotchiRouteModel.swift */; };
+		74116760276BA1800067F68D /* LogsRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411675F276BA1800067F68D /* LogsRouteModel.swift */; };
+		74116764276BA1A80067F68D /* MetricsRouteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116763276BA1A80067F68D /* MetricsRouteModel.swift */; };
 		74402E83275B9AB400D94943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74402E82275B9AB400D94943 /* GoogleService-Info.plist */; };
 		74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E8F275BA2EE00D94943 /* NavigationController.swift */; };
 		74402E92275BA41100D94943 /* RoutingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E91275BA41100D94943 /* RoutingOption.swift */; };
@@ -274,14 +289,29 @@
 		740E834627676B6D00D233CC /* MetricsEventHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsEventHandlerProtocol.swift; sourceTree = "<group>"; };
 		740E834827676B8300D233CC /* MetricsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsPresenter.swift; sourceTree = "<group>"; };
 		740E834A27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetricsPresenter+MetricsEventHandlerProtocol.swift"; sourceTree = "<group>"; };
-		740E834F27676BF200D233CC /* MetricsEntityGatewayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsEntityGatewayProtocol.swift; sourceTree = "<group>"; };
-		740E835127676BFC00D233CC /* MetricsEntityGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsEntityGateway.swift; sourceTree = "<group>"; };
-		740E835327676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetricsEntityGateway+MetricsEntityGatewayProtocol.swift"; sourceTree = "<group>"; };
 		74116706276B73C90067F68D /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		7411670B276B76B10067F68D /* SplashViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewControllerProtocol.swift; sourceTree = "<group>"; };
 		7411670D276B76D50067F68D /* SplashViewController+SplashViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SplashViewController+SplashViewControllerProtocol.swift"; sourceTree = "<group>"; };
 		7411670F276B7BDC0067F68D /* RootTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTransition.swift; sourceTree = "<group>"; };
 		74116712276B7C110067F68D /* RootTransition+resolve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RootTransition+resolve.swift"; sourceTree = "<group>"; };
+		7411671B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogsInteractor+LogsInteractorProtocol.swift"; sourceTree = "<group>"; };
+		7411671C276B89840067F68D /* LogsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsInteractor.swift; sourceTree = "<group>"; };
+		7411671E276B89840067F68D /* LogsInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsInteractorProtocol.swift; sourceTree = "<group>"; };
+		74116721276B89840067F68D /* LogsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsPresenter.swift; sourceTree = "<group>"; };
+		74116722276B89840067F68D /* LogsPresenter+LogsEventHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LogsPresenter+LogsEventHandlerProtocol.swift"; sourceTree = "<group>"; };
+		74116724276B89840067F68D /* LogsEventHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogsEventHandlerProtocol.swift; sourceTree = "<group>"; };
+		7411673C276B89960067F68D /* DotchiPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotchiPresenter.swift; sourceTree = "<group>"; };
+		7411673D276B89960067F68D /* DotchiPresenter+DotchiEventHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DotchiPresenter+DotchiEventHandlerProtocol.swift"; sourceTree = "<group>"; };
+		7411673F276B89960067F68D /* DotchiEventHandlerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotchiEventHandlerProtocol.swift; sourceTree = "<group>"; };
+		74116742276B89960067F68D /* DotchiInteractor+DotchiInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DotchiInteractor+DotchiInteractorProtocol.swift"; sourceTree = "<group>"; };
+		74116743276B89960067F68D /* DotchiInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotchiInteractor.swift; sourceTree = "<group>"; };
+		74116745276B89960067F68D /* DotchiInteractorProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotchiInteractorProtocol.swift; sourceTree = "<group>"; };
+		74116752276B8DC10067F68D /* LogRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRepositoryProtocol.swift; sourceTree = "<group>"; };
+		74116754276B8DD60067F68D /* LogRepository+LogRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogRepository+LogRepositoryProtocol.swift"; sourceTree = "<group>"; };
+		74116756276B8DDE0067F68D /* LogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogRepository.swift; sourceTree = "<group>"; };
+		74116759276B9FC50067F68D /* DotchiRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiRouteModel.swift; sourceTree = "<group>"; };
+		7411675F276BA1800067F68D /* LogsRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsRouteModel.swift; sourceTree = "<group>"; };
+		74116763276BA1A80067F68D /* MetricsRouteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsRouteModel.swift; sourceTree = "<group>"; };
 		74402E82275B9AB400D94943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74402E8F275BA2EE00D94943 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		74402E91275BA41100D94943 /* RoutingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingOption.swift; sourceTree = "<group>"; };
@@ -607,15 +637,6 @@
 			path = ResetPasswordError;
 			sourceTree = "<group>";
 		};
-		63070CCF26EFD57700796082 /* UserDefaultsProtocol */ = {
-			isa = PBXGroup;
-			children = (
-				3747FEA126D03DE200F3A219 /* UserDefaultsProtocol.swift */,
-				63070CD126EFD5C600796082 /* UserDefaults+UserDefaultsProtocol.swift */,
-			);
-			path = UserDefaultsProtocol;
-			sourceTree = "<group>";
-		};
 		63070CD826EFD95800796082 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
@@ -790,6 +811,7 @@
 				3747FE8C26D03DE200F3A219 /* UserPreferences */,
 				740E8331276765BA00D233CC /* Metrics */,
 				746172B6276B61240071C470 /* Dotchi */,
+				7411674F276B8DA40067F68D /* Log */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1058,7 +1080,7 @@
 			isa = PBXGroup;
 			children = (
 				3747FEA226D03DE200F3A219 /* AppStorable.swift */,
-				63070CCF26EFD57700796082 /* UserDefaultsProtocol */,
+				3747FEA126D03DE200F3A219 /* UserDefaultsProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -1066,6 +1088,7 @@
 		63C1A76E273045C1007C5DB3 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7411675C276BA0D40067F68D /* Extensions */,
 				63C1A76D273045B1007C5DB3 /* Protocols */,
 			);
 			path = Core;
@@ -1135,6 +1158,7 @@
 		740E834327676B4500D233CC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				74116761276BA1960067F68D /* Core */,
 				740E834527676B5400D233CC /* Implementation */,
 				740E834427676B4F00D233CC /* Protocols */,
 			);
@@ -1154,32 +1178,6 @@
 			children = (
 				740E834827676B8300D233CC /* MetricsPresenter.swift */,
 				740E834A27676BAF00D233CC /* MetricsPresenter+MetricsEventHandlerProtocol.swift */,
-			);
-			path = Implementation;
-			sourceTree = "<group>";
-		};
-		740E834C27676BCB00D233CC /* EntityGateway */ = {
-			isa = PBXGroup;
-			children = (
-				740E834E27676BE000D233CC /* Implementation */,
-				740E834D27676BD800D233CC /* Protocols */,
-			);
-			path = EntityGateway;
-			sourceTree = "<group>";
-		};
-		740E834D27676BD800D233CC /* Protocols */ = {
-			isa = PBXGroup;
-			children = (
-				740E834F27676BF200D233CC /* MetricsEntityGatewayProtocol.swift */,
-			);
-			path = Protocols;
-			sourceTree = "<group>";
-		};
-		740E834E27676BE000D233CC /* Implementation */ = {
-			isa = PBXGroup;
-			children = (
-				740E835127676BFC00D233CC /* MetricsEntityGateway.swift */,
-				740E835327676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1225,6 +1223,194 @@
 				74116712276B7C110067F68D /* RootTransition+resolve.swift */,
 			);
 			path = RootTransition;
+			sourceTree = "<group>";
+		};
+		74116719276B89840067F68D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				7411671A276B89840067F68D /* Implementation */,
+				7411671D276B89840067F68D /* Protocols */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		7411671A276B89840067F68D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				7411671C276B89840067F68D /* LogsInteractor.swift */,
+				7411671B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		7411671D276B89840067F68D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7411671E276B89840067F68D /* LogsInteractorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7411671F276B89840067F68D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				7411675D276BA1730067F68D /* Core */,
+				74116720276B89840067F68D /* Implementation */,
+				74116723276B89840067F68D /* Protocols */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74116720276B89840067F68D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				74116721276B89840067F68D /* LogsPresenter.swift */,
+				74116722276B89840067F68D /* LogsPresenter+LogsEventHandlerProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		74116723276B89840067F68D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				74116724276B89840067F68D /* LogsEventHandlerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7411673A276B89950067F68D /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74116758276B9FB70067F68D /* Core */,
+				7411673B276B89950067F68D /* Implementation */,
+				7411673E276B89960067F68D /* Protocols */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		7411673B276B89950067F68D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				7411673C276B89960067F68D /* DotchiPresenter.swift */,
+				7411673D276B89960067F68D /* DotchiPresenter+DotchiEventHandlerProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		7411673E276B89960067F68D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				7411673F276B89960067F68D /* DotchiEventHandlerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		74116740276B89960067F68D /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74116741276B89960067F68D /* Implementation */,
+				74116744276B89960067F68D /* Protocols */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74116741276B89960067F68D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				74116743276B89960067F68D /* DotchiInteractor.swift */,
+				74116742276B89960067F68D /* DotchiInteractor+DotchiInteractorProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		74116744276B89960067F68D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				74116745276B89960067F68D /* DotchiInteractorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		7411674F276B8DA40067F68D /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				74116751276B8DB40067F68D /* Implementation */,
+				74116750276B8DAC0067F68D /* Protocols */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		74116750276B8DAC0067F68D /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				74116752276B8DC10067F68D /* LogRepositoryProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		74116751276B8DB40067F68D /* Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				74116756276B8DDE0067F68D /* LogRepository.swift */,
+				74116754276B8DD60067F68D /* LogRepository+LogRepositoryProtocol.swift */,
+			);
+			path = Implementation;
+			sourceTree = "<group>";
+		};
+		74116758276B9FB70067F68D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7411675B276BA0270067F68D /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7411675B276BA0270067F68D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74116759276B9FC50067F68D /* DotchiRouteModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		7411675C276BA0D40067F68D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				63070CD126EFD5C600796082 /* UserDefaults+UserDefaultsProtocol.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7411675D276BA1730067F68D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				7411675E276BA1760067F68D /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		7411675E276BA1760067F68D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				7411675F276BA1800067F68D /* LogsRouteModel.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		74116761276BA1960067F68D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				74116762276BA19C0067F68D /* Domain */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		74116762276BA19C0067F68D /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				74116763276BA1A80067F68D /* MetricsRouteModel.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		74402E8E275BA2D900D94943 /* Navigation */ = {
@@ -1320,7 +1506,6 @@
 				74C4EADE275B6FCB00034387 /* View */,
 				740E834327676B4500D233CC /* Presenter */,
 				740E833A27676A9400D233CC /* Interactor */,
-				740E834C27676BCB00D233CC /* EntityGateway */,
 			);
 			path = Metrics;
 			sourceTree = "<group>";
@@ -1329,6 +1514,8 @@
 			isa = PBXGroup;
 			children = (
 				74C4EADF275B6FD000034387 /* View */,
+				7411671F276B89840067F68D /* Presenter */,
+				74116719276B89840067F68D /* Interactor */,
 			);
 			path = Logs;
 			sourceTree = "<group>";
@@ -1472,6 +1659,8 @@
 			isa = PBXGroup;
 			children = (
 				74D9436727593906000D421D /* View */,
+				7411673A276B89950067F68D /* Presenter */,
+				74116740276B89960067F68D /* Interactor */,
 			);
 			path = Dotchi;
 			sourceTree = "<group>";
@@ -1656,10 +1845,13 @@
 			files = (
 				63302EE626F8F1B300F0ADB9 /* User+init.swift in Sources */,
 				63302F3126FB154F00F0ADB9 /* SystemInfo+SystemInfoProtocol.swift in Sources */,
+				7411674D276B89960067F68D /* DotchiInteractor.swift in Sources */,
+				7411672D276B89840067F68D /* LogsInteractorProtocol.swift in Sources */,
 				375603B426D03E5F009BD2FF /* Lottie.swift in Sources */,
 				3747002026D03DE300F3A219 /* DataError.swift in Sources */,
 				63302EFD26F8F8F800F0ADB9 /* InitializationError+init.swift in Sources */,
 				746172D5276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift in Sources */,
+				7411672C276B89840067F68D /* LogsInteractor.swift in Sources */,
 				3747002126D03DE300F3A219 /* LoginError.swift in Sources */,
 				746172C3276B65400071C470 /* Result.swift in Sources */,
 				74C4EAE7275B70A200034387 /* LogsViewControllerProtocol.swift in Sources */,
@@ -1668,6 +1860,7 @@
 				63070C6D26EFC22400796082 /* InitializationError+LocalizedError.swift in Sources */,
 				3747005026D03DE300F3A219 /* UserPreferencesRepository.swift in Sources */,
 				63070CD726EFD8E800796082 /* AppStorageProtocol.swift in Sources */,
+				7411672F276B89840067F68D /* LogsPresenter+LogsEventHandlerProtocol.swift in Sources */,
 				3704283126E8FB0800AD0FF4 /* CreateAccountError.swift in Sources */,
 				74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */,
 				746172D3276B69190071C470 /* DotchiRepository.swift in Sources */,
@@ -1687,6 +1880,8 @@
 				63070C7326EFC2C100796082 /* DataError+ComponentErrorProtocol.swift in Sources */,
 				63516E1226F295C800325EA8 /* DataResult.swift in Sources */,
 				63302EEC26F8F6DD00F0ADB9 /* UserRole+init.swift in Sources */,
+				7411672B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift in Sources */,
+				74116760276BA1800067F68D /* LogsRouteModel.swift in Sources */,
 				639CC709273276F600801616 /* Animations.swift in Sources */,
 				6380D9DE270EEF8D006B4E0C /* Language.swift in Sources */,
 				63302F3926FB162300F0ADB9 /* EnvironmentProtocol.swift in Sources */,
@@ -1694,7 +1889,7 @@
 				7411670E276B76D50067F68D /* SplashViewController+SplashViewControllerProtocol.swift in Sources */,
 				740E8337276765E100D233CC /* MetricsRepositoryProtocol.swift in Sources */,
 				74C4EAE9275B70AD00034387 /* LogsViewController.swift in Sources */,
-				740E835427676C2A00D233CC /* MetricsEntityGateway+MetricsEntityGatewayProtocol.swift in Sources */,
+				74116730276B89840067F68D /* LogsEventHandlerProtocol.swift in Sources */,
 				3747005B26D03DE300F3A219 /* Cache.swift in Sources */,
 				3747001A26D03DE300F3A219 /* DTO.swift in Sources */,
 				37D44E84272CA7FB001AA0F4 /* Strings.swift in Sources */,
@@ -1709,6 +1904,7 @@
 				6354C8E02758C3F700CB2415 /* App+AppProtocol.swift in Sources */,
 				63302EFB26F8F8D700F0ADB9 /* ResetPasswordError+init.swift in Sources */,
 				3747002226D03DE300F3A219 /* ComponentErrorProtocol.swift in Sources */,
+				7411674B276B89960067F68D /* DotchiEventHandlerProtocol.swift in Sources */,
 				3747005326D03DE300F3A219 /* AuthenticationRepository.swift in Sources */,
 				3747001D26D03DE300F3A219 /* UserPreferences.swift in Sources */,
 				3747005226D03DE300F3A219 /* AuthenticationRepositoryProtocol.swift in Sources */,
@@ -1717,6 +1913,7 @@
 				639CC707273276EE00801616 /* Icons.swift in Sources */,
 				3747010D26D03DE300F3A219 /* AppDelegate.swift in Sources */,
 				74116710276B7BDC0067F68D /* RootTransition.swift in Sources */,
+				74116757276B8DDE0067F68D /* LogRepository.swift in Sources */,
 				7411670C276B76B10067F68D /* SplashViewControllerProtocol.swift in Sources */,
 				74D9437F27594BF0000D421D /* App+resolveDependencies.swift in Sources */,
 				63070CB326EFC92D00796082 /* Cache+CacheProtocol.swift in Sources */,
@@ -1724,7 +1921,6 @@
 				3747002B26D03DE300F3A219 /* InitializationError.swift in Sources */,
 				63302F3B26FB163200F0ADB9 /* Environment+EnvironmentProtocol.swift in Sources */,
 				63302F3326FB15B200F0ADB9 /* AppDefaultsProtocol.swift in Sources */,
-				740E835027676BF200D233CC /* MetricsEntityGatewayProtocol.swift in Sources */,
 				63070CDF26EFDAA300796082 /* AppCacheProtocol.swift in Sources */,
 				3704282E26E8FADB00AD0FF4 /* ResetPasswordDTO.swift in Sources */,
 				6395103C2703BA5F005F57D3 /* LoginError+DataErrorProtocol.swift in Sources */,
@@ -1737,6 +1933,7 @@
 				3747001926D03DE300F3A219 /* UserDTO.swift in Sources */,
 				63302EF926F8F8B600F0ADB9 /* CreateAccountError+init.swift in Sources */,
 				740E834727676B6D00D233CC /* MetricsEventHandlerProtocol.swift in Sources */,
+				7411672E276B89840067F68D /* LogsPresenter.swift in Sources */,
 				7445EEC9275AC9F400072FBC /* DotchiViewControllerProtocol.swift in Sources */,
 				6380D9E0270EEF98006B4E0C /* Theme.swift in Sources */,
 				3747001826D03DE300F3A219 /* UserRoleDTO.swift in Sources */,
@@ -1751,7 +1948,9 @@
 				740E8339276765F700D233CC /* MetricRepository+MetricRepositoryProtocol.swift in Sources */,
 				74402E94275BA45600D94943 /* RouterProtocol+defaults.swift in Sources */,
 				74402E92275BA41100D94943 /* RoutingOption.swift in Sources */,
+				74116764276BA1A80067F68D /* MetricsRouteModel.swift in Sources */,
 				63302F4126FB173400F0ADB9 /* Route.swift in Sources */,
+				7411674E276B89960067F68D /* DotchiInteractorProtocol.swift in Sources */,
 				74C4EAED275B70E200034387 /* MetricsViewController+MetricsViewControllerProtocol.swift in Sources */,
 				63302F3626FB15C200F0ADB9 /* AppDefaults+AppDefaultsProtocol.swift in Sources */,
 				3747002D26D03DE300F3A219 /* UserRole.swift in Sources */,
@@ -1765,14 +1964,17 @@
 				3747005126D03DE300F3A219 /* UserPreferencesRepositoryProtocol.swift in Sources */,
 				639510382703B839005F57D3 /* DataErrorProtocol.swift in Sources */,
 				37D44E82272CA7AD001AA0F4 /* Resources.swift in Sources */,
+				7411674A276B89960067F68D /* DotchiPresenter+DotchiEventHandlerProtocol.swift in Sources */,
+				7411674C276B89960067F68D /* DotchiInteractor+DotchiInteractorProtocol.swift in Sources */,
 				74D9437427594373000D421D /* App+createDependencyContainer.swift in Sources */,
+				74116755276B8DD60067F68D /* LogRepository+LogRepositoryProtocol.swift in Sources */,
 				3747005D26D03DE300F3A219 /* AppCache.swift in Sources */,
 				6380D9E4270EF034006B4E0C /* Theme+ThemeProtocol.swift in Sources */,
 				639CC705273276D800801616 /* Colors.swift in Sources */,
 				3747006026D03DE300F3A219 /* AppStorable.swift in Sources */,
+				74116749276B89960067F68D /* DotchiPresenter.swift in Sources */,
 				6395103A2703BA4A005F57D3 /* DataError+DataErrorProtocol.swift in Sources */,
 				3747004C26D03DE300F3A219 /* UserRepositoryProtocol.swift in Sources */,
-				740E835227676BFC00D233CC /* MetricsEntityGateway.swift in Sources */,
 				740E833E27676AEA00D233CC /* MetricsInteractorProtocol.swift in Sources */,
 				3747012726D03DE300F3A219 /* SceneDelegate.swift in Sources */,
 				3747002E26D03DE300F3A219 /* User.swift in Sources */,
@@ -1781,7 +1983,9 @@
 				63070CE126EFDC1200796082 /* AppStorage+AppStorageProtocol.swift in Sources */,
 				63302F0D26F8FDDD00F0ADB9 /* UserRepository+UserRepositoryProtocol.swift in Sources */,
 				63070C6B26EFC20E00796082 /* InitializationError+CustomStringConvertible.swift in Sources */,
+				7411675A276B9FC50067F68D /* DotchiRouteModel.swift in Sources */,
 				74C4EAE5275B709700034387 /* MetricsViewControllerProtocol.swift in Sources */,
+				74116753276B8DC10067F68D /* LogRepositoryProtocol.swift in Sources */,
 				74D9435827592FC4000D421D /* PresentationStyle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1945,6 +2149,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8ZG2L8C39H;
 				INFOPLIST_FILE = "$(SRCROOT)/Dotchi/Resources/Info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1965,6 +2170,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8ZG2L8C39H;
 				INFOPLIST_FILE = "$(SRCROOT)/Dotchi/Resources/Info/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
