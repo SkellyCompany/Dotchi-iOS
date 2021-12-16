@@ -137,6 +137,8 @@
 		746172C7276B668B0071C470 /* DotchiDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172C6276B668B0071C470 /* DotchiDTO.swift */; };
 		746172CF276B67AD0071C470 /* Dotchi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172CE276B67AD0071C470 /* Dotchi.swift */; };
 		746172D1276B67C00071C470 /* Dotchi+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172D0276B67C00071C470 /* Dotchi+init.swift */; };
+		746172D3276B69190071C470 /* DotchiRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172D2276B69190071C470 /* DotchiRepository.swift */; };
+		746172D5276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746172D4276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift */; };
 		74C4EAE5275B709700034387 /* MetricsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE4275B709700034387 /* MetricsViewControllerProtocol.swift */; };
 		74C4EAE7275B70A200034387 /* LogsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */; };
 		74C4EAE9275B70AD00034387 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE8275B70AD00034387 /* LogsViewController.swift */; };
@@ -281,6 +283,8 @@
 		746172C6276B668B0071C470 /* DotchiDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiDTO.swift; sourceTree = "<group>"; };
 		746172CE276B67AD0071C470 /* Dotchi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dotchi.swift; sourceTree = "<group>"; };
 		746172D0276B67C00071C470 /* Dotchi+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dotchi+init.swift"; sourceTree = "<group>"; };
+		746172D2276B69190071C470 /* DotchiRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiRepository.swift; sourceTree = "<group>"; };
+		746172D4276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiRepository+DotchiRepositoryProtocol.swift"; sourceTree = "<group>"; };
 		74C4EAE4275B709700034387 /* MetricsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		74C4EAE8275B70AD00034387 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
@@ -1214,6 +1218,8 @@
 		746172B9276B62AB0071C470 /* Implementation */ = {
 			isa = PBXGroup;
 			children = (
+				746172D2276B69190071C470 /* DotchiRepository.swift */,
+				746172D4276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1598,6 +1604,7 @@
 				375603B426D03E5F009BD2FF /* Lottie.swift in Sources */,
 				3747002026D03DE300F3A219 /* DataError.swift in Sources */,
 				63302EFD26F8F8F800F0ADB9 /* InitializationError+init.swift in Sources */,
+				746172D5276B692C0071C470 /* DotchiRepository+DotchiRepositoryProtocol.swift in Sources */,
 				3747002126D03DE300F3A219 /* LoginError.swift in Sources */,
 				746172C3276B65400071C470 /* Result.swift in Sources */,
 				74C4EAE7275B70A200034387 /* LogsViewControllerProtocol.swift in Sources */,
@@ -1607,6 +1614,7 @@
 				63070CD726EFD8E800796082 /* AppStorageProtocol.swift in Sources */,
 				3704283126E8FB0800AD0FF4 /* CreateAccountError.swift in Sources */,
 				74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */,
+				746172D3276B69190071C470 /* DotchiRepository.swift in Sources */,
 				3747001626D03DE300F3A219 /* LoginDTO.swift in Sources */,
 				63302F4B26FB1C9600F0ADB9 /* Endpoint.swift in Sources */,
 				74D9434A27591781000D421D /* TabBarController.swift in Sources */,

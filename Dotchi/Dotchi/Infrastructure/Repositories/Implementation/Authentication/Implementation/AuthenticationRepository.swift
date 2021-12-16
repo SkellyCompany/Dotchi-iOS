@@ -11,16 +11,10 @@ import SwiftyCommunicationServices
 
 class AuthenticationRepository {
     var storage: AppStorageProtocol
-
     let defaults: AppDefaultsProtocol
     let environment: EnvironmentProtocol
-    
     let logger: LoggerProtocol
     let service: HttpServiceProtocol
-
-    let loginEndpoint: Endpoint = .login
-    let createAccountEndpoint: Endpoint = .createAccount
-    let resetPasswordEndpoint: Endpoint = .resetPassword
     
     init(storage: AppStorageProtocol, defaults: AppDefaultsProtocol, environment: EnvironmentProtocol, logger: LoggerProtocol, service: HttpServiceProtocol) {
         self.storage = storage

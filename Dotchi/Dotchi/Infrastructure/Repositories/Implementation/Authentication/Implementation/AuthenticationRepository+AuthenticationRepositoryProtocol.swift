@@ -10,7 +10,7 @@ import SwiftyCommunicationServices
 
 extension AuthenticationRepository: AuthenticationRepositoryProtocol {
     func login(with loginModel: LoginDTO, completionHandler: @escaping LoginResultCallback) {
-        service.post(response: UserDTO.self, endpointUrl: loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
+        service.post(response: UserDTO.self, endpointUrl: Endpoint.login.getUrlString(with: environment), body: loginModel) { result in
             switch result {
             case .success(let userDto):
                 let user = User(from: userDto, with: loginModel.password)
@@ -20,6 +20,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
                 return
             case .failure(let httpServiceError):
                 let loginError = LoginError(error: httpServiceError)
+                self.logger.log(type: .info, name: "couldNotLogIn")
                 completionHandler(.failure(loginError))
                 return
             }
@@ -27,7 +28,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
     }
     
     func createAccount(with createAccountModel: CreateAccountDTO, completionHandler: @escaping CreateAccountResultCallback) {
-        service.post(endpointUrl: createAccountEndpoint.getUrlString(with: environment), body: createAccountModel) { result in
+        service.post(endpointUrl: Endpoint.createAccount.getUrlString(with: environment), body: createAccountModel) { result in
             switch result {
             case .success:
                 self.logger.log(type: .info, name: "successfullyCreatedAccount")
@@ -35,6 +36,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
                 return
             case .failure(let httpServiceError):
                 let createAccountError = CreateAccountError(error: httpServiceError)
+                self.logger.log(type: .info, name: "couldNotCreateAccount")
                 completionHandler(.failure(createAccountError))
                 return
             }
@@ -42,7 +44,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
     }
     
     func resetPassword(with resetPasswordModel: ResetPasswordDTO, completionHandler: @escaping ResetPasswordResultCallback) {
-        service.post(endpointUrl: resetPasswordEndpoint.getUrlString(with: environment), body: resetPasswordModel) { result in
+        service.post(endpointUrl: Endpoint.resetPassword.getUrlString(with: environment), body: resetPasswordModel) { result in
             switch result {
             case .success:
                 self.logger.log(type: .info, name: "successfullyResettedPassword")
@@ -50,6 +52,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
                 return
             case .failure(let httpServiceError):
                 let resetPasswordError = ResetPasswordError(error: httpServiceError)
+                self.logger.log(type: .info, name: "couldNotResetPassword")
                 completionHandler(.failure(resetPasswordError))
                 return
             }
@@ -59,14 +62,16 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
     func refreshToken(completionHandler: @escaping (String?) -> Void) {
         if let loggedInUser = storage.user {
             let loginModel = LoginDTO(email: loggedInUser.email, password: loggedInUser.password)
-            service.post(response: UserDTO.self, endpointUrl: self.loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
+            service.post(response: UserDTO.self, endpointUrl: Endpoint.login.getUrlString(with: environment), body: loginModel) { result in
                 switch result {
                 case .success(let userDto):
                     let updatedUser = User(from: userDto, with: loginModel.password)
                     self.storage.user = updatedUser
+                    self.logger.log(type: .info, name: "successfullyRefreshedToken")
                     completionHandler(updatedUser.token)
                     return
                 case .failure:
+                    self.logger.log(type: .info, name: "couldNotRefreshToken")
                     completionHandler(nil)
                     return
                 }
