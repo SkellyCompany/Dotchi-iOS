@@ -8,5 +8,5 @@
 import Foundation
 
 protocol MetricsViewControllerProtocol: AnyObject {
-    
+    var model: MetricsViewModel? { get set }
 }

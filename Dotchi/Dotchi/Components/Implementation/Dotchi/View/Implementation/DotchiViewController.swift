@@ -9,6 +9,11 @@ import UIKit
 
 class DotchiViewController: UIViewController {
     let eventHandler: DotchiEventHandlerProtocol
+    var model: DotchiViewModel? {
+        didSet {
+            refresh()
+        }
+    }
     
     init(eventHandler: DotchiEventHandlerProtocol) {
         self.eventHandler = eventHandler

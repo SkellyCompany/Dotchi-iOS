@@ -10,6 +10,11 @@ import UIKit
 
 class MetricsViewController: UIViewController {
     let eventHandler: MetricsEventHandlerProtocol
+    var model: MetricsViewModel? {
+        didSet {
+            refresh()
+        }
+    }
     
     init(eventHandler: MetricsEventHandlerProtocol) {
         self.eventHandler = eventHandler

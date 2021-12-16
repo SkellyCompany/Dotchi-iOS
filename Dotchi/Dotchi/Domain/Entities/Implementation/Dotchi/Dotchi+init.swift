@@ -8,7 +8,9 @@
 import Foundation
 
 extension Dotchi {
-    init(from dotchiDto: DotchiDTO) {
-        self.id = dotchiDto.dotchiId
+    init(from dto: DotchiDTO) {
+        self.id = dto.dotchiId
+        self.metrics = DotchiMetrics(from: dto.metrics)
+        self.statistics = DotchiStatistics(from: dto.statistics)
     }
 }

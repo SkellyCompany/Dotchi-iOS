@@ -10,6 +10,11 @@ import UIKit
 
 class LogsViewController: UIViewController {
     let eventHandler: LogsEventHandlerProtocol
+    var model: LogsViewModel? {
+        didSet {
+            refresh()
+        }
+    }
     
     init(eventHandler: LogsEventHandlerProtocol) {
         self.eventHandler = eventHandler

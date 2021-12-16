@@ -9,4 +9,6 @@ import Foundation
 
 struct Dotchi {
     let id: String
+    let statistics: DotchiStatistics
+    let metrics: DotchiMetrics
 }

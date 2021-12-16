@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LogsViewControllerProtocol: AnyObject {
-    
+    var model: LogsViewModel? { get set }
 }

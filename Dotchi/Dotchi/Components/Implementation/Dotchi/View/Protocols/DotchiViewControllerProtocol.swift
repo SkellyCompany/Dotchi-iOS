@@ -8,5 +8,5 @@
 import Foundation
 
 protocol DotchiViewControllerProtocol: AnyObject  {
-    
+    var model: DotchiViewModel? { get set }
 }
