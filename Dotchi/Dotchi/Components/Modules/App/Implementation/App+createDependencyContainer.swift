@@ -138,6 +138,12 @@ extension App {
             let service = resolver.resolve(HttpServiceProtocol.self)!
             return AuthenticationRepository(storage: storage, defaults: defaults, environment: environment, logger: logger, service: service)
         }
+        container.register(DotchiRepositoryProtocol.self) { resolver in
+            let environment = resolver.resolve(EnvironmentProtocol.self)!
+            let logger = resolver.resolve(LoggerProtocol.self)!
+            let service = resolver.resolve(HttpServiceProtocol.self)!
+            return DotchiRepository(environment: environment, logger: logger, service: service)
+        }
         container.register(MetricsRepositoryProtocol.self) { resolver in
             let service = resolver.resolve(WebSocketServiceProtocol.self)!
             return MetricsRepository(service: service)

@@ -19,6 +19,7 @@ class App {
     var themeController: ThemeControllerProtocol?
     var appTrackingController: AppTrackingControllerProtocol?
     var userPreferencesRepository: UserPreferencesRepositoryProtocol?
+    var dotchiRepository: DotchiRepositoryProtocol?
     
     private init() {
         

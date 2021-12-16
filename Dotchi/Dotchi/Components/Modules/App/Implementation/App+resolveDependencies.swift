@@ -16,5 +16,6 @@ extension App {
         self.themeController = container?.resolve(ThemeControllerProtocol.self)!
         self.appTrackingController = container?.resolve(AppTrackingControllerProtocol.self)!
         self.userPreferencesRepository = container?.resolve(UserPreferencesRepositoryProtocol.self)!
+        self.dotchiRepository = container?.resolve(DotchiRepositoryProtocol.self)!
     }
 }

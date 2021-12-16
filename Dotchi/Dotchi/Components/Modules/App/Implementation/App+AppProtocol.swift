@@ -21,7 +21,7 @@ extension App: AppProtocol {
     func willConnect(with window: UIWindow) {
         setupTheme(in: [window])
         setupTint(in: window)
-        setupComponents(in: window)
+        launch(in: window)
     }
     
     func willEnterForeground() {
