@@ -30,3 +30,9 @@ class DotchiViewController: UIViewController {
         self.view.backgroundColor = Asset.Colors.pastelBackground.color
     }
 }
+
+extension DotchiViewController {
+    func refresh() {
+        
+    }
+}

@@ -8,13 +8,24 @@
 import Foundation
 
 class MetricsPresenter {
-    weak var viewController: MetricsViewControllerProtocol?
     let interactor: MetricsInteractorProtocol
+    weak var viewController: MetricsViewControllerProtocol? {
+        didSet {
+            refreshViewModel()
+        }
+    }
     
-    let model: MetricsRouteModel
+    let routeModel: MetricsRouteModel
     
-    init(interactor: MetricsInteractorProtocol, model: MetricsRouteModel) {
+    init(interactor: MetricsInteractorProtocol, routeModel: MetricsRouteModel) {
         self.interactor = interactor
-        self.model = model
+        self.routeModel = routeModel
+    }
+}
+
+extension MetricsPresenter {
+    func refreshViewModel() {
+        let viewModel = MetricsViewModel(metrics: routeModel.dotchi.metrics)
+        viewController?.model = viewModel
     }
 }

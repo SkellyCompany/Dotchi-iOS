@@ -154,9 +154,6 @@
 		74116778276BDBCA0067F68D /* LogsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116777276BDBCA0067F68D /* LogsViewModel.swift */; };
 		743B6532276BE2D300D9F57E /* DotchiStatistics+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6531276BE2D300D9F57E /* DotchiStatistics+init.swift */; };
 		743B6534276BE30400D9F57E /* DotchiMetrics+init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6533276BE30400D9F57E /* DotchiMetrics+init.swift */; };
-		743B6536276BE46A00D9F57E /* LogsViewController+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6535276BE46A00D9F57E /* LogsViewController+refresh.swift */; };
-		743B6538276BE4C900D9F57E /* DotchiViewController+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6537276BE4C900D9F57E /* DotchiViewController+refresh.swift */; };
-		743B653A276BE4E000D9F57E /* MetricsViewController+refresh.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743B6539276BE4E000D9F57E /* MetricsViewController+refresh.swift */; };
 		74402E83275B9AB400D94943 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74402E82275B9AB400D94943 /* GoogleService-Info.plist */; };
 		74402E90275BA2EE00D94943 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E8F275BA2EE00D94943 /* NavigationController.swift */; };
 		74402E92275BA41100D94943 /* RoutingOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74402E91275BA41100D94943 /* RoutingOption.swift */; };
@@ -335,9 +332,6 @@
 		74116777276BDBCA0067F68D /* LogsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewModel.swift; sourceTree = "<group>"; };
 		743B6531276BE2D300D9F57E /* DotchiStatistics+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiStatistics+init.swift"; sourceTree = "<group>"; };
 		743B6533276BE30400D9F57E /* DotchiMetrics+init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiMetrics+init.swift"; sourceTree = "<group>"; };
-		743B6535276BE46A00D9F57E /* LogsViewController+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogsViewController+refresh.swift"; sourceTree = "<group>"; };
-		743B6537276BE4C900D9F57E /* DotchiViewController+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DotchiViewController+refresh.swift"; sourceTree = "<group>"; };
-		743B6539276BE4E000D9F57E /* MetricsViewController+refresh.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MetricsViewController+refresh.swift"; sourceTree = "<group>"; };
 		74402E82275B9AB400D94943 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74402E8F275BA2EE00D94943 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		74402E91275BA41100D94943 /* RoutingOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingOption.swift; sourceTree = "<group>"; };
@@ -1523,7 +1517,6 @@
 			children = (
 				74D9436827593916000D421D /* DotchiViewController.swift */,
 				7445EECA275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift */,
-				743B6537276BE4C900D9F57E /* DotchiViewController+refresh.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1681,7 +1674,6 @@
 			children = (
 				74C4EAE8275B70AD00034387 /* LogsViewController.swift */,
 				74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */,
-				743B6535276BE46A00D9F57E /* LogsViewController+refresh.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1691,7 +1683,6 @@
 			children = (
 				74C4EAEE275B70EC00034387 /* MetricsViewController.swift */,
 				74C4EAEC275B70E200034387 /* MetricsViewController+MetricsViewControllerProtocol.swift */,
-				743B6539276BE4E000D9F57E /* MetricsViewController+refresh.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -2005,9 +1996,7 @@
 				639510402703BAAA005F57D3 /* ResetPasswordError+DataErrorProtocol.swift in Sources */,
 				746172BB276B62B80071C470 /* DotchiRepositoryProtocol.swift in Sources */,
 				3747004D26D03DE300F3A219 /* UserRepository.swift in Sources */,
-				743B6536276BE46A00D9F57E /* LogsViewController+refresh.swift in Sources */,
 				63070C7326EFC2C100796082 /* DataError+ComponentErrorProtocol.swift in Sources */,
-				743B6538276BE4C900D9F57E /* DotchiViewController+refresh.swift in Sources */,
 				63516E1226F295C800325EA8 /* DataResult.swift in Sources */,
 				63302EEC26F8F6DD00F0ADB9 /* UserRole+init.swift in Sources */,
 				7411672B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift in Sources */,
@@ -2063,7 +2052,6 @@
 				740E834227676AFF00D233CC /* MetricsInteractor+MetricsInteractorProtocol.swift in Sources */,
 				740E834927676B8300D233CC /* MetricsPresenter.swift in Sources */,
 				7445EECB275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift in Sources */,
-				743B653A276BE4E000D9F57E /* MetricsViewController+refresh.swift in Sources */,
 				6354C8DE2758C21100CB2415 /* AppProtocol.swift in Sources */,
 				63302EF526F8F85D00F0ADB9 /* DataError+init.swift in Sources */,
 				3747001926D03DE300F3A219 /* UserDTO.swift in Sources */,

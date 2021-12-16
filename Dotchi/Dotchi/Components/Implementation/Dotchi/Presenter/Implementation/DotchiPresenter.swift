@@ -8,13 +8,24 @@
 import Foundation
 
 class DotchiPresenter {
-    weak var viewController: DotchiViewControllerProtocol?
     let interactor: DotchiInteractorProtocol
+    weak var viewController: DotchiViewControllerProtocol? {
+        didSet {
+            refreshViewModel()
+        }
+    }
     
-    let model: DotchiRouteModel
+    let routeModel: DotchiRouteModel
     
-    init(interactor: DotchiInteractorProtocol, model: DotchiRouteModel) {
+    init(interactor: DotchiInteractorProtocol, routeModel: DotchiRouteModel) {
         self.interactor = interactor
-        self.model = model
+        self.routeModel = routeModel
+    }
+}
+
+extension DotchiPresenter {
+    func refreshViewModel() {
+        let viewModel = DotchiViewModel(statistics: routeModel.dotchi.statistics)
+        viewController?.model = viewModel
     }
 }

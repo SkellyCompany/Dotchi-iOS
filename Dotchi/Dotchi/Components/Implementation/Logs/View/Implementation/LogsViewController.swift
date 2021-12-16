@@ -31,3 +31,9 @@ class LogsViewController: UIViewController {
         self.view.backgroundColor = Asset.Colors.pastelBackground.color
     }
 }
+
+extension LogsViewController {
+    func refresh() {
+        
+    }
+}

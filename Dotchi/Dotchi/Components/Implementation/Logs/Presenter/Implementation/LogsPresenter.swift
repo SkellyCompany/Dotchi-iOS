@@ -8,13 +8,24 @@
 import Foundation
 
 class LogsPresenter {
-    weak var viewController: LogsViewControllerProtocol?
     let interactor: LogsInteractorProtocol
+    weak var viewController: LogsViewControllerProtocol? {
+        didSet {
+            refreshViewModel()
+        }
+    }
     
-    let model: LogsRouteModel
+    let routeModel: LogsRouteModel
     
-    init(interactor: LogsInteractorProtocol, model: LogsRouteModel) {
+    init(interactor: LogsInteractorProtocol, routeModel: LogsRouteModel) {
         self.interactor = interactor
-        self.model = model
+        self.routeModel = routeModel
+    }
+}
+
+extension LogsPresenter {
+    func refreshViewModel() {
+        let viewModel = LogsViewModel(logs: routeModel.logs)
+        viewController?.model = viewModel
     }
 }

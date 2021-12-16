@@ -179,8 +179,8 @@ extension App {
         }.implements(DotchiViewControllerProtocol.self)
         container.register(DotchiEventHandlerProtocol.self) { resolver in
             let interactor = resolver.resolve(DotchiInteractorProtocol.self)!
-            let model = resolver.resolve(DotchiRouteModel.self)!
-            return DotchiPresenter(interactor: interactor, model: model)
+            let routeModel = resolver.resolve(DotchiRouteModel.self)!
+            return DotchiPresenter(interactor: interactor, routeModel: routeModel)
         }.initCompleted { resolver, eventHandler in
             let presenter = eventHandler as! DotchiPresenter
             presenter.viewController = resolver.resolve(DotchiViewControllerProtocol.self)!
@@ -196,8 +196,8 @@ extension App {
         }.implements(MetricsViewControllerProtocol.self)
         container.register(MetricsEventHandlerProtocol.self) { resolver in
             let interactor = resolver.resolve(MetricsInteractorProtocol.self)!
-            let model = resolver.resolve(MetricsRouteModel.self)!
-            return MetricsPresenter(interactor: interactor, model: model)
+            let routeModel = resolver.resolve(MetricsRouteModel.self)!
+            return MetricsPresenter(interactor: interactor, routeModel: routeModel)
         }.initCompleted { resolver, eventHandler in
             let presenter = eventHandler as! MetricsPresenter
             presenter.viewController = resolver.resolve(MetricsViewControllerProtocol.self)!
@@ -213,8 +213,8 @@ extension App {
         }.implements(LogsViewControllerProtocol.self)
         container.register(LogsEventHandlerProtocol.self) { resolver in
             let interactor = resolver.resolve(LogsInteractorProtocol.self)!
-            let model = resolver.resolve(LogsRouteModel.self)!
-            return LogsPresenter(interactor: interactor, model: model)
+            let routeModel = resolver.resolve(LogsRouteModel.self)!
+            return LogsPresenter(interactor: interactor, routeModel: routeModel)
         }.initCompleted { resolver, eventHandler in
             let presenter = eventHandler as! LogsPresenter
             presenter.viewController = resolver.resolve(LogsViewControllerProtocol.self)!

@@ -31,3 +31,9 @@ class MetricsViewController: UIViewController {
         self.view.backgroundColor = Asset.Colors.pastelBackground.color
     }
 }
+
+extension MetricsViewController {
+    func refresh() {
+        
+    }
+}
