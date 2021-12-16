@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct User: AppStorable, OutputData {
+struct User: AppStorable {
     let id: String
     let email: String
     let password: String

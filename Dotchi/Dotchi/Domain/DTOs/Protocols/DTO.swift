@@ -8,6 +8,6 @@
 import Foundation
 import SwiftyCommunicationServices
 
-protocol DTO: InputData, OutputData {
+protocol DTO: HttpRequestBody, HttpResponseData, WebSocketData {
     
 }

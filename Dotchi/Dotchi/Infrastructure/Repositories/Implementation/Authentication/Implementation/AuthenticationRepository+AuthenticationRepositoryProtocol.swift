@@ -38,7 +38,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
             switch result {
             case .success:
                 self.logger.log(type: .info, name: "successfullyCreatedAccount")
-                completionHandler(.success(EmptyOutput()))
+                completionHandler(.success)
                 return
             case .failure(let httpServiceError):
                 let createAccountError = CreateAccountError(error: httpServiceError)
@@ -53,7 +53,7 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
             switch result {
             case .success:
                 self.logger.log(type: .info, name: "successfullyResettedPassword")
-                completionHandler(.success(EmptyOutput()))
+                completionHandler(.success)
                 return
             case .failure(let httpServiceError):
                 let resetPasswordError = ResetPasswordError(error: httpServiceError)
