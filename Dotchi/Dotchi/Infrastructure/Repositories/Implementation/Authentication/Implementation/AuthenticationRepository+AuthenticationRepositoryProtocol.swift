@@ -13,18 +13,11 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
         service.post(response: UserDTO.self, endpointUrl: loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
             switch result {
             case .success(let userDto):
-                do {
-                    let user = try User(from: userDto, with: loginModel.password)
-                    self.storage.user = user
-                    self.logger.log(type: .info, name: "successfullyLoggedIn")
-                    completionHandler(.success(user))
-                    return
-                } catch let error {
-                    self.logger.log(type: .error, name: "couldNotLogin", description: error.longDescription)
-                    let loginError = LoginError(error: error)
-                    completionHandler(.failure(loginError))
-                    return
-                }
+                let user = User(from: userDto, with: loginModel.password)
+                self.storage.user = user
+                self.logger.log(type: .info, name: "successfullyLoggedIn")
+                completionHandler(.success(user))
+                return
             case .failure(let httpServiceError):
                 let loginError = LoginError(error: httpServiceError)
                 completionHandler(.failure(loginError))
@@ -69,15 +62,10 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
             service.post(response: UserDTO.self, endpointUrl: self.loginEndpoint.getUrlString(with: environment), body: loginModel) { result in
                 switch result {
                 case .success(let userDto):
-                    do {
-                        let updatedUser = try User(from: userDto, with: loginModel.password)
-                        self.storage.user = updatedUser
-                        completionHandler(updatedUser.token)
-                        return
-                    } catch {
-                        completionHandler(nil)
-                        return
-                    }
+                    let updatedUser = User(from: userDto, with: loginModel.password)
+                    self.storage.user = updatedUser
+                    completionHandler(updatedUser.token)
+                    return
                 case .failure:
                     completionHandler(nil)
                     return

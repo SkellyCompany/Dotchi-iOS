@@ -8,7 +8,7 @@
 import Foundation
 
 extension User {
-    init(from userDto: UserDTO, with password: String) throws {
+    init(from userDto: UserDTO, with password: String) {
         self.id = userDto.id
         self.email = userDto.email
         self.password = password
