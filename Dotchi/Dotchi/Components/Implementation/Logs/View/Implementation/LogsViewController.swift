@@ -17,10 +17,10 @@ class LogsViewController: UIViewController {
     }
     
     // MARK: UI Constants
-    private let collectionViewHorizontalInset: CGFloat = 25
+    private let collectionViewHorizontalInset: CGFloat = 15
     private let collectionViewVerticalInset: CGFloat = 10
     private let cellHeight: CGFloat = 50
-    private let cellMargin: CGFloat = 2
+    private let cellMargin: CGFloat = 15
     
     // MARK: Viewa
     private weak var collectionView: UICollectionView?
@@ -109,10 +109,10 @@ extension LogsViewController {
     private func createCollectionSectionLayout(for section: LogsCollectionView.Section) -> NSCollectionLayoutSection {
         switch section {
         case .main:
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(cellHeight))
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(cellHeight))
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             item.edgeSpacing = NSCollectionLayoutEdgeSpacing(leading: nil, top: NSCollectionLayoutSpacing.fixed(cellMargin), trailing: nil, bottom: NSCollectionLayoutSpacing.fixed(cellMargin))
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(cellHeight))
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(cellHeight))
             let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,subitems: [item])
             let section = NSCollectionLayoutSection(group: group)
             section.contentInsets = NSDirectionalEdgeInsets(top: collectionViewVerticalInset, leading: collectionViewHorizontalInset, bottom: collectionViewHorizontalInset, trailing: collectionViewHorizontalInset)

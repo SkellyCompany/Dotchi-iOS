@@ -8,6 +8,7 @@ class LogCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 1
+        label.backgroundColor = .red
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -17,6 +18,7 @@ class LogCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.backgroundColor = .blue
         label.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -25,8 +27,14 @@ class LogCell: UICollectionViewCell {
     // MARK: UI Constants
     private let contentMargin = 10
     private let nameHeight = 30
+    private let nameDescriptionMargin = 10
     
     // MARK: Lifecycle methods
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        initialize()
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -49,7 +57,7 @@ extension LogCell {
         contentView.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
             make.bottom.left.right.equalToSuperview()
-            make.top.equalTo(nameLabel.snp.bottom)
+            make.top.equalTo(nameLabel.snp.bottom).offset(nameDescriptionMargin)
         }
     }
 }
