@@ -85,13 +85,11 @@ extension App {
                 fatalError()
             }
             let dotchiTabBarItem = UITabBarItem(title: "Browse", image: UIImage(systemName: "pawprint"), selectedImage: UIImage(systemName: "pawprint.fill"))
-            let metricsTabBarItem = UITabBarItem(title: "Metrics", image: UIImage(systemName: "chart.bar"), selectedImage: UIImage(systemName: "chart.bar.fill"))
             let logsTabBarItem = UITabBarItem(title: "Logs", image: UIImage(systemName: "doc.badge.gearshape"), selectedImage: UIImage(systemName: "doc.badge.gearshape.fill"))
 
             DispatchQueue.main.async {
                 self.router?.route(to: .dotchi(model: DotchiRouteModel(dotchi: dotchi)), style: .root(window: window, transition: .flipToRight), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
-                    .metrics(model: MetricsRouteModel(dotchi: dotchi)) : metricsTabBarItem,
-                    .logs(model: LogsRouteModel(dotchi: dotchi, logs: logs)) : logsTabBarItem
+                    .logs(model: LogsRouteModel(logs: logs)) : logsTabBarItem
                 ])])
             }
         }

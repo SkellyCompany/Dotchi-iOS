@@ -7,20 +7,22 @@
 
 import Foundation
 
-struct Log {
+struct Log: Hashable {
     let name: String
     let description: String
+    let timestamp: Date
 }
 
 extension Log {
     init(from logDto: LogDTO) {
         self.name = logDto.name
         self.description = logDto.description
+        self.timestamp = Date(timeIntervalSince1970: logDto.timestamp)
     }
     
     static func initMany(from logDtos: [LogDTO]) -> [Log] {
         return logDtos.map { logDto in
-            return Log(name: logDto.name, description: logDto.description)
+            return Log(name: logDto.name, description: logDto.description, timestamp: Date(timeIntervalSince1970: logDto.timestamp))
         }
     }
 }

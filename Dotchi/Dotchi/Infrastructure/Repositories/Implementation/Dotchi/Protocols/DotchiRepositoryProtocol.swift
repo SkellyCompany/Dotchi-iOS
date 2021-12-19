@@ -8,7 +8,7 @@
 import Foundation
 
 protocol DotchiRepositoryProtocol {
-    typealias DotchiResultCallback = (DataResult<Dotchi, DataError>) -> Void
+    typealias DotchiResultCallback = (Result<Dotchi, DataError>) -> Void
     
     func getDotchi(id: String, completionHandler: @escaping DotchiResultCallback)
 }

@@ -10,4 +10,5 @@ import Foundation
 struct LogDTO: DTO {
     let name: String
     let description: String
+    let timestamp: Double
 }

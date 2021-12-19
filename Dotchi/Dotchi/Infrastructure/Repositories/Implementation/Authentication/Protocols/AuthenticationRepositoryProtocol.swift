@@ -8,9 +8,9 @@
 import Foundation
 
 protocol AuthenticationRepositoryProtocol {
-    typealias LoginResultCallback = (DataResult<User, LoginError>) -> Void
-    typealias CreateAccountResultCallback = (Result<CreateAccountError>) -> Void
-    typealias ResetPasswordResultCallback = (Result<ResetPasswordError>) -> Void
+    typealias LoginResultCallback = (Result<User, LoginError>) -> Void
+    typealias CreateAccountResultCallback = (Result<Void, CreateAccountError>) -> Void
+    typealias ResetPasswordResultCallback = (Result<Void, ResetPasswordError>) -> Void
     typealias RefreshedTokenCallback = (String?) -> Void
     
     func login(with loginModel: LoginDTO, completionHandler: @escaping LoginResultCallback)

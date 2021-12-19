@@ -8,6 +8,5 @@
 import Foundation
 
 struct LogsRouteModel {
-    let dotchi: Dotchi
     let logs: [Log]
 }

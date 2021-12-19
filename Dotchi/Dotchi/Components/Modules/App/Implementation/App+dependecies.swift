@@ -145,10 +145,6 @@ extension App {
             let socketService = resolver.resolve(WebSocketServiceProtocol.self)!
             return DotchiRepository(environment: environment, logger: logger, httpService: httpService, socketService: socketService)
         }
-        container.register(MetricsRepositoryProtocol.self) { resolver in
-            let service = resolver.resolve(WebSocketServiceProtocol.self)!
-            return MetricsRepository(service: service)
-        }
         container.register(LogRepositoryProtocol.self) { resolver in
             let environment = resolver.resolve(EnvironmentProtocol.self)!
             let logger = resolver.resolve(LoggerProtocol.self)!
@@ -188,23 +184,6 @@ extension App {
         container.register(DotchiInteractorProtocol.self) { resolver in
             let repository = resolver.resolve(DotchiRepositoryProtocol.self)!
             return DotchiInteractor(repository: repository)
-        }
-        
-        container.register(MetricsViewController.self) { resolver in
-            let eventHandler = resolver.resolve(MetricsEventHandlerProtocol.self)!
-            return MetricsViewController(eventHandler: eventHandler)
-        }.implements(MetricsViewControllerProtocol.self)
-        container.register(MetricsEventHandlerProtocol.self) { resolver in
-            let interactor = resolver.resolve(MetricsInteractorProtocol.self)!
-            let routeModel = resolver.resolve(MetricsRouteModel.self)!
-            return MetricsPresenter(interactor: interactor, routeModel: routeModel)
-        }.initCompleted { resolver, eventHandler in
-            let presenter = eventHandler as! MetricsPresenter
-            presenter.viewController = resolver.resolve(MetricsViewControllerProtocol.self)!
-        }
-        container.register(MetricsInteractorProtocol.self) { resolver in
-            let repository = resolver.resolve(MetricsRepositoryProtocol.self)!
-            return MetricsInteractor(repository: repository)
         }
         
         container.register(LogsViewController.self) { resolver in
