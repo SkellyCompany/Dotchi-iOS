@@ -22,6 +22,9 @@ class LogsViewController: UIViewController {
     private let cellHeight: CGFloat = 50
     private let cellMargin: CGFloat = 2
     
+    // MARK: Viewa
+    private weak var collectionView: UICollectionView?
+    
     // MARK: UI Objects
     private var dataSource: UICollectionViewDiffableDataSource<LogsCollectionView.Section, Log>?
     
@@ -43,8 +46,36 @@ class LogsViewController: UIViewController {
 // MARK: Initialization
 extension LogsViewController {
     func initialize() {
+        initializeView()
+        initializeCollectionView()
+    }
+    
+    private func initializeView() {
         self.title = "Logs"
         self.view.backgroundColor = Asset.Colors.pastelBackground.color
+    }
+    
+    private func initializeCollectionView() {
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: createCompositionalLayout())
+        collectionView.backgroundColor = Asset.Colors.pastelBackground.color
+        view.addSubview(collectionView)
+        collectionView.snp.makeConstraints { make in
+            make.top.bottom.left.right.equalToSuperview()
+        }
+        
+        collectionView.register(LogCell.self, forCellWithReuseIdentifier: LogCell.identifier)
+        dataSource = UICollectionViewDiffableDataSource<LogsCollectionView.Section, Log>(collectionView: collectionView) { (collectionView, indexPath, log) -> UICollectionViewCell in
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LogCell.identifier, for: indexPath) as! LogCell
+            cell.setup(for: log)
+            return cell
+        }
+        
+        var snapshot = NSDiffableDataSourceSnapshot<LogsCollectionView.Section, Log>()
+        snapshot.appendSections(LogsCollectionView.Section.allCases)
+        snapshot.appendItems(model?.logs ?? [])
+        dataSource?.apply(snapshot, animatingDifferences: true)
+        
+        self.collectionView = collectionView
     }
 }
 

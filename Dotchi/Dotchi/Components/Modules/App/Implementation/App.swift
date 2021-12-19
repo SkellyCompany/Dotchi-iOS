@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SnapKit
 import Swinject
 import SwiftyFeatureControllers
 import SwiftyLogger

@@ -158,6 +158,7 @@
 		74D9437427594373000D421D /* App+dependecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D9437327594373000D421D /* App+dependecies.swift */; };
 		74D94376275943AB000D421D /* App+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D94375275943AB000D421D /* App+setup.swift */; };
 		74F56BA0276FB82E00AEADD7 /* LogsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56B9F276FB82E00AEADD7 /* LogsCollectionView.swift */; };
+		74F56BA7276FC29B00AEADD7 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BA6276FC29B00AEADD7 /* LogCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -304,6 +305,7 @@
 		74D9437327594373000D421D /* App+dependecies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+dependecies.swift"; sourceTree = "<group>"; };
 		74D94375275943AB000D421D /* App+setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+setup.swift"; sourceTree = "<group>"; };
 		74F56B9F276FB82E00AEADD7 /* LogsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsCollectionView.swift; sourceTree = "<group>"; };
+		74F56BA6276FC29B00AEADD7 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1408,6 +1410,7 @@
 		74C4EADF275B6FD000034387 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				74F56BA4276FC25C00AEADD7 /* Modules */,
 				74116775276BDBBB0067F68D /* Core */,
 				74C4EAE2275B707A00034387 /* Implementation */,
 				74C4EAE1275B707500034387 /* Protocols */,
@@ -1530,6 +1533,22 @@
 			children = (
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		74F56BA4276FC25C00AEADD7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				74F56BA5276FC28600AEADD7 /* LogCell */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		74F56BA5276FC28600AEADD7 /* LogCell */ = {
+			isa = PBXGroup;
+			children = (
+				74F56BA6276FC29B00AEADD7 /* LogCell.swift */,
+			);
+			path = LogCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1753,6 +1772,7 @@
 				378A3D5F26E65D55002946DD /* AppDefaults.swift in Sources */,
 				74D9435127592D2E000D421D /* Router+RouterProtocol.swift in Sources */,
 				3704283226E8FB0800AD0FF4 /* ResetPasswordError.swift in Sources */,
+				74F56BA7276FC29B00AEADD7 /* LogCell.swift in Sources */,
 				746172C7276B668B0071C470 /* DotchiDTO.swift in Sources */,
 				63302F2E26FB150A00F0ADB9 /* SystemInfoProtocol.swift in Sources */,
 				6354C8E02758C3F700CB2415 /* App+AppProtocol.swift in Sources */,
