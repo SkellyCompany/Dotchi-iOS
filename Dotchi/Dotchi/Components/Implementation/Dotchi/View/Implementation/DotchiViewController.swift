@@ -19,6 +19,8 @@ class DotchiViewController: UIViewController {
     private weak var scrollView: UIScrollView?
     private weak var contentView: UIView?
     
+    private weak var healthView: UIView?
+    
     init(eventHandler: DotchiEventHandlerProtocol) {
         self.eventHandler = eventHandler
         super.init(nibName: nil, bundle: nil)
@@ -30,19 +32,57 @@ class DotchiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        initializeView()
+    }
+}
+
+// MARK: Initialization
+extension DotchiViewController {
+    private func initialize() {
+        initializeView()
+        initializeScrollView()
+        initializeHealthView()
+    }
+    
+    private func initializeView() {
         self.title = "Dotchi"
         self.view.backgroundColor = Asset.Colors.pastelBackground.color
     }
-}
-
-extension DotchiViewController {
-    private func initialize() {
+    
+    private func initializeScrollView() {
+        let scrollView = UIScrollView()
+        let contentView = UIView()
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
         
+        scrollView.snp.makeConstraints { make in
+            make.top.bottom.centerX.width.equalToSuperview()
+        }
+        contentView.snp.makeConstraints { make in
+            make.top.bottom.centerX.width.equalToSuperview()
+        }
+        
+        self.scrollView = scrollView
+        self.contentView = contentView
+    }
+    
+    private func initializeHealthView() {
+        let healthView = StatisticView()
+        healthView.update(header: "Health")
+        contentView?.addSubview(healthView)
+        healthView.snp.makeConstraints { make in
+            make.top.bottom.left.right.equalToSuperview()
+        }
     }
 }
 
+// MARK: Refreshing
 extension DotchiViewController {
     private func refresh() {
+        
+    }
+    
+    private func refreshStatisticViews() {
         
     }
 }
