@@ -17,14 +17,14 @@ class LogsViewController: UIViewController {
         }
     }
     
+    // MARK: Views
+    private weak var collectionView: UICollectionView?
+    
     // MARK: UI Constants
     private let collectionViewHorizontalInset: CGFloat = 15
     private let collectionViewVerticalInset: CGFloat = 10
     private let cellHeight: CGFloat = 50
     private let cellMargin: CGFloat = 10
-    
-    // MARK: Views
-    private weak var collectionView: UICollectionView?
     
     // MARK: UI Objects
     private let searchController = SearchController()
@@ -42,6 +42,7 @@ class LogsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialize()
+        refresh()
     }
 }
 

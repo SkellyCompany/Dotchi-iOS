@@ -18,8 +18,11 @@ class DotchiViewController: UIViewController {
     // MARK: Views
     private weak var scrollView: UIScrollView?
     private weak var contentView: UIView?
+    private weak var healthView: StatisticView?
+    private weak var happinessView: StatisticView?
     
-    private weak var healthView: UIView?
+    // MARK: UI Constants
+    private let contentMargin = 10
     
     init(eventHandler: DotchiEventHandlerProtocol) {
         self.eventHandler = eventHandler
@@ -32,7 +35,8 @@ class DotchiViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeView()
+        initialize()
+        refresh()
     }
 }
 
@@ -42,6 +46,7 @@ extension DotchiViewController {
         initializeView()
         initializeScrollView()
         initializeHealthView()
+        initializeHappinessView()
     }
     
     private func initializeView() {
@@ -59,7 +64,10 @@ extension DotchiViewController {
             make.top.bottom.centerX.width.equalToSuperview()
         }
         contentView.snp.makeConstraints { make in
-            make.top.bottom.centerX.width.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(contentMargin)
+            make.bottom.equalToSuperview().offset(-contentMargin)
+            make.width.equalToSuperview().offset(-contentMargin*2)
         }
         
         self.scrollView = scrollView
@@ -71,18 +79,37 @@ extension DotchiViewController {
         healthView.update(header: "Health")
         contentView?.addSubview(healthView)
         healthView.snp.makeConstraints { make in
-            make.top.bottom.left.right.equalToSuperview()
+            make.top.left.right.equalToSuperview()
         }
+        
+        self.healthView = healthView
+    }
+    
+    private func initializeHappinessView() {
+        guard let healthView = healthView else { return }
+        let happinessView = StatisticView()
+        happinessView.update(header: "Happiness")
+        contentView?.addSubview(happinessView)
+        happinessView.snp.makeConstraints { make in
+            make.top.equalTo(healthView.snp.bottom).offset(contentMargin)
+            make.bottom.left.right.equalToSuperview()
+        }
+        
+        self.happinessView = happinessView
     }
 }
 
 // MARK: Refreshing
 extension DotchiViewController {
     private func refresh() {
-        
+        refreshStatisticViews()
     }
     
     private func refreshStatisticViews() {
-        
+        guard let statistics = model?.statistics,
+              let healthView = healthView,
+              let happinessView = happinessView else { return }
+        healthView.update(value: statistics.health)
+        happinessView.update(value: statistics.happiness)
     }
 }
