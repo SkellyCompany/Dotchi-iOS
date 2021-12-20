@@ -39,6 +39,11 @@ extension DataError {
             case .emptyData:
                 self = .emptyData
             }
+        } else if let webSocketServiceError = error as? WebSocketServiceError {
+            switch webSocketServiceError {
+            case .parseError, .unknown:
+                self = .applicationError
+            }
         } else if error is InitializationError {
             self = .applicationError
         } else {

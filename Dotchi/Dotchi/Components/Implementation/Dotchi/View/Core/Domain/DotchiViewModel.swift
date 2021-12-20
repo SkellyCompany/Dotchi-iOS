@@ -9,4 +9,5 @@ import Foundation
 
 struct DotchiViewModel {
     let statistics: DotchiStatistics
+    let metrics: DotchiMetrics
 }

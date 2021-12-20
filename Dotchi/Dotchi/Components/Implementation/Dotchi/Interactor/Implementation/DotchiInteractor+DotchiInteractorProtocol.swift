@@ -8,5 +8,11 @@
 import Foundation
 
 extension DotchiInteractor: DotchiInteractorProtocol {
+    func observeStatistics(dotchiId: String, completionHandler: @escaping StatisticsResultCallback) {
+        repository.observeStatistics(dotchiId: dotchiId, completionHandler: completionHandler)
+    }
     
+    func observeMetrics(dotchiId: String, completionHandler: @escaping MetricsResultCallback) {
+        repository.observeMetrics(dotchiId: dotchiId, completionHandler: completionHandler)
+    }
 }

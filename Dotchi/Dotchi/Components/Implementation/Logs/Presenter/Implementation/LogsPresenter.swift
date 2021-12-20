@@ -27,7 +27,7 @@ class LogsPresenter {
 
 extension LogsPresenter {
     func refreshViewModel() {
-        let viewModel = LogsViewModel(logs: filteredLogs)
+        let viewModel = LogsViewModel(logs: filteredLogs.sorted { $0.timestamp < $1.timestamp })
         viewController?.model = viewModel
     }
 }

@@ -1,10 +1,3 @@
-//
-//  AuthenticationManager+AuthenticationManagerProtocol.swift
-//  Portal
-//
-//  Created by Greg Charyszczak on 20/09/2021.
-//
-
 import Foundation
 import SwiftyCommunicationServices
 
@@ -15,12 +8,12 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
             case .success(let userDto):
                 let user = User(from: userDto, with: loginModel.password)
                 self.storage.user = user
-                self.logger.log(type: .info, name: "successfullyLoggedIn")
+                self.logger.log(type: .info, name: "successLogin")
                 completionHandler(.success(user))
                 return
             case .failure(let httpServiceError):
                 let loginError = LoginError(error: httpServiceError)
-                self.logger.log(type: .info, name: "couldNotLogIn")
+                self.logger.log(type: .info, name: "failureLogin")
                 completionHandler(.failure(loginError))
                 return
             }
@@ -31,12 +24,12 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
         service.post(endpointUrl: Endpoint.createAccount.getUrlString(with: environment), body: createAccountModel) { result in
             switch result {
             case .success:
-                self.logger.log(type: .info, name: "successfullyCreatedAccount")
+                self.logger.log(type: .info, name: "successCreateAccount")
                 completionHandler(.success(()))
                 return
             case .failure(let httpServiceError):
                 let createAccountError = CreateAccountError(error: httpServiceError)
-                self.logger.log(type: .info, name: "couldNotCreateAccount")
+                self.logger.log(type: .info, name: "failureCreateAccount")
                 completionHandler(.failure(createAccountError))
                 return
             }
@@ -47,12 +40,12 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
         service.post(endpointUrl: Endpoint.resetPassword.getUrlString(with: environment), body: resetPasswordModel) { result in
             switch result {
             case .success:
-                self.logger.log(type: .info, name: "successfullyResettedPassword")
+                self.logger.log(type: .info, name: "successResetPassword")
                 completionHandler(.success(()))
                 return
             case .failure(let httpServiceError):
                 let resetPasswordError = ResetPasswordError(error: httpServiceError)
-                self.logger.log(type: .info, name: "couldNotResetPassword")
+                self.logger.log(type: .info, name: "failureResetPassword")
                 completionHandler(.failure(resetPasswordError))
                 return
             }
@@ -67,11 +60,11 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
                 case .success(let userDto):
                     let updatedUser = User(from: userDto, with: loginModel.password)
                     self.storage.user = updatedUser
-                    self.logger.log(type: .info, name: "successfullyRefreshedToken")
+                    self.logger.log(type: .info, name: "successRefreshToken")
                     completionHandler(updatedUser.token)
                     return
                 case .failure:
-                    self.logger.log(type: .info, name: "couldNotRefreshToken")
+                    self.logger.log(type: .info, name: "failureRefreshToken")
                     completionHandler(nil)
                     return
                 }
