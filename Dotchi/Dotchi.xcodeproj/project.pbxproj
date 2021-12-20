@@ -159,6 +159,7 @@
 		74D94376275943AB000D421D /* App+setup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D94375275943AB000D421D /* App+setup.swift */; };
 		74F56BA0276FB82E00AEADD7 /* LogsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56B9F276FB82E00AEADD7 /* LogsCollectionView.swift */; };
 		74F56BA7276FC29B00AEADD7 /* LogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BA6276FC29B00AEADD7 /* LogCell.swift */; };
+		74F56BA9276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BA8276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -306,6 +307,7 @@
 		74D94375275943AB000D421D /* App+setup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "App+setup.swift"; sourceTree = "<group>"; };
 		74F56B9F276FB82E00AEADD7 /* LogsCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsCollectionView.swift; sourceTree = "<group>"; };
 		74F56BA6276FC29B00AEADD7 /* LogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogCell.swift; sourceTree = "<group>"; };
+		74F56BA8276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogsViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1431,6 +1433,7 @@
 			children = (
 				74C4EAE8275B70AD00034387 /* LogsViewController.swift */,
 				74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */,
+				74F56BA8276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift */,
 			);
 			path = Implementation;
 			sourceTree = "<group>";
@@ -1797,6 +1800,7 @@
 				63070CDF26EFDAA300796082 /* AppCacheProtocol.swift in Sources */,
 				3704282E26E8FADB00AD0FF4 /* ResetPasswordDTO.swift in Sources */,
 				6395103C2703BA5F005F57D3 /* LoginError+DataErrorProtocol.swift in Sources */,
+				74F56BA9276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift in Sources */,
 				3747005C26D03DE300F3A219 /* CacheProtocol.swift in Sources */,
 				7445EECB275ACA1300072FBC /* DotchiViewController+DotchiViewControllerProtocol.swift in Sources */,
 				6354C8DE2758C21100CB2415 /* AppProtocol.swift in Sources */,

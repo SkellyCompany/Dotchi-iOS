@@ -15,6 +15,10 @@ class DotchiViewController: UIViewController {
         }
     }
     
+    // MARK: Views
+    private weak var scrollView: UIScrollView?
+    private weak var contentView: UIView?
+    
     init(eventHandler: DotchiEventHandlerProtocol) {
         self.eventHandler = eventHandler
         super.init(nibName: nil, bundle: nil)
@@ -32,7 +36,13 @@ class DotchiViewController: UIViewController {
 }
 
 extension DotchiViewController {
-    func refresh() {
+    private func initialize() {
+        
+    }
+}
+
+extension DotchiViewController {
+    private func refresh() {
         
     }
 }

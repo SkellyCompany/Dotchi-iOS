@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SwiftyKit
 
 class LogsViewController: UIViewController {
     let eventHandler: LogsEventHandlerProtocol
@@ -20,12 +21,13 @@ class LogsViewController: UIViewController {
     private let collectionViewHorizontalInset: CGFloat = 15
     private let collectionViewVerticalInset: CGFloat = 10
     private let cellHeight: CGFloat = 50
-    private let cellMargin: CGFloat = 15
+    private let cellMargin: CGFloat = 10
     
-    // MARK: Viewa
+    // MARK: Views
     private weak var collectionView: UICollectionView?
     
     // MARK: UI Objects
+    private let searchController = SearchController()
     private var dataSource: UICollectionViewDiffableDataSource<LogsCollectionView.Section, Log>?
     
     init(eventHandler: LogsEventHandlerProtocol) {
@@ -45,14 +47,22 @@ class LogsViewController: UIViewController {
 
 // MARK: Initialization
 extension LogsViewController {
-    func initialize() {
+    private func initialize() {
         initializeView()
+        initializeSearchController()
         initializeCollectionView()
     }
     
     private func initializeView() {
         self.title = "Logs"
         self.view.backgroundColor = Asset.Colors.pastelBackground.color
+    }
+    
+    private func initializeSearchController() {
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
+        navigationItem.searchController = searchController
     }
     
     private func initializeCollectionView() {
@@ -81,7 +91,7 @@ extension LogsViewController {
 
 // MARK: Refreshing
 extension LogsViewController {
-    func refresh() {
+    private func refresh() {
         refreshCollectionView()
     }
     

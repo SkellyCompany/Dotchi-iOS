@@ -8,7 +8,6 @@ class LogCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 1
-        label.backgroundColor = .red
         label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -18,13 +17,13 @@ class LogCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 0
-        label.backgroundColor = .blue
         label.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     // MARK: UI Constants
+    private let cornerRadius: CGFloat = 15
     private let contentMargin = 10
     private let nameHeight = 30
     private let nameDescriptionMargin = 10
@@ -48,15 +47,20 @@ class LogCell: UICollectionViewCell {
 // MARK: Initialization
 extension LogCell {
     func initialize() {
+        self.backgroundColor = Asset.Colors.pastelBackgroundElement.color
+        self.layer.cornerRadius = cornerRadius
+        
         contentView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
-            make.top.left.right.equalToSuperview()
+            make.right.equalToSuperview().offset(-contentMargin)
+            make.top.left.equalToSuperview().offset(contentMargin)
             make.height.equalTo(nameHeight)
         }
         
         contentView.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
-            make.bottom.left.right.equalToSuperview()
+            make.bottom.right.equalToSuperview().offset(-contentMargin)
+            make.left.equalToSuperview().offset(contentMargin)
             make.top.equalTo(nameLabel.snp.bottom).offset(nameDescriptionMargin)
         }
     }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LogsEventHandlerProtocol {
-    
+    func didEnterSearch(text: String)
 }

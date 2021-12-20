@@ -88,7 +88,7 @@ extension App {
             let logsTabBarItem = UITabBarItem(title: "Logs", image: UIImage(systemName: "doc.badge.gearshape"), selectedImage: UIImage(systemName: "doc.badge.gearshape.fill"))
 
             DispatchQueue.main.async {
-                self.router?.route(to: .dotchi(model: DotchiRouteModel(dotchi: dotchi)), style: .root(window: window, transition: .flipToRight), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
+                self.router?.route(to: .dotchi(model: DotchiRouteModel(dotchi: dotchi)), style: .root(window: window, transition: .flipToLeft), options: [.wrapInTabBar(tabBarItem: dotchiTabBarItem, viewControllers: [
                     .logs(model: LogsRouteModel(logs: logs)) : logsTabBarItem
                 ])])
             }

@@ -8,5 +8,8 @@
 import Foundation
 
 extension LogsPresenter: LogsEventHandlerProtocol {
-    
+    func didEnterSearch(text: String) {
+        self.filteredLogs = interactor.filter(logs: logs, keyword: text)
+        refreshViewModel()
+    }
 }

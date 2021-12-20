@@ -24,6 +24,7 @@ internal enum Asset {
   internal enum Colors {
     internal static let accent = ColorAsset(name: "Accent")
     internal static let pastelBackground = ColorAsset(name: "PastelBackground")
+    internal static let pastelBackgroundElement = ColorAsset(name: "PastelBackgroundElement")
   }
   internal enum Icons {
   }

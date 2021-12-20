@@ -15,17 +15,19 @@ class LogsPresenter {
         }
     }
     
-    let routeModel: LogsRouteModel
+    var logs: [Log]
+    var filteredLogs: [Log]
     
     init(interactor: LogsInteractorProtocol, routeModel: LogsRouteModel) {
         self.interactor = interactor
-        self.routeModel = routeModel
+        self.logs = routeModel.logs
+        self.filteredLogs = logs
     }
 }
 
 extension LogsPresenter {
     func refreshViewModel() {
-        let viewModel = LogsViewModel(logs: routeModel.logs)
+        let viewModel = LogsViewModel(logs: filteredLogs)
         viewController?.model = viewModel
     }
 }
