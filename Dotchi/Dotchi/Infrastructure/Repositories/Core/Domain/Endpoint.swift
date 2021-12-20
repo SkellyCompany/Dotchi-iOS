@@ -50,4 +50,25 @@ extension Endpoint {
             return "\(environment.apiUrl)/\(Self.updatedStatisticsUrl)/\(dotchiId)"
         }
     }
+    
+    func getEventString() -> String {
+        switch self {
+        case .login:
+            return "\(Self.loginUrl)"
+        case .createAccount:
+            return "\(Self.createAccountUrl)"
+        case .resetPassword:
+            return "\(Self.resetPasswordUrl)"
+        case .log(let dotchiId):
+            return "\(Self.logUrl)/\(dotchiId)"
+        case .dotchi(let dotchiId):
+            return "\(Self.dotchiUrl)/\(dotchiId)"
+        case .newLog(let dotchiId):
+            return "\(Self.newLogUrl)/\(dotchiId)"
+        case .updatedMetrics(let dotchiId):
+            return "\(Self.updatedMetricsUrl)/\(dotchiId)"
+        case .updatedStatistics(let dotchiId):
+            return "\(Self.updatedStatisticsUrl)/\(dotchiId)"
+        }
+    }
 }

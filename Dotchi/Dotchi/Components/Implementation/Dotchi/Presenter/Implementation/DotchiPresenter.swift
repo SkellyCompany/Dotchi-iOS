@@ -25,8 +25,8 @@ class DotchiPresenter {
         self.dotchi = routeModel.dotchi
         self.statistics = routeModel.dotchi.statistics
         self.metrics = routeModel.dotchi.metrics
-//        observeStatistics()
-//        observeMetrics()
+        observeStatistics()
+        observeMetrics()
     }
 }
 

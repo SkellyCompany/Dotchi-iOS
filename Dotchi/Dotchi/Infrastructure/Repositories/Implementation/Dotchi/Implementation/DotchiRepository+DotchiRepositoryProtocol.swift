@@ -26,7 +26,7 @@ extension DotchiRepository: DotchiRepositoryProtocol {
     }
     
     func observeStatistics(dotchiId: String, completionHandler: @escaping StatisticsResultCallback) {
-        socketService.on(.custom(name: Endpoint.updatedStatistics(dotchiId: dotchiId).getUrlString(with: environment)), with: DotchiStatisticsDTO.self, in: .json, completionHandler: { result in
+        socketService.on(.custom(name: Endpoint.updatedStatistics(dotchiId: dotchiId).getEventString()), with: DotchiStatisticsDTO.self, in: .json, completionHandler: { result in
             switch result {
             case .success(let dotchiStatisticsDto):
                 let statistics = DotchiStatistics(from: dotchiStatisticsDto)
@@ -43,7 +43,7 @@ extension DotchiRepository: DotchiRepositoryProtocol {
     }
     
     func observeMetrics(dotchiId: String, completionHandler: @escaping MetricsResultCallback) {
-        socketService.on(.custom(name: Endpoint.updatedMetrics(dotchiId: dotchiId).getUrlString(with: environment)), with: DotchiMetricsDTO.self, in: .json, completionHandler: { result in
+        socketService.on(.custom(name: Endpoint.updatedMetrics(dotchiId: dotchiId).getEventString()), with: DotchiMetricsDTO.self, in: .json, completionHandler: { result in
             switch result {
             case .success(let dotchiMetricsDto):
                 let statistics = DotchiMetrics(from: dotchiMetricsDto)
