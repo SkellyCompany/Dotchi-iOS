@@ -4,11 +4,20 @@ class LogCell: UICollectionViewCell {
     static let identifier = "LogCell"
     
     // MARK: Views
+    private lazy var imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(systemName: "doc.fill")
+        imageView.setImageColor(to: .systemBlue)
+        return imageView
+    }()
+    
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 17, weight: .semibold)
+//        label.textColor = .systemBlue
+        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -17,6 +26,7 @@ class LogCell: UICollectionViewCell {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 0
+        label.textColor = .systemGray
         label.font = UIFont.systemFont(ofSize: 15.0, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -24,8 +34,9 @@ class LogCell: UICollectionViewCell {
     
     // MARK: UI Constants
     private let cornerRadius: CGFloat = 15
-    private let contentMargin = 10
-    private let nameHeight = 30
+    private let contentMargin = 15
+    private let imageNameMargin = 5
+    private let headerHeight = 20
     private let nameDescriptionMargin = 10
     
     // MARK: Lifecycle methods
@@ -47,14 +58,21 @@ class LogCell: UICollectionViewCell {
 // MARK: Initialization
 extension LogCell {
     func initialize() {
-        self.backgroundColor = Asset.Colors.pastelBackgroundElement.color
+        self.backgroundColor = .systemGray6
         self.layer.cornerRadius = cornerRadius
+        
+        contentView.addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.left.top.equalToSuperview().offset(contentMargin)
+            make.height.width.equalTo(headerHeight)
+        }
         
         contentView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-contentMargin)
-            make.top.left.equalToSuperview().offset(contentMargin)
-            make.height.equalTo(nameHeight)
+            make.top.equalToSuperview().offset(contentMargin)
+            make.height.equalTo(headerHeight)
+            make.left.equalTo(imageView.snp.right).offset(imageNameMargin)
         }
         
         contentView.addSubview(descriptionLabel)

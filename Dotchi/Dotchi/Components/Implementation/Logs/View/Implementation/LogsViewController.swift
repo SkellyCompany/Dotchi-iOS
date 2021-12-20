@@ -24,7 +24,7 @@ class LogsViewController: UIViewController {
     private let collectionViewHorizontalInset: CGFloat = 15
     private let collectionViewVerticalInset: CGFloat = 10
     private let cellHeight: CGFloat = 50
-    private let cellMargin: CGFloat = 10
+    private let cellMargin: CGFloat = 15
     
     // MARK: UI Objects
     private let searchController = SearchController()
@@ -56,7 +56,7 @@ extension LogsViewController {
     
     private func initializeView() {
         self.title = "Logs"
-        self.view.backgroundColor = Asset.Colors.pastelBackground.color
+        self.view.backgroundColor = .systemBackground
     }
     
     private func initializeSearchController() {
@@ -68,7 +68,7 @@ extension LogsViewController {
     
     private func initializeCollectionView() {
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: createCompositionalLayout())
-        collectionView.backgroundColor = Asset.Colors.pastelBackground.color
+        collectionView.backgroundColor = .systemBackground
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
             make.top.bottom.left.right.equalToSuperview()

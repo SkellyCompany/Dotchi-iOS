@@ -42,7 +42,7 @@ extension App {
     }
     
     func setupTint(in window: UIWindow) {
-        window.tintColor = Asset.Colors.accent.color
+        window.tintColor = .systemPink
     }
     
     func launch(in window: UIWindow) {

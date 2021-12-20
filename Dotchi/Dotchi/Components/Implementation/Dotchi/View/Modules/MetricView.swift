@@ -2,11 +2,17 @@ import UIKit
 
 class MetricView: UIView {
     // MARK: Views
+    private lazy var headerImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
     private lazy var headerLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 1
-        label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
+        label.font = UIFont.systemFont(ofSize: 14, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -22,9 +28,10 @@ class MetricView: UIView {
     
     // MARK: UI Constants
     private let cornerRadius: CGFloat = 15
-    private let contentMargin = 10
-    private let headerHeight = 30
-    private let valueHeight = 50
+    private let contentMargin = 15
+    private let headerImageLabelMargin = 5
+    private let headerHeight = 15
+    private let valueHeight = 30
     
     // MARK: Lifecycle methods
     init() {
@@ -46,20 +53,30 @@ class MetricView: UIView {
 extension MetricView {
     private func initialize() {
         initializeView()
+        initializeHeaderImageView()
         initializeHeaderLabel()
         initializeValueLabel()
     }
     
     private func initializeView() {
-        self.backgroundColor = Asset.Colors.pastelBackgroundElement.color
+        self.backgroundColor = .systemGray6
         self.layer.cornerRadius = cornerRadius
+    }
+    
+    private func initializeHeaderImageView() {
+        addSubview(headerImageView)
+        headerImageView.snp.makeConstraints { make in
+            make.top.left.equalToSuperview().offset(contentMargin)
+            make.height.width.equalTo(headerHeight)
+        }
     }
     
     private func initializeHeaderLabel() {
         addSubview(headerLabel)
         headerLabel.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-contentMargin)
-            make.top.left.equalToSuperview().offset(contentMargin)
+            make.top.equalToSuperview().offset(contentMargin)
+            make.left.equalTo(headerImageView.snp.right).offset(headerImageLabelMargin)
             make.height.equalTo(headerHeight)
         }
     }
@@ -77,12 +94,21 @@ extension MetricView {
 
 // MARK: Updating
 extension MetricView {
-    func update(header: String) {
-        headerLabel.text = header
+    func update(tint: UIColor) {
+        headerLabel.textColor = tint
+        headerImageView.setImageColor(to: tint)
     }
     
-    func update(value: Double) {
-        valueLabel.text = "\(value)"
+    func update(headerImage: UIImage) {
+        headerImageView.image = headerImage
+    }
+    
+    func update(headerString: String) {
+        headerLabel.text = headerString
+    }
+    
+    func update(value: String) {
+        valueLabel.text = value
     }
 }
 

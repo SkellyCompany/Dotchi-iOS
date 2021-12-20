@@ -10,6 +10,6 @@ import SwiftyKit
 
 class Colors: SwiftyKitColors {
     override var accent: UIColor {
-        return Asset.Colors.accent.color
+        return .systemPink
     }
 }
