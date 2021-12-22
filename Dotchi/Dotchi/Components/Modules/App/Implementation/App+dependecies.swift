@@ -51,17 +51,17 @@ extension App {
     }
     
     private func setupLogger(container: Container) -> Container {
-        container.register(CryptorProtocol.self) { resolver in
-            return Cryptor()
+        container.register(LoggerProtocol.self) { resolver in
+            let logger = Logger()
+            logger.registerServices(.consoleLogger, .firebaseAnalyticsLogger)
+            return logger
         }
         return container
     }
     
     private func setupCryptor(container: Container) -> Container {
-        container.register(LoggerProtocol.self) { resolver in
-            let logger = Logger()
-            logger.registerServices(.consoleLogger, .firebaseAnalyticsLogger)
-            return logger
+        container.register(CryptorProtocol.self) { resolver in
+            return Cryptor()
         }
         return container
     }
