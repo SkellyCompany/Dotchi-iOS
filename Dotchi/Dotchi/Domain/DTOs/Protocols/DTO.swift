@@ -9,5 +9,5 @@ import Foundation
 import SwiftyCommunicationServices
 
 protocol DTO: HttpRequestBody, HttpResponseData, WebSocketData {
-    
+
 }

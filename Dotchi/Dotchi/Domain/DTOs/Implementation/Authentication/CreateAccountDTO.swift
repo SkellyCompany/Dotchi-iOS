@@ -8,7 +8,7 @@
 import Foundation
 
 struct CreateAccountDTO: DTO {
-    private enum CodingKeys : String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case email, firstName = "first_name", lastName = "last_name", password
     }
 

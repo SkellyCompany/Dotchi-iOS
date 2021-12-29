@@ -8,7 +8,7 @@ class StatisticView: UIView {
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
-    
+
     private lazy var headerLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -17,21 +17,21 @@ class StatisticView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private lazy var valueContainer: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray4
         view.layer.cornerRadius = 10
         return view
     }()
-    
+
     private lazy var valueContainerFill: UIView = {
         let view = UIView()
         view.backgroundColor = .systemGray4
         view.layer.cornerRadius = 10
         return view
     }()
-    
+
     private lazy var valueLabel: OutlinedLabel = {
         let label = OutlinedLabel()
         label.textAlignment = .center
@@ -42,25 +42,25 @@ class StatisticView: UIView {
         label.outlineWidth = 4
         return label
     }()
-    
+
     // MARK: UI Constants
     private let cornerRadius: CGFloat = 15
     private let contentMargin = 15
     private let headerImageLabelMargin = 5
     private let headerHeight = 15
     private let valueHeight = 40
-    
+
     // MARK: Lifecycle methods
     init() {
         super.init(frame: CGRect.zero)
         initialize()
     }
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -76,12 +76,12 @@ extension StatisticView {
         initializeValueContainerFill()
         initializeValueLabel()
     }
-    
+
     private func initializeView() {
         self.backgroundColor = .systemGray6
         self.layer.cornerRadius = cornerRadius
     }
-    
+
     private func initializeHeaderImageView() {
         addSubview(headerImageView)
         headerImageView.snp.makeConstraints { make in
@@ -89,7 +89,7 @@ extension StatisticView {
             make.height.width.equalTo(headerHeight)
         }
     }
-    
+
     private func initializeHeaderLabel() {
         addSubview(headerLabel)
         headerLabel.snp.makeConstraints { make in
@@ -99,7 +99,7 @@ extension StatisticView {
             make.height.equalTo(headerHeight)
         }
     }
-    
+
     private func initializeValueContainer() {
         addSubview(valueContainer)
         valueContainer.snp.makeConstraints { make in
@@ -109,7 +109,7 @@ extension StatisticView {
             make.height.equalTo(valueHeight)
         }
     }
-    
+
     private func initializeValueContainerFill() {
         valueContainer.addSubview(valueContainerFill)
         valueContainerFill.snp.makeConstraints { make in
@@ -117,7 +117,7 @@ extension StatisticView {
             make.width.equalToSuperview().multipliedBy(0)
         }
     }
-    
+
     private func initializeValueLabel() {
         valueContainer.addSubview(valueLabel)
         valueLabel.snp.makeConstraints { make in
@@ -133,24 +133,26 @@ extension StatisticView {
         headerImageView.setImageColor(to: tint)
         valueContainerFill.backgroundColor = tint
     }
-    
+
     func update(headerImage: UIImage) {
         headerImageView.image = headerImage
     }
-    
+
     func update(headerString: String) {
         headerLabel.text = headerString
     }
-    
+
     func update(value: Double, valueAsString: String) {
         valueLabel.text = valueAsString
-        let anim = UIViewPropertyAnimator(duration: 0.2, curve: UIView.AnimationCurve.linear, animations: { [weak self] in
-            self?.valueContainerFill.snp.remakeConstraints { make in
-                make.top.left.bottom.equalToSuperview()
-                make.width.equalToSuperview().multipliedBy(value / 100)
-            }
-            self?.layoutIfNeeded()
-        })
+        let anim = UIViewPropertyAnimator(duration: 0.2,
+                                          curve: UIView.AnimationCurve.linear,
+                                          animations: { [weak self] in
+                                            self?.valueContainerFill.snp.remakeConstraints { make in
+                                                make.top.left.bottom.equalToSuperview()
+                                                make.width.equalToSuperview().multipliedBy(value / 100)
+                                            }
+                                            self?.layoutIfNeeded()
+                                          })
         anim.startAnimation()
     }
 }

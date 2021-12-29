@@ -10,6 +10,6 @@ import Foundation
 protocol LogRepositoryProtocol {
     typealias LogsResultCallback = (Result<[Log], DataError>) -> Void
     typealias LogResultCallback = (Result<Log, DataError>) -> Void
-    
+
     func getAllLogs(dotchiId: String, completionHandler: @escaping LogsResultCallback)
 }

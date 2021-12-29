@@ -10,4 +10,3 @@ import Foundation
 protocol ComponentErrorProtocol: Error {
     var userDescription: String { get }
 }
-

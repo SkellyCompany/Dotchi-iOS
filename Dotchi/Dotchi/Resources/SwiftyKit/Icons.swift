@@ -9,5 +9,5 @@ import Foundation
 import SwiftyKit
 
 class Icons: SwiftyKitIcons {
-    
+
 }

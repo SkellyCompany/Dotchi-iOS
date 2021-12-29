@@ -21,10 +21,11 @@ extension Log {
         self.description = logDto.description
         self.timestamp = Date(timeIntervalSince1970: logDto.timestamp)
     }
-    
+
     static func initMany(from logDtos: [LogDTO]) -> [Log] {
         return logDtos.map { logDto in
-            return Log(id: logDto.id, name: logDto.name, description: logDto.description, timestamp: Date(timeIntervalSince1970: logDto.timestamp))
+            return Log(id: logDto.id, name: logDto.name, description: logDto.description,
+                       timestamp: Date(timeIntervalSince1970: logDto.timestamp))
         }
     }
 }

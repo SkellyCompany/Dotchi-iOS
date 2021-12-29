@@ -15,7 +15,7 @@ protocol UserDefaultsProtocol: AnyObject {
 
     func string(forKey defaultName: String) -> String?
     func array(forKey defaultName: String) -> [Any]?
-    func dictionary(forKey defaultName: String) -> [String : Any]?
+    func dictionary(forKey defaultName: String) -> [String: Any]?
     func data(forKey defaultName: String) -> Data?
     func stringArray(forKey defaultName: String) -> [String]?
     func integer(forKey defaultName: String) -> Int
@@ -30,7 +30,7 @@ protocol UserDefaultsProtocol: AnyObject {
     func set(_ value: Bool, forKey defaultName: String)
     func set(_ url: URL?, forKey defaultName: String)
 
-    func register(defaults registrationDictionary: [String : Any])
+    func register(defaults registrationDictionary: [String: Any])
 
     func synchronize() -> Bool
 }

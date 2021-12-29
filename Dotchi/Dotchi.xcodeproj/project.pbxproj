@@ -144,6 +144,7 @@
 		749197C0276BDE8800F29D61 /* DotchiStatisticsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197BF276BDE8800F29D61 /* DotchiStatisticsDTO.swift */; };
 		749197C4276BDF6200F29D61 /* DotchiStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197C3276BDF6200F29D61 /* DotchiStatistics.swift */; };
 		749197C6276BDF7200F29D61 /* DotchiMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197C5276BDF7200F29D61 /* DotchiMetrics.swift */; };
+		749C1984277C5F8B00324BCA /* .switlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 749C1983277C5F8B00324BCA /* .switlint.yml */; };
 		74C4EAE7275B70A200034387 /* LogsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */; };
 		74C4EAE9275B70AD00034387 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE8275B70AD00034387 /* LogsViewController.swift */; };
 		74C4EAEB275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */; };
@@ -296,6 +297,7 @@
 		749197BF276BDE8800F29D61 /* DotchiStatisticsDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiStatisticsDTO.swift; sourceTree = "<group>"; };
 		749197C3276BDF6200F29D61 /* DotchiStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiStatistics.swift; sourceTree = "<group>"; };
 		749197C5276BDF7200F29D61 /* DotchiMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiMetrics.swift; sourceTree = "<group>"; };
+		749C1983277C5F8B00324BCA /* .switlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .switlint.yml; sourceTree = "<group>"; };
 		74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		74C4EAE8275B70AD00034387 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogsViewController+LogsViewControllerProtocol.swift"; sourceTree = "<group>"; };
@@ -843,6 +845,7 @@
 				375603BF26D03FF5009BD2FF /* Storyboards */,
 				637DD91D262C965A005972BD /* Info */,
 				3747FDF826D03DCB00F3A219 /* SwiftGen */,
+				749C1982277C5F8B00324BCA /* SwiftLint */,
 				37D44E80272CA6FF001AA0F4 /* SwiftyKit */,
 			);
 			path = Resources;
@@ -1403,6 +1406,14 @@
 			path = Dotchi;
 			sourceTree = "<group>";
 		};
+		749C1982277C5F8B00324BCA /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				749C1983277C5F8B00324BCA /* .switlint.yml */,
+			);
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
 		74C4EADD275B6FBB00034387 /* Logs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1579,6 +1590,7 @@
 				637DD8EE262C93DD005972BD /* Frameworks */,
 				637DD8EF262C93DD005972BD /* Resources */,
 				6337D7CF262CA05E0001CB46 /* SwiftGen */,
+				749C1978277B037A00324BCA /* SwiftLint */,
 				6337D7D0262CA0890001CB46 /* Crashlytics */,
 				6337D7D1262CA0C30001CB46 /* TODO */,
 			);
@@ -1662,6 +1674,7 @@
 				375603DA26D03FF5009BD2FF /* Images.xcassets in Resources */,
 				375603D926D03FF5009BD2FF /* Icons.xcassets in Resources */,
 				375603D426D03FF5009BD2FF /* LaunchScreen.storyboard in Resources */,
+				749C1984277C5F8B00324BCA /* .switlint.yml in Resources */,
 				375603D726D03FF5009BD2FF /* Localizable.strings in Resources */,
 				375603DC26D03FF5009BD2FF /* loadingSuccess.json in Resources */,
 				3747FE1026D03DCB00F3A219 /* lottie.stencil in Resources */,
@@ -1729,6 +1742,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "KEYWORDS=\"STUB:|WARNING:|TODO:|FIXME:|DevTeam:|\\?\\?\\?:\" \nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -not -path \"${SRCROOT}/Pods/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/1: warning: \\$1/\"\n\nKEYWORDS=\"ERROR:|XXX:|\\!\\!\\!:\" \nfind \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -not -path \"${SRCROOT}/Pods/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/1: error: \\$1/\"\nERROR_OUTPUT=`find \"${SRCROOT}\" \\( -name \"*.h\" -or -name \"*.m\" -or -name \"*.swift\" \\) -not -path \"${SRCROOT}/Pods/*\" -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($KEYWORDS).*\\$\" | perl -p -e \"s/($KEYWORDS)/1: error: \\$1/\"`\n\nexit ${#ERROR_OUTPUT}\n";
+		};
+		749C1978277B037A00324BCA /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --config ${PROJECT_DIR}/${PRODUCT_NAME}/Resources/SwiftLint/.switlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

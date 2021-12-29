@@ -10,5 +10,5 @@ import UIKit
 
 enum RoutingOption {
     case wrapInNavigation
-    case wrapInTabBar(tabBarItem: UITabBarItem, viewControllers: KeyValuePairs<Route, UITabBarItem>? = nil)
+    case wrapInTabBar(tabBarItem: UITabBarItem, siblings: KeyValuePairs<Route, UITabBarItem>? = nil)
 }

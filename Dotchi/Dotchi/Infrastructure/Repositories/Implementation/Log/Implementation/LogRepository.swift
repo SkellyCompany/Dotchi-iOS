@@ -14,8 +14,11 @@ class LogRepository {
     let logger: LoggerProtocol
     let httpService: HttpServiceProtocol
     let socketService: WebSocketServiceProtocol
-    
-    init(environment: EnvironmentProtocol, logger: LoggerProtocol, httpService: HttpServiceProtocol, socketService: WebSocketServiceProtocol) {
+
+    init(environment: EnvironmentProtocol,
+         logger: LoggerProtocol,
+         httpService: HttpServiceProtocol,
+         socketService: WebSocketServiceProtocol) {
         self.environment = environment
         self.logger = logger
         self.httpService = httpService

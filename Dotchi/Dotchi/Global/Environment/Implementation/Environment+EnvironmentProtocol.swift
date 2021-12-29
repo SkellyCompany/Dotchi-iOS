@@ -15,11 +15,11 @@ extension Environment: EnvironmentProtocol {
         return "https://dotchiapi.herokuapp.com"
         #endif
     }
-    
+
     var homepageUrl: URL {
-       return URL.initWithPrefix(string: "https://schemabuoi.github.io/greg-charyszczak")!
+        return URL.initWithPrefix(string: "https://schemabuoi.github.io/greg-charyszczak")!
     }
-    
+
     var supportEmail: String {
         return "charyszczakg@gmail.com"
     }

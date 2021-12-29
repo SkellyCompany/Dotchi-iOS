@@ -12,62 +12,63 @@ import Swinject
 import SwiftyCryptor
 import SwiftyLogger
 
+// swiftlint:disable force_cast
 extension App {
     func createDependencyContainer() {
         var container = Container()
         container = setupGlobals(container: container)
         container = setupRouter(container: container)
-        
+
         container = setupLogger(container: container)
         container = setupCryptor(container: container)
         container = setupCommunicationServices(container: container)
         container = setupFeatureControllers(container: container)
-        
+
         container = setupStorage(container: container)
         container = setupRepositories(container: container)
         container = setupComponents(container: container)
         self.container = container
     }
-    
+
     private func setupGlobals(container: Container) -> Container {
-        container.register(EnvironmentProtocol.self) { resolver in
+        container.register(EnvironmentProtocol.self) { _ in
             return Environment()
         }
-        container.register(AppDefaultsProtocol.self) { resolver in
+        container.register(AppDefaultsProtocol.self) { _ in
             return AppDefaults()
         }
-        container.register(SystemInfoProtocol.self) { resolver in
+        container.register(SystemInfoProtocol.self) { _ in
             return SystemInfo()
         }
         return container
     }
-    
+
     private func setupRouter(container: Container) -> Container {
-        container.register(RouterProtocol.self) { resolver in
+        container.register(RouterProtocol.self) { _ in
             let router = Router(container: container)
             return router
         }
         return container
     }
-    
+
     private func setupLogger(container: Container) -> Container {
-        container.register(LoggerProtocol.self) { resolver in
+        container.register(LoggerProtocol.self) { _ in
             let logger = Logger()
             logger.registerServices(.consoleLogger, .firebaseAnalyticsLogger)
             return logger
         }
         return container
     }
-    
+
     private func setupCryptor(container: Container) -> Container {
-        container.register(CryptorProtocol.self) { resolver in
+        container.register(CryptorProtocol.self) { _ in
             return Cryptor()
         }
         return container
     }
-    
+
     private func setupCommunicationServices(container: Container) -> Container {
-        container.register(HttpServiceProtocol.self) { resolver in
+        container.register(HttpServiceProtocol.self) { _ in
             return HttpService()
         }
         container.register(WebSocketServiceProtocol.self) { resolver in
@@ -76,7 +77,7 @@ extension App {
         }
         return container
     }
-    
+
     private func setupFeatureControllers(container: Container) -> Container {
         container.register(LanguageControllerProtocol.self) { _ in
             return LanguageController()
@@ -101,7 +102,7 @@ extension App {
         }
         return container
     }
-    
+
     private func setupStorage(container: Container) -> Container {
         container.register(UserDefaultsProtocol.self) { _ in
             return UserDefaults()
@@ -118,7 +119,7 @@ extension App {
         }
         return container
     }
-    
+
     private func setupRepositories(container: Container) -> Container {
         container.register(UserPreferencesRepositoryProtocol.self) { resolver in
             let storage = resolver.resolve(AppStorageProtocol.self)!
@@ -136,25 +137,35 @@ extension App {
             let storage = resolver.resolve(AppStorageProtocol.self)!
             let logger = resolver.resolve(LoggerProtocol.self)!
             let service = resolver.resolve(HttpServiceProtocol.self)!
-            return AuthenticationRepository(storage: storage, defaults: defaults, environment: environment, logger: logger, service: service)
+            return AuthenticationRepository(storage: storage,
+                                            defaults: defaults,
+                                            environment: environment,
+                                            logger: logger,
+                                            service: service)
         }
         container.register(DotchiRepositoryProtocol.self) { resolver in
             let environment = resolver.resolve(EnvironmentProtocol.self)!
             let logger = resolver.resolve(LoggerProtocol.self)!
             let httpService = resolver.resolve(HttpServiceProtocol.self)!
             let socketService = resolver.resolve(WebSocketServiceProtocol.self)!
-            return DotchiRepository(environment: environment, logger: logger, httpService: httpService, socketService: socketService)
+            return DotchiRepository(environment: environment,
+                                    logger: logger,
+                                    httpService: httpService,
+                                    socketService: socketService)
         }
         container.register(LogRepositoryProtocol.self) { resolver in
             let environment = resolver.resolve(EnvironmentProtocol.self)!
             let logger = resolver.resolve(LoggerProtocol.self)!
             let httpService = resolver.resolve(HttpServiceProtocol.self)!
             let socketService = resolver.resolve(WebSocketServiceProtocol.self)!
-            return LogRepository(environment: environment, logger: logger, httpService: httpService, socketService: socketService)
+            return LogRepository(environment: environment,
+                                 logger: logger,
+                                 httpService: httpService,
+                                 socketService: socketService)
         }
         return container
     }
-    
+
     private func setupComponents(container: Container) -> Container {
         container.register(TabBarController.self) { resolver in
             let router = resolver.resolve(RouterProtocol.self)!
@@ -164,11 +175,11 @@ extension App {
         container.register(NavigationController.self) { _ in
             return NavigationController()
         }.inObjectScope(.transient)
-        
+
         container.register(SplashViewController.self) { _ in
             return SplashViewController()
         }.implements(SplashViewControllerProtocol.self)
-        
+
         container.register(DotchiViewController.self) { resolver in
             let eventHandler = resolver.resolve(DotchiEventHandlerProtocol.self)!
             return DotchiViewController(eventHandler: eventHandler)
@@ -185,7 +196,7 @@ extension App {
             let repository = resolver.resolve(DotchiRepositoryProtocol.self)!
             return DotchiInteractor(repository: repository)
         }
-        
+
         container.register(LogsViewController.self) { resolver in
             let eventHandler = resolver.resolve(LogsEventHandlerProtocol.self)!
             return LogsViewController(eventHandler: eventHandler)
@@ -202,10 +213,10 @@ extension App {
             let repository = resolver.resolve(LogRepositoryProtocol.self)!
             return LogsInteractor(repository: repository)
         }
-        
+
         return container
     }
-    
+
     func resolveDependencies() {
         self.router = container?.resolve(RouterProtocol.self)!
         self.logger = container?.resolve(LoggerProtocol.self)!
@@ -218,3 +229,4 @@ extension App {
         self.logRepository = container?.resolve(LogRepositoryProtocol.self)!
     }
 }
+// swiftlint:enable force_cast

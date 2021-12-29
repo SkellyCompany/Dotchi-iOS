@@ -18,10 +18,6 @@ class CacheItem<T: AnyObject> {
     private var _value: T?
 
     var value: T? {
-        set {
-            self.lastRefreshTimestamp = NSDate().timeIntervalSince1970
-            _value = newValue
-        }
         get {
             if let lastRefreshTimestamp = lastRefreshTimestamp,
                Int(NSDate().timeIntervalSince1970) - Int(lastRefreshTimestamp) < expirationTimeInSeconds {
@@ -30,6 +26,10 @@ class CacheItem<T: AnyObject> {
             } else {
                 return nil
             }
+        }
+        set {
+            self.lastRefreshTimestamp = NSDate().timeIntervalSince1970
+            _value = newValue
         }
     }
 

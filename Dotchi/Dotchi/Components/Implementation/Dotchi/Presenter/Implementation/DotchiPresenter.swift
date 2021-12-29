@@ -14,12 +14,12 @@ class DotchiPresenter {
             refreshViewModel()
         }
     }
-    
+
     let dotchi: Dotchi
-    
+
     var statistics: DotchiStatistics
     var metrics: DotchiMetrics
-    
+
     init(interactor: DotchiInteractorProtocol, routeModel: DotchiRouteModel) {
         self.interactor = interactor
         self.dotchi = routeModel.dotchi
@@ -46,7 +46,7 @@ extension DotchiPresenter {
             }
         }
     }
-    
+
     func observeMetrics() {
         interactor.observeMetrics(dotchiId: dotchi.id) { result in
             if case let Result.success(metrics) = result {

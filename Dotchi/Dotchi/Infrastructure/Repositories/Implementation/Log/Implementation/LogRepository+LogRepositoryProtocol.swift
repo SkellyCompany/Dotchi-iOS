@@ -9,7 +9,8 @@ import Foundation
 
 extension LogRepository: LogRepositoryProtocol {
     func getAllLogs(dotchiId: String, completionHandler: @escaping LogsResultCallback) {
-        httpService.get(response: [LogDTO].self, endpointUrl: Endpoint.log(dotchiId: dotchiId).getUrlString(with: environment)) { result in
+        httpService.get(response: [LogDTO].self,
+                        endpointUrl: Endpoint.log(dotchiId: dotchiId).getUrlString(with: environment)) { result in
             switch result {
             case .success(let logDto):
                 let logs = Log.initMany(from: logDto)

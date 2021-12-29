@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol DotchiViewControllerProtocol: AnyObject  {
+protocol DotchiViewControllerProtocol: AnyObject {
     var model: DotchiViewModel? { get set }
 }

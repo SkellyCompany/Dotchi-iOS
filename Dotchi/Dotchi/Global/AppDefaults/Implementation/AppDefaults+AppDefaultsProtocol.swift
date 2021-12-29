@@ -13,16 +13,16 @@ extension AppDefaults: AppDefaultsProtocol {
         let deviceLanguageCode = Locale.current.languageCode ?? defaultLanguage.rawValue
         return Language(rawValue: deviceLanguageCode) ?? defaultLanguage
     }
-    
+
     private var defaultLanguage: Language {
         return .english
     }
-    
+
     // MARK: Theme
     var defaultTheme: Theme {
         return .dark
     }
-    
+
     // MARK: User Preferences
     var defaultPreferences: UserPreferences {
         return UserPreferences(applicationLanguage: self.defaultApplicationLanguage,

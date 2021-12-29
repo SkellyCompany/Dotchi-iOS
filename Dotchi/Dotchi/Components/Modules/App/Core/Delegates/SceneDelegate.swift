@@ -11,7 +11,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     private lazy var app: AppProtocol = App.shared
 
-    func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+    func scene(
+        _ scene: UIScene,
+        willConnectTo session: UISceneSession,
+        options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         let window: UIWindow = {
             let window = UIWindow(frame: windowScene.coordinateSpace.bounds)
@@ -42,4 +45,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         app.didEnterBackground()
     }
 }
-

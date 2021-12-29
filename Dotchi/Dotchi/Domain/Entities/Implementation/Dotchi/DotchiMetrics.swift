@@ -5,19 +5,19 @@ struct DotchiMetrics {
     let humidity: Double
     let lightIntensity: Double
     let soundIntensity: Double
-    
+
     var temperatureString: String {
         return "\(String(format: "%.0f", temperature))°C"
     }
-    
+
     var humidityString: String {
         return "\(String(format: "%.0f", humidity))%"
     }
-    
+
     var lightIntensityString: String {
         return "\(String(format: "%.0f", lightIntensity))%"
     }
-    
+
     var soundIntensityString: String {
         return "\(String(format: "%.0f", soundIntensity))%"
     }

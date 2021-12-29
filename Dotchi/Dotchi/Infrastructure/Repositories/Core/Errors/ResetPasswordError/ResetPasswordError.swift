@@ -16,6 +16,7 @@ enum ResetPasswordError {
 }
 
 extension ResetPasswordError {
+    // swiflint:disable cyclomatic_complexity
     init(error: Error?) {
         if let httpServiceError = error as? HttpServiceError {
             switch httpServiceError {
@@ -47,4 +48,5 @@ extension ResetPasswordError {
             self = .applicationError
         }
     }
+    // swiflint:enable cyclomatic_complexity
 }

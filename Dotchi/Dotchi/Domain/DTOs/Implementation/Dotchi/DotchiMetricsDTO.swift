@@ -31,7 +31,7 @@ struct DotchiMetricsDTO: DTO {
     enum CodingKeys: String, CodingKey {
         case temperature, humidity, lightIntensity = "light_intensity", soundIntensity = "sound_intensity"
     }
-    
+
     let temperature: Double
     let humidity: Double
     let lightIntensity: Double

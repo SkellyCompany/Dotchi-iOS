@@ -16,13 +16,17 @@ extension AppStorage: AppStorageProtocol {
             _userPreferences = newValue
         }
     }
-    
+
     var user: User? {
         get {
             do {
                 if let _user = _user {
                     let decryptedPassword = try cryptor.decrypt(value: _user.password)
-                    return User(id: _user.id, email: _user.email, password: decryptedPassword, phoneNumber: _user.phoneNumber, roles: _user.roles, token: _user.token)
+                    return User(id: _user.id,
+                                email: _user.email,
+                                password: decryptedPassword,
+                                phoneNumber: _user.phoneNumber,
+                                roles: _user.roles, token: _user.token)
                 } else {
                     return nil
                 }
@@ -35,7 +39,11 @@ extension AppStorage: AppStorageProtocol {
             do {
                 if let newValue = newValue {
                     let encryptedPassword = try cryptor.encrypt(value: newValue.password)
-                    _user = User(id: newValue.id, email: newValue.email, password: encryptedPassword, phoneNumber: newValue.phoneNumber, roles: newValue.roles, token: newValue.token)
+                    _user = User(id: newValue.id,
+                                 email: newValue.email,
+                                 password: encryptedPassword,
+                                 phoneNumber: newValue.phoneNumber,
+                                 roles: newValue.roles, token: newValue.token)
                 } else {
                     _user = nil
                 }

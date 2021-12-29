@@ -9,7 +9,7 @@ import Foundation
 
 class LogsInteractor {
     let repository: LogRepositoryProtocol
-    
+
     init(repository: LogRepositoryProtocol) {
         self.repository = repository
     }

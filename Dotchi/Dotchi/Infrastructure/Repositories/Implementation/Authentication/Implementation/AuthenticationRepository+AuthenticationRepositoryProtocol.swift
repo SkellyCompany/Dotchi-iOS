@@ -3,7 +3,9 @@ import SwiftyCommunicationServices
 
 extension AuthenticationRepository: AuthenticationRepositoryProtocol {
     func login(with loginModel: LoginDTO, completionHandler: @escaping LoginResultCallback) {
-        service.post(response: UserDTO.self, endpointUrl: Endpoint.login.getUrlString(with: environment), body: loginModel) { result in
+        service.post(response: UserDTO.self,
+                     endpointUrl: Endpoint.login.getUrlString(with: environment),
+                     body: loginModel) { result in
             switch result {
             case .success(let userDto):
                 let user = User(from: userDto, with: loginModel.password)
@@ -19,9 +21,11 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
             }
         }
     }
-    
-    func createAccount(with createAccountModel: CreateAccountDTO, completionHandler: @escaping CreateAccountResultCallback) {
-        service.post(endpointUrl: Endpoint.createAccount.getUrlString(with: environment), body: createAccountModel) { result in
+
+    func createAccount(with createAccountModel: CreateAccountDTO,
+                       completionHandler: @escaping CreateAccountResultCallback) {
+        service.post(endpointUrl: Endpoint.createAccount.getUrlString(with: environment),
+                     body: createAccountModel) { result in
             switch result {
             case .success:
                 self.logger.log(type: .info, name: "successCreateAccount")
@@ -35,9 +39,11 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
             }
         }
     }
-    
-    func resetPassword(with resetPasswordModel: ResetPasswordDTO, completionHandler: @escaping ResetPasswordResultCallback) {
-        service.post(endpointUrl: Endpoint.resetPassword.getUrlString(with: environment), body: resetPasswordModel) { result in
+
+    func resetPassword(with resetPasswordModel: ResetPasswordDTO,
+                       completionHandler: @escaping ResetPasswordResultCallback) {
+        service.post(endpointUrl: Endpoint.resetPassword.getUrlString(with: environment),
+                     body: resetPasswordModel) { result in
             switch result {
             case .success:
                 self.logger.log(type: .info, name: "successResetPassword")
@@ -51,11 +57,13 @@ extension AuthenticationRepository: AuthenticationRepositoryProtocol {
             }
         }
     }
-    
+
     func refreshToken(completionHandler: @escaping (String?) -> Void) {
         if let loggedInUser = storage.user {
             let loginModel = LoginDTO(email: loggedInUser.email, password: loggedInUser.password)
-            service.post(response: UserDTO.self, endpointUrl: Endpoint.login.getUrlString(with: environment), body: loginModel) { result in
+            service.post(response: UserDTO.self,
+                         endpointUrl: Endpoint.login.getUrlString(with: environment),
+                         body: loginModel) { result in
                 switch result {
                 case .success(let userDto):
                     let updatedUser = User(from: userDto, with: loginModel.password)

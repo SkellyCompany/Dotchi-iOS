@@ -19,7 +19,7 @@ extension Cache: CacheProtocol {
             cache.setObject(newCacheItem, forKey: key)
         }
     }
-    
+
     func get(forKey key: T) -> S? {
         return cache.object(forKey: key)?.value
     }

@@ -10,7 +10,7 @@ import Swinject
 
 class Router {
     let container: Container
-    
+
     init(container: Container) {
         self.container = container
     }

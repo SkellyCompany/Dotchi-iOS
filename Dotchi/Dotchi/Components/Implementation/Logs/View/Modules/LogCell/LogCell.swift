@@ -2,7 +2,7 @@ import UIKit
 
 class LogCell: UICollectionViewCell {
     static let identifier = "LogCell"
-    
+
     // MARK: Views
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
@@ -11,17 +11,17 @@ class LogCell: UICollectionViewCell {
         imageView.setImageColor(to: .systemBlue)
         return imageView
     }()
-    
+
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
         label.numberOfLines = 1
-//        label.textColor = .systemBlue
+        //        label.textColor = .systemBlue
         label.font = UIFont.systemFont(ofSize: 15, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     private lazy var descriptionLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
@@ -31,24 +31,24 @@ class LogCell: UICollectionViewCell {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     // MARK: UI Constants
     private let cornerRadius: CGFloat = 15
     private let contentMargin = 15
     private let imageNameMargin = 5
     private let headerHeight = 20
     private let nameDescriptionMargin = 10
-    
+
     // MARK: Lifecycle methods
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialize()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
     override func prepareForReuse() {
         super.prepareForReuse()
         reset()
@@ -60,13 +60,13 @@ extension LogCell {
     func initialize() {
         self.backgroundColor = .systemGray6
         self.layer.cornerRadius = cornerRadius
-        
+
         contentView.addSubview(imageView)
         imageView.snp.makeConstraints { make in
             make.left.top.equalToSuperview().offset(contentMargin)
             make.height.width.equalTo(headerHeight)
         }
-        
+
         contentView.addSubview(nameLabel)
         nameLabel.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-contentMargin)
@@ -74,7 +74,7 @@ extension LogCell {
             make.height.equalTo(headerHeight)
             make.left.equalTo(imageView.snp.right).offset(imageNameMargin)
         }
-        
+
         contentView.addSubview(descriptionLabel)
         descriptionLabel.snp.makeConstraints { make in
             make.bottom.right.equalToSuperview().offset(-contentMargin)

@@ -8,8 +8,8 @@
 import Foundation
 
 class Cache<T: AnyObject, S: AnyObject> {
-    typealias keyType = T
-    typealias valueType = S
+    typealias KeyType = T
+    typealias ValueType = S
 
     let cache: NSCache<T, CacheItem<S>> = NSCache<T, CacheItem<S>>()
 }

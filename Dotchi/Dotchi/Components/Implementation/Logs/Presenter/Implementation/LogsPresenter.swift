@@ -14,10 +14,10 @@ class LogsPresenter {
             refreshViewModel()
         }
     }
-    
+
     var logs: [Log]
     var filteredLogs: [Log]
-    
+
     init(interactor: LogsInteractorProtocol, routeModel: LogsRouteModel) {
         self.interactor = interactor
         self.logs = routeModel.logs

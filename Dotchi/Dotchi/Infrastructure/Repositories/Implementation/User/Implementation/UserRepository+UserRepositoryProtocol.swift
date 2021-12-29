@@ -11,11 +11,11 @@ extension UserRepository: UserRepositoryProtocol {
     func getLoggedInUser() -> User? {
         return storage.user
     }
-    
+
     func saveLoggedInUser(user: User) {
         storage.user = user
     }
-    
+
     func clearLoggedInUser() {
         storage.user = nil
     }

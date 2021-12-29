@@ -8,9 +8,9 @@
 import Foundation
 
 protocol CacheProtocol {
-    associatedtype keyType
-    associatedtype valueType
+    associatedtype KeyType
+    associatedtype ValueType
 
-    func set(_ value: valueType, forKey: keyType, expirationTimeInSeconds: Int)
-    func get(forKey: keyType) -> valueType?
+    func set(_ value: ValueType, forKey: KeyType, expirationTimeInSeconds: Int)
+    func get(forKey: KeyType) -> ValueType?
 }

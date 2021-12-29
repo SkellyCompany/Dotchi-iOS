@@ -8,10 +8,10 @@
 import Foundation
 
 struct UserDTO: DTO {
-    private enum CodingKeys : String, CodingKey {
+    private enum CodingKeys: String, CodingKey {
         case id, email, passwordHash = "password_hash", phoneNumber = "phone_number", token, roles
     }
-    
+
     let id: String
     let email: String
     let passwordHash: String

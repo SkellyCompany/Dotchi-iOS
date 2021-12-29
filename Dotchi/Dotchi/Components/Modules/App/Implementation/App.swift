@@ -13,7 +13,7 @@ import SwiftyLogger
 
 class App {
     static let shared = App()
-    
+
     var container: Container?
     var router: RouterProtocol?
     var logger: LoggerProtocol?
@@ -24,8 +24,6 @@ class App {
     var userPreferencesRepository: UserPreferencesRepositoryProtocol?
     var dotchiRepository: DotchiRepositoryProtocol?
     var logRepository: LogRepositoryProtocol?
-    
-    private init() {
-        
-    }
+
+    private init() {}
 }

@@ -11,7 +11,7 @@ struct LogDTO: DTO {
     enum CodingKeys: String, CodingKey {
         case id = "_id", name, description, timestamp
     }
-    
+
     let id: String
     let name: String
     let description: String

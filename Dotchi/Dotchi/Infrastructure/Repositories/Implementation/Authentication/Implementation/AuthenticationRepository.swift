@@ -15,8 +15,12 @@ class AuthenticationRepository {
     let environment: EnvironmentProtocol
     let logger: LoggerProtocol
     let service: HttpServiceProtocol
-    
-    init(storage: AppStorageProtocol, defaults: AppDefaultsProtocol, environment: EnvironmentProtocol, logger: LoggerProtocol, service: HttpServiceProtocol) {
+
+    init(storage: AppStorageProtocol,
+         defaults: AppDefaultsProtocol,
+         environment: EnvironmentProtocol,
+         logger: LoggerProtocol,
+         service: HttpServiceProtocol) {
         self.storage = storage
         self.defaults = defaults
         self.environment = environment

@@ -9,7 +9,7 @@ import Foundation
 
 class DotchiInteractor {
     let repository: DotchiRepositoryProtocol
-    
+
     init(repository: DotchiRepositoryProtocol) {
         self.repository = repository
     }

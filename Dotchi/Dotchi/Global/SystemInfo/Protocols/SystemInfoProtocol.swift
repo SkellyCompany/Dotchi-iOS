@@ -8,12 +8,12 @@
 import Foundation
 
 protocol SystemInfoProtocol {
-    /// Short app version: "major.minor.patch"
+    // Short app version: "major.minor.patch"
     var shortAppVersion: String { get }
-    
-    /// App version with build number included
+
+    // App version with build number included
     var appVersion: String { get }
-    
-    /// Friendly device name, like "iPhone 6s"
+
+    // Friendly device name, like "iPhone 6s"
     var deviceName: String { get }
 }

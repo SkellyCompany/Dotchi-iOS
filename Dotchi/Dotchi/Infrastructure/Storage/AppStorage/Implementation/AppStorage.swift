@@ -25,7 +25,9 @@ class AppStorage {
                 let encodedData = try JSONEncoder().encode(_userPreferences)
                 userDefaults.set(encodedData, forKey: kUserPreferences)
             } catch let error {
-                logger.log(type: .error, name: "couldNotSaveUserPreferencesToAppStorage", description: error.longDescription)
+                logger.log(type: .error,
+                           name: "couldNotSaveUserPreferencesToAppStorage",
+                           description: error.longDescription)
             }
         }
     }
@@ -46,19 +48,24 @@ class AppStorage {
     }
 
     // MARK: Initialization
-    init(appDefaults: AppDefaultsProtocol, userDefaults: UserDefaultsProtocol, logger: LoggerProtocol, cryptor: CryptorProtocol) {
+    init(appDefaults: AppDefaultsProtocol,
+         userDefaults: UserDefaultsProtocol,
+         logger: LoggerProtocol,
+         cryptor: CryptorProtocol) {
         self.appDefaults = appDefaults
         self.userDefaults = userDefaults
         self.logger = logger
         self.cryptor = cryptor
-        
+
         let decoder = JSONDecoder()
         if let userPreferencesData = userDefaults.data(forKey: kUserPreferences) {
             do {
                 let userPreferences = try decoder.decode(UserPreferences.self, from: userPreferencesData)
                 self._userPreferences = userPreferences
             } catch let error {
-                logger.log(type: .error, name: "couldNotRetrieveUserPreferencesFromAppStorage", description: error.longDescription)
+                logger.log(type: .error,
+                           name: "couldNotRetrieveUserPreferencesFromAppStorage",
+                           description: error.longDescription)
                 self._userPreferences = appDefaults.defaultPreferences
             }
         } else {

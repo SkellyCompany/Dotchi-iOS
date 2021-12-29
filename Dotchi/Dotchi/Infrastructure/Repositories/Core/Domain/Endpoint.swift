@@ -11,17 +11,17 @@ enum Endpoint {
     static let loginUrl = "authenticate"
     static let createAccountUrl = "register"
     static let resetPasswordUrl = "user/forgot-password"
-    
+
     static let dotchiUrl = "dotchi"
     static let logUrl = "log"
     static let newLogUrl = "newLog"
     static let updatedMetricsUrl = "updatedMetrics"
     static let updatedStatisticsUrl = "updatedStatistics"
-    
+
     case login
     case createAccount
     case resetPassword
-    
+
     case dotchi(dotchiId: String)
     case log(dotchiId: String)
     case newLog(dotchiId: String)
@@ -50,7 +50,7 @@ extension Endpoint {
             return "\(environment.apiUrl)/\(Self.updatedStatisticsUrl)/\(dotchiId)"
         }
     }
-    
+
     func getEventString() -> String {
         switch self {
         case .login:

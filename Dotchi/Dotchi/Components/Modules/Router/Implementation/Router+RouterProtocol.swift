@@ -24,9 +24,9 @@ extension Router: RouterProtocol {
                 tabBar.viewControllers = [navigation]
                 viewControllers?.forEach { route, tabBarItem in
                     let navigation = container.resolve(NavigationController.self)!
-                    let vc = resolveViewController(for: route)
-                    vc.tabBarItem = tabBarItem
-                    navigation.viewControllers = [vc]
+                    let sibling = resolveViewController(for: route)
+                    sibling.tabBarItem = tabBarItem
+                    navigation.viewControllers = [sibling]
                     tabBar.viewControllers?.append(navigation)
                 }
                 viewController = tabBar
@@ -34,7 +34,7 @@ extension Router: RouterProtocol {
         }
         self.route(to: viewController, style: style)
     }
-    
+
     private func resolveViewController(for route: Route) -> UIViewController {
         switch route {
         case .splash:
@@ -47,7 +47,7 @@ extension Router: RouterProtocol {
             return container.resolve(LogsViewController.self)!
         }
     }
-    
+
     private func route(to viewController: UIViewController, style: PresentationStyle) {
         switch style {
         case .root(let window, let transition):

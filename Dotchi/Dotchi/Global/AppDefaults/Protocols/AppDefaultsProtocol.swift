@@ -9,8 +9,8 @@ import Foundation
 
 protocol AppDefaultsProtocol {
     var defaultApplicationLanguage: Language { get }
-    
+
     var defaultTheme: Theme { get }
-    
+
     var defaultPreferences: UserPreferences { get }
 }

@@ -9,8 +9,8 @@ import Foundation
 
 protocol EnvironmentProtocol {
     var apiUrl: String { get }
-    
+
     var homepageUrl: URL { get }
-    
+
     var supportEmail: String { get }
 }
