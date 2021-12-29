@@ -145,6 +145,8 @@
 		749197C4276BDF6200F29D61 /* DotchiStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197C3276BDF6200F29D61 /* DotchiStatistics.swift */; };
 		749197C6276BDF7200F29D61 /* DotchiMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197C5276BDF7200F29D61 /* DotchiMetrics.swift */; };
 		749C1984277C5F8B00324BCA /* .switlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 749C1983277C5F8B00324BCA /* .switlint.yml */; };
+		749C198C277C8F8D00324BCA /* DotchiUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C198B277C8F8D00324BCA /* DotchiUnitTests.swift */; };
+		749C1994277C928400324BCA /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 749C1993277C928400324BCA /* Mockingbird */; };
 		74C4EAE7275B70A200034387 /* LogsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */; };
 		74C4EAE9275B70AD00034387 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE8275B70AD00034387 /* LogsViewController.swift */; };
 		74C4EAEB275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */; };
@@ -164,6 +166,16 @@
 		74F56BAC2770797300AEADD7 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BAB2770797200AEADD7 /* StatisticView.swift */; };
 		74F56BAE27707A0E00AEADD7 /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BAD27707A0E00AEADD7 /* MetricView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		749C198D277C8F8D00324BCA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 637DD8E9262C93DD005972BD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 637DD8F0262C93DD005972BD;
+			remoteInfo = Dotchi;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3704282B26E8FADA00AD0FF4 /* CreateAccountDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountDTO.swift; sourceTree = "<group>"; };
@@ -298,6 +310,8 @@
 		749197C3276BDF6200F29D61 /* DotchiStatistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiStatistics.swift; sourceTree = "<group>"; };
 		749197C5276BDF7200F29D61 /* DotchiMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiMetrics.swift; sourceTree = "<group>"; };
 		749C1983277C5F8B00324BCA /* .switlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .switlint.yml; sourceTree = "<group>"; };
+		749C1989277C8F8C00324BCA /* DotchiUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DotchiUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		749C198B277C8F8D00324BCA /* DotchiUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiUnitTests.swift; sourceTree = "<group>"; };
 		74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		74C4EAE8275B70AD00034387 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogsViewController+LogsViewControllerProtocol.swift"; sourceTree = "<group>"; };
@@ -333,6 +347,14 @@
 				6354C8D72758BFDA00CB2415 /* SwiftyKit in Frameworks */,
 				74D94346275913BB000D421D /* SnapKit in Frameworks */,
 				74D9437227593D83000D421D /* Swinject in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749C1986277C8F8C00324BCA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749C1994277C928400324BCA /* Mockingbird in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +836,7 @@
 			isa = PBXGroup;
 			children = (
 				637DD8F3262C93DD005972BD /* Dotchi */,
+				749C198A277C8F8D00324BCA /* DotchiUnitTests */,
 				637DD8F2262C93DD005972BD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -822,6 +845,7 @@
 			isa = PBXGroup;
 			children = (
 				637DD8F1262C93DD005972BD /* Dotchi.app */,
+				749C1989277C8F8C00324BCA /* DotchiUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1414,6 +1438,14 @@
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
+		749C198A277C8F8D00324BCA /* DotchiUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				749C198B277C8F8D00324BCA /* DotchiUnitTests.swift */,
+			);
+			path = DotchiUnitTests;
+			sourceTree = "<group>";
+		};
 		74C4EADD275B6FBB00034387 /* Logs */ = {
 			isa = PBXGroup;
 			children = (
@@ -1617,17 +1649,42 @@
 			productReference = 637DD8F1262C93DD005972BD /* Dotchi.app */;
 			productType = "com.apple.product-type.application";
 		};
+		749C1988277C8F8C00324BCA /* DotchiUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 749C198F277C8F8D00324BCA /* Build configuration list for PBXNativeTarget "DotchiUnitTests" */;
+			buildPhases = (
+				749C1985277C8F8C00324BCA /* Sources */,
+				749C1986277C8F8C00324BCA /* Frameworks */,
+				749C1987277C8F8C00324BCA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				749C198E277C8F8D00324BCA /* PBXTargetDependency */,
+			);
+			name = DotchiUnitTests;
+			packageProductDependencies = (
+				749C1993277C928400324BCA /* Mockingbird */,
+			);
+			productName = DotchiUnitTests;
+			productReference = 749C1989277C8F8C00324BCA /* DotchiUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		637DD8E9262C93DD005972BD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					637DD8F0262C93DD005972BD = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					749C1988277C8F8C00324BCA = {
+						CreatedOnToolsVersion = 13.2;
+						TestTargetID = 637DD8F0262C93DD005972BD;
 					};
 				};
 			};
@@ -1652,12 +1709,14 @@
 				6354C8D52758BFDA00CB2415 /* XCRemoteSwiftPackageReference "Swifty-Kit" */,
 				74D94344275913BA000D421D /* XCRemoteSwiftPackageReference "SnapKit" */,
 				74D9437027593D82000D421D /* XCRemoteSwiftPackageReference "Swinject" */,
+				749C1992277C928300324BCA /* XCRemoteSwiftPackageReference "mockingbird" */,
 			);
 			productRefGroup = 637DD8F2262C93DD005972BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				637DD8F0262C93DD005972BD /* Dotchi */,
+				749C1988277C8F8C00324BCA /* DotchiUnitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1681,6 +1740,13 @@
 				375603DD26D03FF5009BD2FF /* loadingError.json in Resources */,
 				375603D826D03FF5009BD2FF /* InfoPlist.strings in Resources */,
 				375603D626D03FF5009BD2FF /* Colors.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		749C1987277C8F8C00324BCA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1901,7 +1967,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		749C1985277C8F8C00324BCA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				749C198C277C8F8D00324BCA /* DotchiUnitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		749C198E277C8F8D00324BCA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 637DD8F0262C93DD005972BD /* Dotchi */;
+			targetProxy = 749C198D277C8F8D00324BCA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		375603C026D03FF5009BD2FF /* LaunchScreen.storyboard */ = {
@@ -2093,6 +2175,46 @@
 			};
 			name = Release;
 		};
+		749C1990277C8F8D00324BCA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8ZG2L8C39H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.charyszczak.DotchiUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dotchi.app/Dotchi";
+			};
+			name = Debug;
+		};
+		749C1991277C8F8D00324BCA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8ZG2L8C39H;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.charyszczak.DotchiUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dotchi.app/Dotchi";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -2110,6 +2232,15 @@
 			buildConfigurations = (
 				637DD906262C93DF005972BD /* Debug */,
 				637DD907262C93DF005972BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		749C198F277C8F8D00324BCA /* Build configuration list for PBXNativeTarget "DotchiUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				749C1990277C8F8D00324BCA /* Debug */,
+				749C1991277C8F8D00324BCA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2145,8 +2276,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "git@github.com:6rishka/Swifty-Communication-Services.git";
 			requirement = {
-				branch = 1.0.8;
-				kind = branch;
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
 			};
 		};
 		6354C8C62758BE4700CB2415 /* XCRemoteSwiftPackageReference "Swifty-Extensions" */ = {
@@ -2179,6 +2310,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
+			};
+		};
+		749C1992277C928300324BCA /* XCRemoteSwiftPackageReference "mockingbird" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/birdrides/mockingbird";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
 			};
 		};
 		74D94344275913BA000D421D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -2249,6 +2388,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6354C8D52758BFDA00CB2415 /* XCRemoteSwiftPackageReference "Swifty-Kit" */;
 			productName = SwiftyKit;
+		};
+		749C1993277C928400324BCA /* Mockingbird */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 749C1992277C928300324BCA /* XCRemoteSwiftPackageReference "mockingbird" */;
+			productName = Mockingbird;
 		};
 		74D94345275913BB000D421D /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;

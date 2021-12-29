@@ -101,6 +101,15 @@
         }
       },
       {
+        "package": "Mockingbird",
+        "repositoryURL": "https://github.com/birdrides/mockingbird",
+        "state": {
+          "branch": null,
+          "revision": "4069bb0cb0163b1f05b2bbb95f9396964d5a19ca",
+          "version": "0.18.1"
+        }
+      },
+      {
         "package": "nanopb",
         "repositoryURL": "https://github.com/firebase/nanopb.git",
         "state": {
@@ -176,9 +185,9 @@
         "package": "SwiftyCommunicationServices",
         "repositoryURL": "git@github.com:6rishka/Swifty-Communication-Services.git",
         "state": {
-          "branch": "1.0.8",
+          "branch": null,
           "revision": "ccba33f45307edb6c7b9abe590cbc375861f0bde",
-          "version": null
+          "version": "1.0.8"
         }
       },
       {
