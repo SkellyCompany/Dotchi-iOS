@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Log: Hashable {
+public struct Log: Hashable {
     let id: String
     let name: String
     let description: String

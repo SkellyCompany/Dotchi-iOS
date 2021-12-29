@@ -7,9 +7,9 @@
 
 import Foundation
 
-protocol LogRepositoryProtocol {
-    typealias LogsResultCallback = (Result<[Log], DataError>) -> Void
-    typealias LogResultCallback = (Result<Log, DataError>) -> Void
+public typealias LogsResultCallback = (Result<[Log], DataError>) -> Void
+public typealias LogResultCallback = (Result<Log, DataError>) -> Void
 
+public protocol LogRepositoryProtocol {
     func getAllLogs(dotchiId: String, completionHandler: @escaping LogsResultCallback)
 }

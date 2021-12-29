@@ -8,7 +8,7 @@
 import Foundation
 import SwiftyCommunicationServices
 
-enum DataError {
+public enum DataError {
     case connectionError
     case applicationError
     case dataSourceError

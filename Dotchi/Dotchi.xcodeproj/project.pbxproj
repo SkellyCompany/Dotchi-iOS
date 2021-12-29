@@ -178,7 +178,7 @@
 		74F56BA9276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BA8276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift */; };
 		74F56BAC2770797300AEADD7 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BAB2770797200AEADD7 /* StatisticView.swift */; };
 		74F56BAE27707A0E00AEADD7 /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BAD27707A0E00AEADD7 /* MetricView.swift */; };
-		AE3E23B6179624D5071EA0CE /* DotchiUnitTests-DotchiMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B39034FBAE6482C946F9B6 /* DotchiUnitTests-DotchiMocks.generated.swift */; };
+		A5206B3E9103D5C4095E3467 /* DotchiUnitTests-DotchiMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B39034FBAE6482C946F9B6 /* DotchiUnitTests-DotchiMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1785,7 +1785,7 @@
 			files = (
 			);
 			inputPaths = (
-				"/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10",
+				"/tmp/Mockingbird-B17D0FFD-E2DD-4B86-91F9-338723655B34",
 			);
 			name = "Generate Mockingbird Mocks";
 			outputPaths = (
@@ -1793,7 +1793,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10'\n\n~/Library/Developer/Xcode/DerivedData/Dotchi-atgknrvujdpcglhadgqqbwlkaspn/SourcePackages/checkouts/mockingbird/mockingbird generate \\\n  --targets 'Dotchi' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/DotchiUnitTests-DotchiMocks.generated.swift\"";
+			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-B17D0FFD-E2DD-4B86-91F9-338723655B34'\n\n~/Library/Developer/Xcode/DerivedData/Dotchi-atgknrvujdpcglhadgqqbwlkaspn/SourcePackages/checkouts/mockingbird/mockingbird generate \\\n  --targets 'Dotchi' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/DotchiUnitTests-DotchiMocks.generated.swift\" \\\n  --disable-swiftlint";
 		};
 		6337D7CF262CA05E0001CB46 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1878,11 +1878,11 @@
 			);
 			name = "Clean Mockingbird Mocks";
 			outputPaths = (
-				"/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10",
+				"/tmp/Mockingbird-B17D0FFD-E2DD-4B86-91F9-338723655B34",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "echo $RANDOM > '/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10'\n";
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-B17D0FFD-E2DD-4B86-91F9-338723655B34'\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2042,7 +2042,7 @@
 				749C19A0277CC9CD00324BCA /* LogsInteractor+LogsInteractorProtocol.swift in Sources */,
 				749C199C277CC28800324BCA /* DTO.swift in Sources */,
 				749C199F277CC9CA00324BCA /* LogsInteractorProtocol.swift in Sources */,
-				AE3E23B6179624D5071EA0CE /* DotchiUnitTests-DotchiMocks.generated.swift in Sources */,
+				A5206B3E9103D5C4095E3467 /* DotchiUnitTests-DotchiMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
