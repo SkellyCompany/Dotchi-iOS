@@ -1,3 +1,5 @@
 cyclomatic_complexity: 10
+cyclomatic_complexity:
+    ignores_case_statements: true
 identifier_name:
-  allowed_symbols: "_"
+    allowed_symbols: "_"

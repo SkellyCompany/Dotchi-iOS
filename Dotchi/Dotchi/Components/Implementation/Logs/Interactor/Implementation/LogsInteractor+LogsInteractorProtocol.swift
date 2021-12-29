@@ -20,18 +20,4 @@ extension LogsInteractor: LogsInteractorProtocol {
         }
         return filteredLogs
     }
-
-    func filter(logs: [Log], keyword: String, from fromDate: Date, to toDate: Date) -> [Log] {
-        guard !keyword.isEmpty else {
-            return logs
-        }
-        var filteredLogs: [Log] = []
-        logs.forEach { log in
-            if (log.name.contains(keyword) || log.description.contains(keyword))
-                && log.timestamp >= fromDate && log.timestamp <= toDate {
-                filteredLogs.append(log)
-            }
-        }
-        return filteredLogs
-    }
 }
