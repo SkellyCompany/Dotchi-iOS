@@ -1,6 +1,3 @@
-# Created by https://www.toptal.com/developers/gitignore/api/swift,xcode,macos,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=swift,xcode,macos,windows
-
 ### macOS ###
 # General
 .DS_Store
@@ -144,8 +141,6 @@ $RECYCLE.BIN/
 # gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
 
 
-
-
 ## Gcc Patch
 /*.gcno
 
@@ -156,4 +151,8 @@ $RECYCLE.BIN/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 
-# End of https://www.toptal.com/developers/gitignore/api/swift,xcode,macos,windows
+### Mockingbird
+*.generated.swift
+**/*.xcodeproj/MockingbirdCache/
+.mockingbird/
+lib_InternalSwiftSyntaxParser.dylib

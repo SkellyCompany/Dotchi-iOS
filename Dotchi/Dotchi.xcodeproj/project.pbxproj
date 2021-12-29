@@ -145,8 +145,21 @@
 		749197C4276BDF6200F29D61 /* DotchiStatistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197C3276BDF6200F29D61 /* DotchiStatistics.swift */; };
 		749197C6276BDF7200F29D61 /* DotchiMetrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749197C5276BDF7200F29D61 /* DotchiMetrics.swift */; };
 		749C1984277C5F8B00324BCA /* .switlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 749C1983277C5F8B00324BCA /* .switlint.yml */; };
-		749C198C277C8F8D00324BCA /* DotchiUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C198B277C8F8D00324BCA /* DotchiUnitTests.swift */; };
 		749C1994277C928400324BCA /* Mockingbird in Frameworks */ = {isa = PBXBuildFile; productRef = 749C1993277C928400324BCA /* Mockingbird */; };
+		749C1996277C935400324BCA /* LogsInteractorUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749C1995277C935400324BCA /* LogsInteractorUnitTests.swift */; };
+		749C1997277CC0AE00324BCA /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116769276BCC560067F68D /* Log.swift */; };
+		749C1998277CC0BF00324BCA /* LogsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671C276B89840067F68D /* LogsInteractor.swift */; };
+		749C1999277CC11F00324BCA /* LogRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116752276B8DC10067F68D /* LogRepositoryProtocol.swift */; };
+		749C199A277CC1D000324BCA /* LogDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74116766276BCC230067F68D /* LogDTO.swift */; };
+		749C199B277CC1E700324BCA /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3747FE3F26D03DE200F3A219 /* DataError.swift */; };
+		749C199C277CC28800324BCA /* DTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3747FE3326D03DE200F3A219 /* DTO.swift */; };
+		749C199D277CC29300324BCA /* InitializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3747FE5226D03DE200F3A219 /* InitializationError.swift */; };
+		749C199E277CC9AD00324BCA /* DataError+DataErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639510392703BA4A005F57D3 /* DataError+DataErrorProtocol.swift */; };
+		749C199F277CC9CA00324BCA /* LogsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671E276B89840067F68D /* LogsInteractorProtocol.swift */; };
+		749C19A0277CC9CD00324BCA /* LogsInteractor+LogsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7411671B276B89840067F68D /* LogsInteractor+LogsInteractorProtocol.swift */; };
+		749C19A1277CC9DB00324BCA /* InitializationError+CustomStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63070C6A26EFC20E00796082 /* InitializationError+CustomStringConvertible.swift */; };
+		749C19A2277CC9DF00324BCA /* InitializationError+LocalizedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63070C6C26EFC22400796082 /* InitializationError+LocalizedError.swift */; };
+		749C19A3277CCA0B00324BCA /* DataErrorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639510372703B839005F57D3 /* DataErrorProtocol.swift */; };
 		74C4EAE7275B70A200034387 /* LogsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */; };
 		74C4EAE9275B70AD00034387 /* LogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAE8275B70AD00034387 /* LogsViewController.swift */; };
 		74C4EAEB275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */; };
@@ -165,6 +178,7 @@
 		74F56BA9276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BA8276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift */; };
 		74F56BAC2770797300AEADD7 /* StatisticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BAB2770797200AEADD7 /* StatisticView.swift */; };
 		74F56BAE27707A0E00AEADD7 /* MetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F56BAD27707A0E00AEADD7 /* MetricView.swift */; };
+		AE3E23B6179624D5071EA0CE /* DotchiUnitTests-DotchiMocks.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0B39034FBAE6482C946F9B6 /* DotchiUnitTests-DotchiMocks.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -311,7 +325,7 @@
 		749197C5276BDF7200F29D61 /* DotchiMetrics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiMetrics.swift; sourceTree = "<group>"; };
 		749C1983277C5F8B00324BCA /* .switlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .switlint.yml; sourceTree = "<group>"; };
 		749C1989277C8F8C00324BCA /* DotchiUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DotchiUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		749C198B277C8F8D00324BCA /* DotchiUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotchiUnitTests.swift; sourceTree = "<group>"; };
+		749C1995277C935400324BCA /* LogsInteractorUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsInteractorUnitTests.swift; sourceTree = "<group>"; };
 		74C4EAE6275B70A200034387 /* LogsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewControllerProtocol.swift; sourceTree = "<group>"; };
 		74C4EAE8275B70AD00034387 /* LogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogsViewController.swift; sourceTree = "<group>"; };
 		74C4EAEA275B70C200034387 /* LogsViewController+LogsViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogsViewController+LogsViewControllerProtocol.swift"; sourceTree = "<group>"; };
@@ -328,6 +342,7 @@
 		74F56BA8276FD90800AEADD7 /* LogsViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LogsViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
 		74F56BAB2770797200AEADD7 /* StatisticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticView.swift; sourceTree = "<group>"; };
 		74F56BAD27707A0E00AEADD7 /* MetricView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricView.swift; sourceTree = "<group>"; };
+		A0B39034FBAE6482C946F9B6 /* DotchiUnitTests-DotchiMocks.generated.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; lastKnownFileType = sourcecode.swift; name = "DotchiUnitTests-DotchiMocks.generated.swift"; path = "MockingbirdMocks/DotchiUnitTests-DotchiMocks.generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -838,6 +853,7 @@
 				637DD8F3262C93DD005972BD /* Dotchi */,
 				749C198A277C8F8D00324BCA /* DotchiUnitTests */,
 				637DD8F2262C93DD005972BD /* Products */,
+				67B0A9DF16FC2F30A91B18D7 /* Generated Mocks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1082,6 +1098,14 @@
 				63070CF726EFE57A00796082 /* Storage */,
 			);
 			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		67B0A9DF16FC2F30A91B18D7 /* Generated Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				A0B39034FBAE6482C946F9B6 /* DotchiUnitTests-DotchiMocks.generated.swift */,
+			);
+			name = "Generated Mocks";
 			sourceTree = "<group>";
 		};
 		74116705276B73BA0067F68D /* Splash */ = {
@@ -1441,7 +1465,7 @@
 		749C198A277C8F8D00324BCA /* DotchiUnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				749C198B277C8F8D00324BCA /* DotchiUnitTests.swift */,
+				749C1995277C935400324BCA /* LogsInteractorUnitTests.swift */,
 			);
 			path = DotchiUnitTests;
 			sourceTree = "<group>";
@@ -1653,6 +1677,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 749C198F277C8F8D00324BCA /* Build configuration list for PBXNativeTarget "DotchiUnitTests" */;
 			buildPhases = (
+				F4055038DA3E80B2DF27AA36 /* Clean Mockingbird Mocks */,
+				1B10156230134A76D6969A28 /* Generate Mockingbird Mocks */,
 				749C1985277C8F8C00324BCA /* Sources */,
 				749C1986277C8F8C00324BCA /* Frameworks */,
 				749C1987277C8F8C00324BCA /* Resources */,
@@ -1753,6 +1779,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B10156230134A76D6969A28 /* Generate Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10",
+			);
+			name = "Generate Mockingbird Mocks";
+			outputPaths = (
+				"$(SRCROOT)/MockingbirdMocks/DotchiUnitTests-DotchiMocks.generated.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -eu\n\n# Ensure mocks are generated prior to running Compile Sources\nrm -f '/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10'\n\n~/Library/Developer/Xcode/DerivedData/Dotchi-atgknrvujdpcglhadgqqbwlkaspn/SourcePackages/checkouts/mockingbird/mockingbird generate \\\n  --targets 'Dotchi' \\\n  --outputs \"${SRCROOT}/MockingbirdMocks/DotchiUnitTests-DotchiMocks.generated.swift\"";
+		};
 		6337D7CF262CA05E0001CB46 /* SwiftGen */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1826,6 +1868,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint --config ${PROJECT_DIR}/${PRODUCT_NAME}/Resources/SwiftLint/.switlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		F4055038DA3E80B2DF27AA36 /* Clean Mockingbird Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Clean Mockingbird Mocks";
+			outputPaths = (
+				"/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "echo $RANDOM > '/tmp/Mockingbird-EB8C8022-D332-44A1-8F14-1B6A68C8CE10'\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1971,7 +2028,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				749C198C277C8F8D00324BCA /* DotchiUnitTests.swift in Sources */,
+				749C19A3277CCA0B00324BCA /* DataErrorProtocol.swift in Sources */,
+				749C199B277CC1E700324BCA /* DataError.swift in Sources */,
+				749C199A277CC1D000324BCA /* LogDTO.swift in Sources */,
+				749C1998277CC0BF00324BCA /* LogsInteractor.swift in Sources */,
+				749C1997277CC0AE00324BCA /* Log.swift in Sources */,
+				749C199E277CC9AD00324BCA /* DataError+DataErrorProtocol.swift in Sources */,
+				749C1999277CC11F00324BCA /* LogRepositoryProtocol.swift in Sources */,
+				749C19A2277CC9DF00324BCA /* InitializationError+LocalizedError.swift in Sources */,
+				749C1996277C935400324BCA /* LogsInteractorUnitTests.swift in Sources */,
+				749C199D277CC29300324BCA /* InitializationError.swift in Sources */,
+				749C19A1277CC9DB00324BCA /* InitializationError+CustomStringConvertible.swift in Sources */,
+				749C19A0277CC9CD00324BCA /* LogsInteractor+LogsInteractorProtocol.swift in Sources */,
+				749C199C277CC28800324BCA /* DTO.swift in Sources */,
+				749C199F277CC9CA00324BCA /* LogsInteractorProtocol.swift in Sources */,
+				AE3E23B6179624D5071EA0CE /* DotchiUnitTests-DotchiMocks.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
